@@ -1,0 +1,188 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
+    <title>Hello Amaze UI</title>
+
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileColor" content="#0e90d2">
+
+    <link rel="stylesheet" href="external/css/amazeui.min.css">
+    <link rel="stylesheet" href="external/css/amazeui.flat.css">
+    <link rel="stylesheet" href="external/css/app.css">
+    <style>
+        .content--fixed{
+            position:fixed;
+            top:50%;
+            margin-top:-296.8px;
+        }
+        .am-form-right{
+            padding-right:10em!important;
+        }
+        br{height:30px;}
+        .head{
+            text-align: center;
+            font-weight: 500;
+            color:#4c4c4c;
+            font-size:24px;
+            padding-top: 2.6rem;
+            margin-bottom: 2.6rem;
+            line-height: 1;
+        }
+        .sechead{
+            text-align: center;
+            font-weight: 500;
+            color:#808080;
+            font-size:12px;
+            padding-top:0;
+            margin-top:-8px;
+            margin-bottom: 1.8rem;
+            line-height: 1;
+        }
+
+        .imga {
+            background: #d9d9d9;
+            position: absolute;
+            right: 0;
+            top: 0px;
+            width: 133.2px;
+            height: 48px;
+            display: block;
+            margin-top: 1px;
+            line-height: 1;
+            z-index: 2;
+            border-radius: 0 4px 4px 0;
+        }
+        .img {
+            line-height: 48px;
+            text-align: center;
+            -webkit-user-select: none;
+        }
+        .img:hover{
+            background: #ccc;
+        }
+        .img:active{
+            background: #bfbfbf;
+        }
+        .am-cf--btn input{
+            padding:25.8px 0 21.8px 0;
+        }
+
+        .ui.segment {
+            position: relative;
+            text-align: center;
+        }
+        .ui.horizontal.divider:after, .ui.horizontal.divider:before {
+            content: '';
+            display: table-cell;
+            position: relative;
+            top: 50%;
+            width: 50%;
+            background: url(images/divider.png) no-repeat;
+        }
+        .ui.horizontal.divider {
+            display: table;
+            white-space: nowrap;
+            height: auto;
+            margin: 0 auto;
+            line-height: 1;
+            width:80%;
+            text-align: center;
+        }
+        .ui.divider {
+            margin: 1rem 0;
+            line-height: 1;
+            height: 0;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .05em;
+            color: rgba(0,0,0,.85);
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+            font-size: 1rem;
+        }
+        .ui.horizontal.divider:before {
+            background-position: right 4em top 50%;
+        }
+        .ui.horizontal.divider:after {
+            background-position: left 4em top 50%;
+        }
+        .form--padding{
+            padding:0 40px;
+
+            position:relative;
+            box-shadow: 0 0 0 1px #D4D4D5,0 2px 4px 0 rgba(34,36,38,.15),0 2px 10px 0 rgba(34,36,38,.25);
+        }
+        .alert--position{
+            display:none;
+            position: absolute;
+            top: 32px;
+            width: 360px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="am-g content--fixed">
+    <div class="ui center aligned basic segment">
+        <div class="ui horizontal divider"><img src="images/logo.png" alt=""></div>
+    </div>
+    <br>
+    <div class="am-u-lg-fix am-u-md-fix am-u-sm-centered" style="">
+
+        <form method="post" class="am-form form--padding" id="doc-vld-msg">
+            <p class="head">绑定已有账号</p>
+            <div class="am-form-groupa">
+                <input type="text" name="tel" value="" placeholder="登录名" class="am-radius js-pattern-mobile"  data-validation-message="输入地球上的手机号撒" required>
+                <div class="am-alert am-alert-dangers" style="visibility: hidden;"></div>
+            </div>
+            <div class="am-form-groupa">
+                <input type="password" name="password" id="password" value="" placeholder="密码(不少于6位)" class="am-radius" minlength="6" required>
+                <div class="am-alert am-alert-dangers" style="visibility: hidden;"></div>
+            </div>
+            <br>
+            <input id="submit" type="submit" value="立即注册" class="am-btn am-btn-first am-btn-block">
+            <div class="am-cf am-cf--btn">
+                <input type="button" name="" value="绑定新账号" class="am-btn am-btn-link am-btn-sm am-center">
+
+            </div>
+            <div class="am-alert alert--position" data-am-alert style="">输入地球上的手机号撒</div>
+
+        </form>
+
+    </div>
+</div>
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="external/js/jquery.min.js"></script>
+<!--<![endif]-->
+<!--[if lte IE 8 ]>
+<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="external/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+<script src="external/js/amazeui.min.js"></script>
+<script src="js/alert.js"></script>
+</body>
+</html>
