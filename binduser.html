@@ -7,7 +7,7 @@
     <meta name="keywords" content="">
     <meta name="viewport"
           content="width=device-width, initial-scale=1">
-    <title>Hello Amaze UI</title>
+    <title>绑定已有账号 - 第一电动网</title>
 
     <!-- Set render engine for 360 browser -->
     <meta name="renderer" content="webkit">
@@ -31,9 +31,8 @@
     <link rel="stylesheet" href="external/css/app.css">
     <style>
         .content--fixed{
-            position:fixed;
-            top:50%;
-            margin-top:-296.8px;
+            margin-top:60px;
+
         }
         .am-form-right{
             padding-right:10em!important;
@@ -48,26 +47,16 @@
             margin-bottom: 2.6rem;
             line-height: 1;
         }
-        .sechead{
-            text-align: center;
-            font-weight: 500;
-            color:#808080;
-            font-size:12px;
-            padding-top:0;
-            margin-top:-8px;
-            margin-bottom: 1.8rem;
-            line-height: 1;
-        }
 
         .imga {
             background: #d9d9d9;
             position: absolute;
-            right: 0;
-            top: 0px;
+            right: 1px;
+            top: 1px;
             width: 133.2px;
             height: 48px;
             display: block;
-            margin-top: 1px;
+            padding:0;
             line-height: 1;
             z-index: 2;
             border-radius: 0 4px 4px 0;
@@ -135,11 +124,36 @@
             position:relative;
             box-shadow: 0 0 0 1px #D4D4D5,0 2px 4px 0 rgba(34,36,38,.15),0 2px 10px 0 rgba(34,36,38,.25);
         }
+        @media(max-width:320px){
+
+            .content--fixed{
+                position:static;
+                margin-top:0;
+            }
+            .form--padding{
+                padding:0;
+                box-shadow:0 0 0 0;
+            }
+            .head{
+                padding-top:0;
+                margin-bottom:1rem ;
+            }
+
+            .am-cf--btn input{
+                padding: 14px 0 21.8px 0;
+
+            }
+
+        }
         .alert--position{
-            display:none;
+            display: none;
             position: absolute;
-            top: 32px;
-            width: 360px;
+            top: 2.5em;
+            left: 0;
+            text-align: center;
+            line-height: 36px;
+            padding: 0 40px;
+            width: 100%;
         }
     </style>
 </head>
@@ -155,21 +169,19 @@
         <form method="post" class="am-form form--padding" id="doc-vld-msg">
             <p class="head">绑定已有账号</p>
             <div class="am-form-groupa">
-                <input type="text" name="tel" value="" placeholder="登录名" class="am-radius js-pattern-mobile"  data-validation-message="输入地球上的手机号撒" required>
+                <input type="text" name="loginName" value="" placeholder="登录名" class="am-radius" minlength="1"  data-validation-message="请正确输入真确用户名" required>
                 <div class="am-alert am-alert-dangers" style="visibility: hidden;"></div>
             </div>
             <div class="am-form-groupa">
-                <input type="password" name="password" id="password" value="" placeholder="密码(不少于6位)" class="am-radius" minlength="6" required>
+                <input type="text" name="password" id="password" value="" autocomplete="off" placeholder="密码(不少于6位)" class="am-radius" minlength="6" required>
                 <div class="am-alert am-alert-dangers" style="visibility: hidden;"></div>
             </div>
-            <br>
-            <input id="submit" type="submit" value="立即注册" class="am-btn am-btn-first am-btn-block">
+            <input id="submit4" type="button" value="立即绑定" class="am-btn am-btn-first am-btn-block">
             <div class="am-cf am-cf--btn">
-                <input type="button" name="" value="绑定新账号" class="am-btn am-btn-link am-btn-sm am-center">
+                <a href=""><input type="button" name="" value="绑定新账号" class="am-btn am-btn-links am-btn-sm am-center" style="text-decoration: underline;"></a>
 
             </div>
-            <div class="am-alert alert--position" data-am-alert style="">输入地球上的手机号撒</div>
-
+            <div class="am-alert alert--position" data-am-alert style=""><button type="button" class="am-close--re">&times;</button><p class="am-radius">输入地球上的手机号撒</p></div>
         </form>
 
     </div>

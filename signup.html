@@ -7,7 +7,7 @@
     <meta name="keywords" content="">
     <meta name="viewport"
           content="width=device-width, initial-scale=1">
-    <title>Hello Amaze UI</title>
+    <title>注册账号 - 第一电动网</title>
 
     <!-- Set render engine for 360 browser -->
     <meta name="renderer" content="webkit">
@@ -31,9 +31,8 @@
     <link rel="stylesheet" href="external/css/app.css">
     <style>
         .content--fixed{
-            position:fixed;
-            top:50%;
-            margin-top:-296.8px;
+            margin-top:60px;
+
         }
         .am-form-right{
             padding-right:10em!important;
@@ -52,12 +51,12 @@
         .imga {
             background: #d9d9d9;
             position: absolute;
-            right: 0;
-            top: 0px;
+            right: 1px;
+            top: 1px;
             width: 133.2px;
             height: 48px;
             display: block;
-            margin-top: 1px;
+            padding:0;
             line-height: 1;
             z-index: 2;
             border-radius: 0 4px 4px 0;
@@ -125,11 +124,36 @@
             position:relative;
             box-shadow: 0 0 0 1px #D4D4D5,0 2px 4px 0 rgba(34,36,38,.15),0 2px 10px 0 rgba(34,36,38,.25);
         }
+        @media(max-width:320px){
+
+            .content--fixed{
+                position:static;
+                margin-top:0;
+            }
+            .form--padding{
+                padding:0;
+                box-shadow:0 0 0 0;
+            }
+            .head{
+                padding-top:0;
+                margin-bottom:1rem ;
+            }
+
+            .am-cf--btn input{
+                padding: 14px 0 21.8px 0;
+
+            }
+
+        }
         .alert--position{
-            display:none;
+            display: none;
             position: absolute;
-            top: 32px;
-            width: 360px;
+            top: 2.5em;
+            left: 0;
+            text-align: center;
+            line-height: 36px;
+            padding: 0 40px;
+            width: 100%;
         }
     </style>
 </head>
@@ -145,33 +169,32 @@
         <form method="post" class="am-form form--padding" id="doc-vld-msg">
             <p class="head">手机注册</p>
             <div class="am-form-groupa">
-            <input type="text" name="tel" value="" placeholder="请输入手机号" class="am-radius js-pattern-mobile"  data-validation-message="输入地球上的手机号撒" required>
+            <input type="text" id="mobile" name="mobile" value="" placeholder="请输入手机号" class="am-radius js-pattern-mobile"  data-validation-message="输入地球上的手机号撒" required>
             <div class="am-alert am-alert-dangers" style="visibility: hidden;"></div>
             </div>
             <div class="am-form-groupa">
-            <input type="password" name="password" id="password" value="" placeholder="密码(不少于6位)" class="am-radius" minlength="6" required>
+            <input type="text" name="password" id="password" value="" autocomplete="off" placeholder="密码(不少于6位)" class="am-radius" minlength="6" required>
             <div class="am-alert am-alert-dangers" style="visibility: hidden;"></div>
             </div>
             <div class="am-form-icon am-form-groupa">
 
-                <input type="text" name="checkone" class="am-form-right am-radius" placeholder="验证码" minlength="4" required>
-                <img class="imga" src="images/yanzhen.png" alt="">
+                <input type="text" name="rvCode" class="am-form-right am-radius" placeholder="验证码" minlength="4" required>
+                <img onclick="imga(this);" class="imga" src="http://www.d1ev.com/api/checkcode?type=register&code_len=4&font_size=14&width=133&height=48" alt="">
                 <div class="am-alert am-alert-dangers" style="visibility: hidden;"></div>
             </div>
 
             <div class="am-form-icon am-form-groupa">
 
-                <input type="text" name="checktwo" class="am-form-right am-radius" placeholder="验证码" minlength="4" required>
-                <span class="imga img">点击获取</span>
+                <input type="text" name="vCode" class="am-form-right am-radius" placeholder="验证码" minlength="4" required>
+                <input type="button" value="点击获取" class="am-btn imga img  btn-loading-example" data-am-loading="{loadingText: '已发送'}">
                 <div class="am-alert am-alert-dangers" style="visibility: hidden;"></div>
             </div>
-            <br>
-            <input id="submit" type="submit" value="立即注册" class="am-btn am-btn-first am-btn-block">
+            <input id="submit" type="button" value="立即注册" class="am-btn am-btn-first am-btn-block">
             <div class="am-cf am-cf--btn">
-                <input type="button" name="" value="使用邮箱注册" class="am-btn am-btn-link am-btn-sm am-fl">
-                <input type="button" name="" value="已有账号，去登录" class="am-btn am-btn-link am-btn-sm am-fr">
+                <a href="http://www.d1ev.com/sign/signupmail.html"><input type="button" name="" value="使用邮箱注册" class="am-btn am-btn-links am-btn-sm am-fl"></a>
+                <a href="http://www.d1ev.com/sign/login.html"><input type="button" name="" value="已有账号，去登录" class="am-btn am-btn-links am-btn-sm am-fr"></a>
             </div>
-            <div class="am-alert alert--position" data-am-alert style="">账号或密码错误</div>
+            <div class="am-alert alert--position" data-am-alert style=""><button type="button" class="am-close--re">&times;</button><p class="am-radius">账号或密码错误</p></div>
 
         </form>
 

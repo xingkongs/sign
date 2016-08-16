@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,14 +26,39 @@
     <!-- Tile icon for Win8 (144x144 + tile color) -->
     <meta name="msapplication-TileColor" content="#0e90d2">
 
-    <link rel="stylesheet" href="external/css/amazeui.min.css">
-    <link rel="stylesheet" href="external/css/amazeui.flat.css">
-    <link rel="stylesheet" href="external/css/app.css">
+    <!--<link rel="stylesheet" href="http://www.d1ev.com/sign/external/css/amazeui.min.css">-->
+    <!--<link rel="stylesheet" href="http://www.d1ev.com/sign/external/css/amazeui.flat.css">-->
+    <!--<link rel="stylesheet" href="http://www.d1ev.com/sign/external/css/app.css">-->
+    <!--<link rel="stylesheet" href="//at.alicdn.com/t/font_1469600638_0967958.css">-->
     <style>
+        *{margin:0;padding:0;}
+        *, *:before, *:after {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        html{font-size: 10px;}
+        /*自定义样式*/
+        .am-text-head{font-size:16px;color:#000;}
+        .am-text-content,.am-text-content>a{font-size:16px;color:#f60;margin-left:5px;}
+        .am-text-tip{font-size:14px;color:#999;}
+        .am-text-button{font-size: 24px; font-weight:bold; color: #f60;letter-spacing: 3px; border: 1px solid #f60;padding:10px 30px; text-align: center; line-height: 40px; display: inline-block;}
+        .am-text-button:hover{color:#e65c00;border-color: #e65c00;}
+        .am-text-button:active{color:#cc5200;border-color:#cc5200;}
+        .am-text-left {
+            text-align: left !important;
+        }
+        body {
+            position: relative;
+            background: #fff;
+            font-family: PingFangSC Regular, Hiragino Sans GB, 'Microsoft Yahei', Arial, Helvetica, sans-serif,"Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB W3", "FontAwesome", sans-serif;
+            font-weight: normal;
+            line-height: 1.6;
+            color: #333333;
+            font-size: 1.6rem;
+        }
         .content--fixed{
-            position:fixed;
-            top:50%;
-            margin-top:-296.8px;
+            margin-top:60px;
+
         }
         .am-form-right{
             padding-right:10em!important;
@@ -62,12 +87,11 @@
         .imga {
             background: #d9d9d9;
             position: absolute;
-            right: 0;
-            top: 0px;
+            right: 1px;
+            top: 1px;
             width: 133.2px;
             height: 48px;
             display: block;
-            margin-top: 1px;
             line-height: 1;
             z-index: 2;
             border-radius: 0 4px 4px 0;
@@ -90,14 +114,6 @@
         .ui.segment {
             position: relative;
             text-align: center;
-        }
-        .ui.horizontal.divider:after, .ui.horizontal.divider:before {
-            content: '';
-            display: table-cell;
-            position: relative;
-            top: 50%;
-            width: 50%;
-            background: url(images/divider.png) no-repeat;
         }
         .ui.horizontal.divider {
             display: table;
@@ -135,11 +151,36 @@
             position:relative;
             box-shadow: 0 0 0 1px #D4D4D5,0 2px 4px 0 rgba(34,36,38,.15),0 2px 10px 0 rgba(34,36,38,.25);
         }
+        @media(max-width:320px){
+
+            .content--fixed{
+                position:static;
+                margin-top:0;
+            }
+            .form--padding{
+                padding:0;
+                box-shadow:0 0 0 0;
+            }
+            .head{
+                padding-top:0;
+                margin-bottom:1rem ;
+            }
+
+            .am-cf--btn input{
+                padding: 14px 0 21.8px 0;
+
+            }
+
+        }
         .alert--position{
-            display:none;
+            display: none;
             position: absolute;
-            top: 32px;
-            width: 360px;
+            top: 2.5em;
+            left: 0;
+            text-align: center;
+            line-height: 36px;
+            padding: 0 40px;
+            width: 100%;
         }
         p{
             margin:0;
@@ -160,41 +201,59 @@
             border:1px solid #4c4c4c;
             background: #fff;
         }
+        /*icon定位*/
+        .am-form{
+            text-align: center;
+        }
+        .icon-shibai{
+            display: inline-block;
+            line-height: 1;
+            margin: 16px 0 12px;
+            font-size: 60px;
+        }
     </style>
 </head>
 <body class=" am-color--re">
 
-<div class="am-g content--fixed">
-    <div class="ui center aligned basic segment">
-        <div class="ui horizontal divider"><img src="images/logo.png" alt=""></div>
-    </div>
-    <br>
-    <div class="am-u-lg-fix am-u-md-fix am-u-sm-centered" style="">
+<div class="am-g" style="background: #f2f3f5;padding:70px 0;">
 
-        <form method="get" class="am-form">
-            <br>
-            <br>
-            <br>
-            <p class="am-text-lg am-text-center headsec">感谢您的注册，请进行邮箱验证</p>
-            <br>
-            <p class="am-btn-sm am-text-center">激活邮件已经发送到你的邮箱：957956806@qq.com</p>
-            <p class="am-btn-sm am-text-center">请点击邮件中的链接激活账号</p>
-            <br>
-            <p class="am-btn-sm am-text-center textmargin">收不到？ <a class="" style="text-decoration:underline;color:#527fff;" href="javascript:;">重新发送</a></p>
-            <input class="mail_button am-btn am-btn-sm am-center am-radius" type="button" value="立即登录邮箱">
-        </form>
+
+    <div class="" style="width:650px;margin:0 auto;overflow:hidden;">
+        <div class="ui center aligned basic segment">
+            <div class="ui horizontal divider am-text-left" style="width:100%;background: #f60;padding:0 50px;"><img src="http://www.d1ev.com/sign/images/logow.png" alt="logo" title="logo" style="padding:20px 0;"></div>
+        </div>
+        <div style="border:1px solid #ddd;background: #fff;">
+            <form method="get" class="am-form am-text-left" style="margin:50px">
+
+                <p class="am-text-head">你好，</p>
+                <p class="am-text-head">您此次找回密码的验证码是 :</p>
+                <div style="text-align: center;margin:20px 0;">
+                    <span class="am-text-button"><span style="margin-right:5px;">[email-code1]</span><span>[email-code2]</span></span>
+                </div>
+                <p class="am-text-tip">请在15分钟内输入验证码完成身份验证。如非你本人操作，请忽略此邮件。</p>
+                <br>
+                <br>
+                <p class="am-text-head">第一电动网团队</p>
+            </form>
+        </div>
+
 
     </div>
 </div>
 <!--[if (gte IE 9)|!(IE)]><!-->
-<script src="external/js/jquery.min.js"></script>
+<script src="http://www.d1ev.com/sign/external/js/jquery.min.js"></script>
 <!--<![endif]-->
 <!--[if lte IE 8 ]>
 <script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
 <script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
-<script src="external/js/amazeui.ie8polyfill.min.js"></script>
+<script src="http://www.d1ev.com/sign/external/js/amazeui.ie8polyfill.min.js"></script>
 <![endif]-->
-<script src="external/js/amazeui.min.js"></script>
-<script src="js/alert.js"></script>
+<script src="http://www.d1ev.com/sign/external/js/amazeui.min.js"></script>
+<script src="http://www.d1ev.com/sign/js/alert.js"></script>
+</body>
+</html></title>
+</head>
+<body>
+
 </body>
 </html>

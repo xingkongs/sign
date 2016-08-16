@@ -709,8 +709,8 @@ select {
 }
 @media only screen and (min-width:641px) {
   [class*="am-u-"] {
-    padding-left: 3.6rem;
-    padding-right: 3.6rem;
+    padding-left: 36px;
+    padding-right: 36px;
   }
 }
 [class*="am-u-pull-"] {
@@ -2033,7 +2033,14 @@ fieldset[disabled] .am-btn-success.am-active {
   cursor: pointer;
   border-radius: 0;
 }
-.am-btn-link,
+.am-btn-links{
+  color: #4c4c4c;
+  font-weight: normal;
+  cursor: pointer;
+  border-radius: 0;
+}
+.am-btn-link,.am-btn-links,
+.am-btn-links:active,
 .am-btn-link:active,
 .am-btn-link[disabled],
 fieldset[disabled] .am-btn-link {
@@ -2041,7 +2048,8 @@ fieldset[disabled] .am-btn-link {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
-.am-btn-link,
+.am-btn-link,.am-btn-links,
+.am-btn-links:hover,
 .am-btn-link:hover,
 .am-btn-link:focus,
 .am-btn-link:active {
@@ -2051,6 +2059,15 @@ fieldset[disabled] .am-btn-link {
 .am-btn-link:focus {
   color: #4c4c4c;
   text-decoration: underline;
+  background-color: transparent;
+}
+.am-btn-links:hover,
+.am-btn-links:focus {
+  color: #f60;
+  background-color: transparent;
+}
+.am-btn-links:active {
+  color: #f26100;
   background-color: transparent;
 }
 .am-btn-link[disabled]:hover,
@@ -2077,8 +2094,7 @@ fieldset[disabled] .am-btn-link:focus {
 .am-btn-block {
   display: block;
   width: 100%;
-  padding-left: 0;
-  padding-right: 0;
+  padding:0.857em 0;
 }
 /* Multiple block buttons vertically space */
 .am-btn-block + .am-btn-block {
@@ -2397,6 +2413,7 @@ output {
 .am-form-field {
   display: block;
   width: 100%;
+  height:50px;
   padding: 1.28rem;
   font-size: 1.4rem;
   line-height: 1.6;
@@ -2818,23 +2835,23 @@ fieldset[disabled] .am-checkbox-inline {
 .am-form-success .am-radio-inline,
 .am-form-success .am-checkbox-inline,
 .am-form-success label {
-  color: #5eb95e;
+  color: #b2b2b2;
 }
 .am-form-success [class*="icon-"] {
-  color: #5eb95e;
+  color: #b2b2b2;
 }
 .am-form-success .am-form-field,
 .am-field-valid {
-  border-color: #5eb95e !important;
+  border-color: #b2b2b2 !important;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
           box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 .am-form-success .am-form-field:focus,
 .am-field-valid:focus {
   background-color: #fefffe;
-  border-color: #459f45;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 5px #a5d8a5 !important;
-          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 5px #a5d8a5 !important;
+  border-color: #b2b2b2;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 5px transparent !important;
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 5px transparent !important;
 }
 /* Horizontal forms */
 .am-form-horizontal .am-form-label,
@@ -4603,8 +4620,29 @@ a.am-badge:focus {
   -webkit-transition: all .3s;
   transition: all .3s;
 }
+.am-close--re {
+  display: inline-block;
+  text-align: center;
+  width: 24px;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 24px;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  opacity: .2;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
 .am-close:hover,
 .am-close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: .5;
+  outline: none;
+}
+.am-close--re:hover,
+.am-close--re:focus {
   color: #000;
   text-decoration: none;
   cursor: pointer;
@@ -4615,6 +4653,14 @@ a.am-badge:focus {
   font-size: 16px;
 }
 button.am-close {
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  /* Needed for Sarari */
+  border: 0;
+  -webkit-appearance: none;
+}
+button.am-close--re{
   padding: 0;
   cursor: pointer;
   background: transparent;
@@ -8281,6 +8327,13 @@ img.am-thumbnail,
 .am-text-xxxl {
   font-size: 4.2rem;
 }
+/*自定义样式*/
+.am-text-head{font-size:16px;color:#000;}
+.am-text-content{font-size:16px;color:#f60;margin-left:18px;}
+.am-text-tip{font-size:12px;color:#999;}
+.am-text-button{-webkit-user-select: none;font-size: 16px;  color: #f60; border: 1px solid #f60; width: 100px; text-align: center; line-height: 40px; display: inline-block;}
+.am-text-button:hover{color:#e65c00;border-color: #e65c00;}
+.am-text-button:active{color:#cc5200;border-color:#cc5200;}
 .am-ellipsis,
 .am-text-truncate {
   word-wrap: normal;
@@ -8494,9 +8547,9 @@ img.am-thumbnail,
 .am-alert {
   margin-bottom:0;
   padding:0;
-  background: #0e90d2;
-  color: #fff;
-  border: 1px solid #0c7cb5;
+  background: transparent;
+  color: transparent;
+  border: 1px solid transparent;
   border-radius: 2px;
 }
 .am-alert a {
@@ -8513,7 +8566,13 @@ img.am-thumbnail,
 .am-alert .am-close {
   opacity: .4;
 }
+.am-alert .am-close--re {
+  opacity: .4;
+}
 .am-alert .am-close:hover {
+  opacity: .6;
+}
+.am-alert .am-close--re:hover {
   opacity: .6;
 }
 /* Add margin if adjacent element */
@@ -8537,10 +8596,18 @@ img.am-thumbnail,
 .am-alert > .am-close:first-child {
   float: right;
   height: auto;
-  margin: -3px -5px auto auto;
+  margin:5px;
+}
+.am-alert > .am-close--re:first-child {
+  float: right;
+  height: auto;
+  margin:5px;
 }
 /* Remove margin from adjacent element */
 .am-alert > .am-close:first-child + * {
+  margin-top: 0;
+}
+.am-alert > .am-close--re:first-child + * {
   margin-top: 0;
 }
 .am-alert-secondary {
