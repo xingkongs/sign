@@ -1680,11 +1680,12 @@ pre code {
 .am-btn[disabled],
 fieldset[disabled] .am-btn {
   pointer-events: none;
-  border-color: transparent;
+  border-color: #b2b2b2;
   cursor: not-allowed;
-  opacity: 0.45;
+  opacity: 1;
+  color: #b2b2b2;
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 .am-btn.am-round {
   border-radius: 1000px;
@@ -2485,10 +2486,10 @@ output {
 .am-form input[type="color"]:focus,
 .am-form-field:focus {
   background-color: #fefffe;
-  border-color: #3bb4f2;
+  border-color: #3bb4f2!important;
   outline: 0;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 5px rgba(59, 180, 242, 0.3);
-          box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 5px rgba(59, 180, 242, 0.3);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 5px rgba(59, 180, 242, 0.3)!important;
+          box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 5px rgba(59, 180, 242, 0.3)!important;
 }
 .am-form select::-webkit-input-placeholder,
 .am-form textarea::-webkit-input-placeholder,

@@ -344,8 +344,13 @@ $('.btn-loading-example').click(function () {
     var n=0;
     var i;
     if($(".am-form-icon:has(img)").length>0){i=3}else{i=2}
+    $btn.closest(".am-form-icon").siblings(".am-form-groupa").find("input").each(function(){
+        if($(this).val()){n++}else{formcheck=false;}
+    });
     //console.log(i);
-    if(formcheck&&code){
+    //console.log(formcheck);
+    if(n===i){formcheck=true;}
+    if(n===i&&formcheck&&code){
         var mobile = $("#mobile").val();
         $.ajax({
             type: "post",
@@ -365,14 +370,12 @@ $('.btn-loading-example').click(function () {
                         }
                     }, 1000);
                 }
-                $btn.closest(".am-form-icon").siblings(".am-form-groupa").find("input").each(function(){
-                    if($(this).val()){n++}else{formcheck=false;}
-                });
-                // console.log(n===i);
-                if(n===i){formcheck=true;}
-                // console.log(formcheck);
-                console.log(code);
-                if(n===i&&formcheck&&code){$("#doc-vld-msg").find(".am-form-icon").find("input[type=button]").removeClass("am-disabled");}
+
+                // // console.log(n===i);
+                // if(n===i){formcheck=true;}
+                // // console.log(formcheck);
+                // console.log(code);
+                // if(n===i&&formcheck&&code){$("#doc-vld-msg").find(".am-form-icon").find("input[type=button]").removeClass("am-disabled");}
 
                 // //var _msg = JSON.parse(_msg);
                 // if (_msg.error === 1) {
