@@ -477,7 +477,7 @@
                     <div class="am-alert am-alert-dangers am-text-left" style="visibility: hidden;"></div>
                 </div>
                 <div class="am-form-groupa">
-                    <input type="password" name="password" onchange="" id="password2" value="" placeholder="密码(不少于6位)" class="am-radius" data-equal-to="#password" required>
+                    <input type="password" name="password" onchange="" id="password2" value="" placeholder="重复密码(不少于6位)" class="am-radius" data-equal-to="#password" required>
                     <div class="am-alert am-alert-dangers am-text-left" style="visibility: hidden;"></div>
                 </div>
                 <input id="submitpassword" onclick="submitclick(this,this.id)" type="button" value="确定" class="am-modal_button--re am-btn-first"><botton class="am-btn-second am-modal_button--re am-modal_button--cancel" data-am-modal-close>取消</botton>
@@ -524,8 +524,8 @@
                     <div class="am-alert am-alert-dangers am-text-left" style="visibility: hidden;"></div>
                 </div>
                 <div class="am-form-password" style="margin-top:0;">
-                    <input type="text" name="password" id="password" value="" autocomplete="off" placeholder="密码(不少于6位)" class="am-radius" minlength="6" required>
-                    <div class="am-alert am-alert-dangers" style="visibility: hidden;"></div>
+                    <input type="text" name="password_bind" id="passwordnew1" onchange="checkfalse(this)" value="" autocomplete="off" placeholder="密码(不少于6位)" class="am-radius" minlength="6" required>
+                    <div class="am-alert am-alert-dangers am-text-left" style="visibility: hidden;"></div>
                 </div>
                 <div class="am-form-icon am-form-groupa">
                     <input type="text" name="vvvCode" onchange="checkfalse(this)" class="am-form-right am-radius" placeholder="验证码" minlength="4" required>
@@ -548,8 +548,8 @@
                     <div class="am-alert am-alert-dangers am-text-left" style="visibility: hidden;"></div>
                 </div>
                 <div class="am-form-password" style="margin-top:0;">
-                    <input type="text" name="password" id="password" value="" autocomplete="off" placeholder="密码(不少于6位)" class="am-radius" minlength="6" required>
-                    <div class="am-alert am-alert-dangers" style="visibility: hidden;"></div>
+                    <input type="text" name="password_bind" id="passwordnew2" onchange="checkfalse(this)" value="" autocomplete="off" placeholder="密码(不少于6位)" class="am-radius" minlength="6" required>
+                    <div class="am-alert am-alert-dangers am-text-left" style="visibility: hidden;"></div>
                 </div>
                 <div class="am-form-icon am-form-groupa">
                     <input type="text" name="vmmCode" onchange="checkfalse(this)" class="am-form-right am-radius" placeholder="验证码" minlength="4" required>
@@ -557,6 +557,25 @@
                     <div class="am-alert am-alert-dangers am-text-left" style="visibility: hidden;"></div>
                 </div>
                 <input id="submitaddmail" onclick="submitclick(this,this.id)" type="button" value="确定" class="am-modal_button--re am-btn-first"><botton class="am-btn-second am-modal_button--re am-modal_button--cancel" data-am-modal-close>取消</botton>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="am-modal am-modal-no-btn am-modal--ajax" tabindex="-1" id="doc-modal-11">
+    <div class="am-modal-dialog">
+        <div class="am-modal-hd"></div>
+        <form method="post" action="http://www.d1ev.com/member/liutengfei/modifypassword" target="_self" class="am-form" id="doc-vld-msgspassword_set" novalidate="novalidate">
+            <div class="am-modal-bd--re">
+                <p class="am-text-left" style="font-size: 18px;color:#000;">设置密码</p>
+                <div class="am-form-groupa">
+                    <input type="password" name="password_set" onchange="" id="passworda" value="" placeholder="密码(不少于6位)" class="am-radius" minlength="6" required>
+                    <div class="am-alert am-alert-dangers am-text-left" style="visibility: hidden;"></div>
+                </div>
+                <div class="am-form-groupa">
+                    <input type="password" name="password_set" onchange="" id="password2a" value="" placeholder="重复密码(不少于6位)" class="am-radius" data-equal-to="#passworda" required>
+                    <div class="am-alert am-alert-dangers am-text-left" style="visibility: hidden;"></div>
+                </div>
+                <input id="submitsetpassword_set" onclick="submitclick(this,this.id)" type="button" value="确定" class="am-modal_button--re am-btn-first"><botton class="am-btn-second am-modal_button--re am-modal_button--cancel" data-am-modal-close>取消</botton>
             </div>
         </form>
     </div>
