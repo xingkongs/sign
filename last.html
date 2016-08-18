@@ -179,7 +179,7 @@
                                     <div class="input92cc"> <input id="rxm" class="input" type="text" value="" name="xm" style="width:190px;"> </div>
                                     <div id="mxm" class="input_msg"></div>
                                 </li>
-                                <li>
+                                <li style="display:none;">
                                     <div class="name"><span>*</span>邮箱：</div>
                                     <div class="input92cc"><input id="remail" class="  input" type="text" value="ldk8259878@163.com" name="email" style="width:190px;" disabled></div>
                                     <div class="input_msg">
@@ -196,7 +196,7 @@
                                     </div>
                                 </li>
                                 <li><div class="name"><span>*</span>个人介绍：</div><div class="input92cc"><textarea name="about" cols="30" rows="7" id="rselfIntroduce" class="input" style=" height:100px;width: 280px;">jlaskjflaksj;ldfjka;sdf</textarea></div><div id="mselfIntroduce" class="input_msg"></div></li>
-                                <li>
+                                <li style="display:none;">
                                     <div class="name"><span>*</span>手机：</div>
                                     <div class="input92cc"><input class="  input" type="text" value="13467077567" style="width:190px;" disabled></div>
                                     <div class="input_msg">
@@ -511,6 +511,54 @@
 <div class="am-modal am-modal-no-btn" tabindex="-1" id="doc-modal-8">
     <div class="am-modal-dialog">
         <iframe src="https://open.weixin.qq.com/connect/qrconnect?appid=wxb6c18a9512fe651a&scope=snsapi_login&redirect_uri=http://www.d1ev.com/member/weixin/login&state=&login_type=jssdk" frameborder="0" height="405" style="background:#ddd;"></iframe>
+    </div>
+</div>
+<div class="am-modal am-modal-no-btn" tabindex="-1" id="doc-modal-9">
+    <div class="am-modal-dialog">
+        <div class="am-modal-hd"></div>
+        <form method="post" action="http://www.d1ev.com/member/liutengfei/modifymobile" target="_self" class="am-form" id="doc-vld-msgaddtel" novalidate="novalidate">
+            <div class="am-modal-bd--re">
+                <p class="am-text-left" style="font-size: 18px;color:#000;">绑定手机</p>
+                <div class="am-form-groupa">
+                    <input type="text" name="mobile" onchange="checkfalse(this)" value="" placeholder="请输入手机号" class="am-radius" minlength="11" required>
+                    <div class="am-alert am-alert-dangers am-text-left" style="visibility: hidden;"></div>
+                </div>
+                <div class="am-form-password" style="margin-top:0;">
+                    <input type="text" name="password" id="password" value="" autocomplete="off" placeholder="密码(不少于6位)" class="am-radius" minlength="6" required>
+                    <div class="am-alert am-alert-dangers" style="visibility: hidden;"></div>
+                </div>
+                <div class="am-form-icon am-form-groupa">
+                    <input type="text" name="vvvCode" onchange="checkfalse(this)" class="am-form-right am-radius" placeholder="验证码" minlength="4" required>
+                    <input type="button" value="点击获取" class="am-btn imga img  btn-loading-example" data-am-loading="{loadingText: '已发送'}">
+                    <div class="am-alert am-alert-dangers am-text-left" style="visibility: hidden;"></div>
+                </div>
+                <input id="submitaddtel" onclick="submitclick(this,this.id)" type="button" value="确定" class="am-modal_button--re am-btn-first"><botton class="am-btn-second am-modal_button--re am-modal_button--cancel" data-am-modal-close>取消</botton>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="am-modal am-modal-no-btn" tabindex="-1" id="doc-modal-10">
+    <div class="am-modal-dialog">
+        <div class="am-modal-hd"></div>
+        <form method="post" action="http://www.d1ev.com/member/liutengfei/modifymobile" target="_self" class="am-form" id="doc-vld-msgaddmail" novalidate="novalidate">
+            <div class="am-modal-bd--re">
+                <p class="am-text-left" style="font-size: 18px;color:#000;">绑定邮箱</p>
+                <div class="am-form-groupa">
+                    <input type="email" name="email" value="" onchange="checkfalse(this)" placeholder="请输入邮箱" class="am-radius" data-validation-message="输入地球上的邮箱撒" required>
+                    <div class="am-alert am-alert-dangers am-text-left" style="visibility: hidden;"></div>
+                </div>
+                <div class="am-form-password" style="margin-top:0;">
+                    <input type="text" name="password" id="password" value="" autocomplete="off" placeholder="密码(不少于6位)" class="am-radius" minlength="6" required>
+                    <div class="am-alert am-alert-dangers" style="visibility: hidden;"></div>
+                </div>
+                <div class="am-form-icon am-form-groupa">
+                    <input type="text" name="vmmCode" onchange="checkfalse(this)" class="am-form-right am-radius" placeholder="验证码" minlength="4" required>
+                    <input type="button" value="点击获取" class="am-btn imga img  btn-loading-example" data-am-loading="{loadingText: '已发送'}">
+                    <div class="am-alert am-alert-dangers am-text-left" style="visibility: hidden;"></div>
+                </div>
+                <input id="submitaddmail" onclick="submitclick(this,this.id)" type="button" value="确定" class="am-modal_button--re am-btn-first"><botton class="am-btn-second am-modal_button--re am-modal_button--cancel" data-am-modal-close>取消</botton>
+            </div>
+        </form>
     </div>
 </div>
 <div style="display:none"><script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="//hm.baidu.com/hm.js?c1d54a092f01be0215b4487856c2c6f6";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s);})();</script><script type="text/javascript">var cnzz_protocol=(("https:"==document.location.protocol)?" https://":" http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_2469655'%3E%3C/span%3E%3Cscript src='"+cnzz_protocol+"s13.cnzz.com/stat.php%3Fid%3D2469655' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var cnzz_protocol=(("https:"==document.location.protocol)?" https://":" http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1254528018'%3E%3C/span%3E%3Cscript src='"+cnzz_protocol+"s95.cnzz.com/stat.php%3Fid%3D1254528018' type='text/javascript'%3E%3C/script%3E"));</script></div>

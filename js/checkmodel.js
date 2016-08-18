@@ -303,6 +303,152 @@ $(function () {
         }
     });
 });
+$(function () {
+    $('#doc-vld-msgaddtel').validator({
+
+        onValid: function (validity) {
+            $(validity.field).closest('.am-form-groupa').find('.am-alert').css('visibility', 'hidden');
+            //console.log($(validity.field));
+            formcheck = validity.valid;
+            if ($(validity.field).is("select")) {
+                formcheck = false;
+                var $check = $(validity.field).siblings(".am-selected").find(".am-selected-content li.am-checked").attr("data-value");
+                var $sendcode = $("#doc-modal-7--re").find("input");
+                var $username1 = $(validity.field).find("option").eq(0).attr("data-style");
+                var $username2 = $(validity.field).find("option").eq(1).attr("data-style");
+                //console.log($check);
+                if ($check === "a") {
+                    $sendcode.attr("name", "vvCode");
+                    $("#doc-modal-5").attr("data-style", $username1);
+                    $("#doc-modal-6").attr("data-style", $username1 || $username2);
+                } else if ($check === "b") {
+                    $sendcode.attr("name", "vmCode");
+                    $("#doc-modal-4").attr("data-style", $username2);
+                }
+            }
+            return formcheck;
+        },
+
+        onInValid: function (validity) {
+            var $field = $(validity.field);
+            var $group = $field.closest('.am-form-groupa');
+            var $alert = $group.find('.am-alert');
+            // 使用自定义的提示信息 或 插件内置的提示信息
+            var msg = $field.data('validationMessage') || this.getValidationMessage(validity);
+
+            $alert.html(msg).show().css('visibility', 'visible');
+            //console.log(validity);
+            return formcheck = validity.valid;
+
+            // var $modal = $('#your-modal');
+            //
+            // $modal.siblings('.am-btn').on('click', function(e) {
+            //     var $target = $(e.target);
+            //     if (($target).hasClass('js-modal-open')) {
+            //         $modal.modal();
+            //     } else if (($target).hasClass('js-modal-close')) {
+            //         $modal.modal('close');
+            //     } else {
+            //         $modal.modal('toggle');
+            //     }
+            // });
+
+        },
+        validate: function (validity) {
+            var v = $(validity.field).val();
+            var $field = $(validity.field);
+            var msg = $field.data('validationMessage') || this.getValidationMessage(validity);
+            //console.log(validity.field);
+            var comparer = function (v1, v2) {
+                if (v1 != v2) {
+                    validity.valid = false;
+                }
+
+                // 这些属性目前 v2.3 以前没什么用，如果不想写可以忽略
+                // 从 v2.3 开始，这些属性被 getValidationMessage() 用于生成错误提示信息
+                if (v2 < 10) {
+                    validity.rangeUnderflow = true;
+                } else if (v2 > 10) {
+                    validity.rangeOverflow = true;
+                }
+            };
+
+        }
+    });
+});
+$(function () {
+    $('#doc-vld-msgaddmail').validator({
+
+        onValid: function (validity) {
+            $(validity.field).closest('.am-form-groupa').find('.am-alert').css('visibility', 'hidden');
+            //console.log($(validity.field));
+            formcheck = validity.valid;
+            if ($(validity.field).is("select")) {
+                formcheck = false;
+                var $check = $(validity.field).siblings(".am-selected").find(".am-selected-content li.am-checked").attr("data-value");
+                var $sendcode = $("#doc-modal-7--re").find("input");
+                var $username1 = $(validity.field).find("option").eq(0).attr("data-style");
+                var $username2 = $(validity.field).find("option").eq(1).attr("data-style");
+                //console.log($check);
+                if ($check === "a") {
+                    $sendcode.attr("name", "vvCode");
+                    $("#doc-modal-5").attr("data-style", $username1);
+                    $("#doc-modal-6").attr("data-style", $username1 || $username2);
+                } else if ($check === "b") {
+                    $sendcode.attr("name", "vmCode");
+                    $("#doc-modal-4").attr("data-style", $username2);
+                }
+            }
+            return formcheck;
+        },
+
+        onInValid: function (validity) {
+            var $field = $(validity.field);
+            var $group = $field.closest('.am-form-groupa');
+            var $alert = $group.find('.am-alert');
+            // 使用自定义的提示信息 或 插件内置的提示信息
+            var msg = $field.data('validationMessage') || this.getValidationMessage(validity);
+
+            $alert.html(msg).show().css('visibility', 'visible');
+            //console.log(validity);
+            return formcheck = validity.valid;
+
+            // var $modal = $('#your-modal');
+            //
+            // $modal.siblings('.am-btn').on('click', function(e) {
+            //     var $target = $(e.target);
+            //     if (($target).hasClass('js-modal-open')) {
+            //         $modal.modal();
+            //     } else if (($target).hasClass('js-modal-close')) {
+            //         $modal.modal('close');
+            //     } else {
+            //         $modal.modal('toggle');
+            //     }
+            // });
+
+        },
+        validate: function (validity) {
+            var v = $(validity.field).val();
+            var $field = $(validity.field);
+            var msg = $field.data('validationMessage') || this.getValidationMessage(validity);
+            //console.log(validity.field);
+            var comparer = function (v1, v2) {
+                if (v1 != v2) {
+                    validity.valid = false;
+                }
+
+                // 这些属性目前 v2.3 以前没什么用，如果不想写可以忽略
+                // 从 v2.3 开始，这些属性被 getValidationMessage() 用于生成错误提示信息
+                if (v2 < 10) {
+                    validity.rangeUnderflow = true;
+                } else if (v2 > 10) {
+                    validity.rangeOverflow = true;
+                }
+            };
+
+        }
+    });
+});
 //手机验证码
 
 $('.btn-loading-example').click(function () {
@@ -628,6 +774,7 @@ function submitclick(thies, thisone) {
     var $passwordold = $this.siblings(".am-form-groupa").eq(0).find("input").val();
     var $passwordnew = $this.siblings(".am-form-groupa").eq(1).find("input").val();
     var $passwordnewre = $this.siblings(".am-form-groupa").eq(2).find("input").val();
+    var $password=$this.siblings(".am-form-password").find("input").val();
     var $username = $this.closest(".am-modal").attr("data-style");
     //console.log($username);
     //console.log($passwordold);
@@ -670,6 +817,31 @@ function submitclick(thies, thisone) {
                     newpassword: $passwordnew,
                     repassword: $passwordnewre
                 },
+                success: function (_msg) {
+                    console.log(_msg);
+                    codeajax(_msg, $this,thisone);
+                }
+            });
+        }else if (formcheck && code && thisone === "submitaddtel") {
+            console.log(4);
+            $.ajax({
+                type: "post",
+                url: "http://www.d1ev.com/member/liutengfei/binding",
+                dataType: "json",
+                data: {select: $username, binding: $mom, password:$password, vCode: $inputcontent},
+                success: function (_msg) {
+                    console.log(_msg);
+                    codeajax(_msg, $this,thisone);
+                }
+            });
+        }else if (formcheck && code && thisone === "submitaddmail") {
+            console.log(5);
+            console.log($password);
+            $.ajax({
+                type: "post",
+                url: "http://www.d1ev.com/member/liutengfei/binding",
+                dataType: "json",
+                data: {select: $username, binding: $mom, password:$password, vCode: $inputcontent},
                 success: function (_msg) {
                     console.log(_msg);
                     codeajax(_msg, $this,thisone);
@@ -790,7 +962,7 @@ function externalbind(a,thisone){
             success: function (_msg) {
                 // console.log(_msg.error===0);
                 if(_msg.error===0){
-                    //unbind(_msg, $this);
+                    unbind(_msg, $this);
                     $li.find(".li_span--content").text("");
                     $li.find(".li_span--button").text("解除绑定");
                 }else{
@@ -818,7 +990,7 @@ function externalbind(a,thisone){
             $(this).closest("li").find(".li_span--button").removeClass("am-disabled");
         }else if(!$(this).find(".li_span--content").text()){
             //console.log(this);
-            $(this).find(".li_span--button").addClass("am-disabled");
+            //$(this).find(".li_span--button").addClass("am-disabled");
         }
     })
 })();
