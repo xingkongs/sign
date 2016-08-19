@@ -20,18 +20,17 @@ $(function () {
             formcheck = validity.valid;
             if ($(validity.field).is("select")) {
                 formcheck = false;
-                var $check = $(validity.field).siblings(".am-selected").find(".am-selected-content li.am-checked").attr("data-value");
+                var $check = $(validity.field).val();
                 var $sendcode = $("#doc-modal-7--re").find("input");
-                var $username1 = $(validity.field).find("option").eq(0).attr("data-style");
-                var $username2 = $(validity.field).find("option").eq(1).attr("data-style");
                 //console.log($check);
-                if ($check === "a") {
-                    $sendcode.attr("name", "vvCode");
-                    $("#doc-modal-5").attr("data-style", $username1);
-                    $("#doc-modal-6").attr("data-style", $username1 || $username2);
-                } else if ($check === "b") {
-                    $sendcode.attr("name", "vmCode");
-                    $("#doc-modal-4").attr("data-style", $username2);
+                var test=/^1[1-9]\d{9}$/.test($check);
+                if (test) {
+                    $sendcode.attr("name", "vvCode").attr("minlength","4");
+                    $("#doc-modal-5").attr("data-style", $check);
+                    $("#doc-modal-11").attr("data-style", $check);
+                } else if (!test) {
+                    $sendcode.attr("name", "vmCode").attr("minlength","6");
+                    $("#doc-modal-4").attr("data-style", $check);
                 }
             }
             return formcheck;
@@ -93,18 +92,17 @@ $(function () {
             formcheck = validity.valid;
             if ($(validity.field).is("select")) {
                 formcheck = false;
-                var $check = $(validity.field).siblings(".am-selected").find(".am-selected-content li.am-checked").attr("data-value");
+                var $check = $(validity.field).val();
                 var $sendcode = $("#doc-modal-7--re").find("input");
-                var $username1 = $(validity.field).find("option").eq(0).attr("data-style");
-                var $username2 = $(validity.field).find("option").eq(1).attr("data-style");
                 //console.log($check);
-                if ($check === "a") {
-                    $sendcode.attr("name", "vvCode");
-                    $("#doc-modal-5").attr("data-style", $username1);
-                    $("#doc-modal-6").attr("data-style", $username1 || $username2);
-                } else if ($check === "b") {
-                    $sendcode.attr("name", "vmCode");
-                    $("#doc-modal-4").attr("data-style", $username2);
+                var test=/^1[1-9]\d{9}$/.test($check);
+                if (test) {
+                    $sendcode.attr("name", "vvCode").attr("minlength","4");
+                    $("#doc-modal-5").attr("data-style", $check);
+                    $("#doc-modal-11").attr("data-style", $check);
+                } else if (!test) {
+                    $sendcode.attr("name", "vmCode").attr("minlength","6");
+                    $("#doc-modal-4").attr("data-style", $check);
                 }
             }
             return formcheck;
@@ -166,18 +164,17 @@ $(function () {
             formcheck = validity.valid;
             if ($(validity.field).is("select")) {
                 formcheck = false;
-                var $check = $(validity.field).siblings(".am-selected").find(".am-selected-content li.am-checked").attr("data-value");
+                var $check = $(validity.field).val();
                 var $sendcode = $("#doc-modal-7--re").find("input");
-                var $username1 = $(validity.field).find("option").eq(0).attr("data-style");
-                var $username2 = $(validity.field).find("option").eq(1).attr("data-style");
                 //console.log($check);
-                if ($check === "a") {
-                    $sendcode.attr("name", "vvCode");
-                    $("#doc-modal-5").attr("data-style", $username1);
-                    $("#doc-modal-6").attr("data-style", $username1 || $username2);
-                } else if ($check === "b") {
-                    $sendcode.attr("name", "vmCode");
-                    $("#doc-modal-4").attr("data-style", $username2);
+                var test=/^1[1-9]\d{9}$/.test($check);
+                if (test) {
+                    $sendcode.attr("name", "vvCode").attr("minlength","4");
+                    $("#doc-modal-5").attr("data-style", $check);
+                    $("#doc-modal-11").attr("data-style", $check);
+                } else if (!test) {
+                    $sendcode.attr("name", "vmCode").attr("minlength","6");
+                    $("#doc-modal-4").attr("data-style", $check);
                 }
             }
             return formcheck;
@@ -239,18 +236,17 @@ $(function () {
             formcheck = validity.valid;
             if ($(validity.field).is("select")) {
                 formcheck = false;
-                var $check = $(validity.field).siblings(".am-selected").find(".am-selected-content li.am-checked").attr("data-value");
+                var $check = $(validity.field).val();
                 var $sendcode = $("#doc-modal-7--re").find("input");
-                var $username1 = $(validity.field).find("option").eq(0).attr("data-style");
-                var $username2 = $(validity.field).find("option").eq(1).attr("data-style");
                 //console.log($check);
-                if ($check === "a") {
-                    $sendcode.attr("name", "vvCode");
-                    $("#doc-modal-5").attr("data-style", $username1);
-                    $("#doc-modal-6").attr("data-style", $username1 || $username2);
-                } else if ($check === "b") {
-                    $sendcode.attr("name", "vmCode");
-                    $("#doc-modal-4").attr("data-style", $username2);
+                var test=/^1[1-9]\d{9}$/.test($check);
+                if (test) {
+                    $sendcode.attr("name", "vvCode").attr("minlength","4");
+                    $("#doc-modal-5").attr("data-style", $check);
+                    $("#doc-modal-11").attr("data-style", $check);
+                } else if (!test) {
+                    $sendcode.attr("name", "vmCode").attr("minlength","6");
+                    $("#doc-modal-4").attr("data-style", $check);
                 }
             }
             return formcheck;
@@ -312,18 +308,17 @@ $(function () {
             formcheck = validity.valid;
             if ($(validity.field).is("select")) {
                 formcheck = false;
-                var $check = $(validity.field).siblings(".am-selected").find(".am-selected-content li.am-checked").attr("data-value");
+                var $check = $(validity.field).val();
                 var $sendcode = $("#doc-modal-7--re").find("input");
-                var $username1 = $(validity.field).find("option").eq(0).attr("data-style");
-                var $username2 = $(validity.field).find("option").eq(1).attr("data-style");
                 //console.log($check);
-                if ($check === "a") {
-                    $sendcode.attr("name", "vvCode");
-                    $("#doc-modal-5").attr("data-style", $username1);
-                    $("#doc-modal-6").attr("data-style", $username1 || $username2);
-                } else if ($check === "b") {
-                    $sendcode.attr("name", "vmCode");
-                    $("#doc-modal-4").attr("data-style", $username2);
+                var test=/^1[1-9]\d{9}$/.test($check);
+                if (test) {
+                    $sendcode.attr("name", "vvCode").attr("minlength","4");
+                    $("#doc-modal-5").attr("data-style", $check);
+                    $("#doc-modal-11").attr("data-style", $check);
+                } else if (!test) {
+                    $sendcode.attr("name", "vmCode").attr("minlength","6");
+                    $("#doc-modal-4").attr("data-style", $check);
                 }
             }
             return formcheck;
@@ -385,18 +380,17 @@ $(function () {
             formcheck = validity.valid;
             if ($(validity.field).is("select")) {
                 formcheck = false;
-                var $check = $(validity.field).siblings(".am-selected").find(".am-selected-content li.am-checked").attr("data-value");
+                var $check = $(validity.field).val();
                 var $sendcode = $("#doc-modal-7--re").find("input");
-                var $username1 = $(validity.field).find("option").eq(0).attr("data-style");
-                var $username2 = $(validity.field).find("option").eq(1).attr("data-style");
                 //console.log($check);
-                if ($check === "a") {
-                    $sendcode.attr("name", "vvCode");
-                    $("#doc-modal-5").attr("data-style", $username1);
-                    $("#doc-modal-6").attr("data-style", $username1 || $username2);
-                } else if ($check === "b") {
-                    $sendcode.attr("name", "vmCode");
-                    $("#doc-modal-4").attr("data-style", $username2);
+                var test=/^1[1-9]\d{9}$/.test($check);
+                if (test) {
+                    $sendcode.attr("name", "vvCode").attr("minlength","4");
+                    $("#doc-modal-5").attr("data-style", $check);
+                    $("#doc-modal-11").attr("data-style", $check);
+                } else if (!test) {
+                    $sendcode.attr("name", "vmCode").attr("minlength","6");
+                    $("#doc-modal-4").attr("data-style", $check);
                 }
             }
             return formcheck;
@@ -458,18 +452,17 @@ $(function () {
             formcheck = validity.valid;
             if ($(validity.field).is("select")) {
                 formcheck = false;
-                var $check = $(validity.field).siblings(".am-selected").find(".am-selected-content li.am-checked").attr("data-value");
+                var $check = $(validity.field).val();
                 var $sendcode = $("#doc-modal-7--re").find("input");
-                var $username1 = $(validity.field).find("option").eq(0).attr("data-style");
-                var $username2 = $(validity.field).find("option").eq(1).attr("data-style");
                 //console.log($check);
-                if ($check === "a") {
-                    $sendcode.attr("name", "vvCode");
-                    $("#doc-modal-5").attr("data-style", $username1);
-                    $("#doc-modal-6").attr("data-style", $username1 || $username2);
-                } else if ($check === "b") {
-                    $sendcode.attr("name", "vmCode");
-                    $("#doc-modal-4").attr("data-style", $username2);
+                var test=/^1[1-9]\d{9}$/.test($check);
+                if (test) {
+                    $sendcode.attr("name", "vvCode").attr("minlength","4");
+                    $("#doc-modal-5").attr("data-style", $check);
+                    $("#doc-modal-11").attr("data-style", $check);
+                } else if (!test) {
+                    $sendcode.attr("name", "vmCode").attr("minlength","6");
+                    $("#doc-modal-4").attr("data-style", $check);
                 }
             }
             return formcheck;
@@ -522,6 +515,15 @@ $(function () {
         }
     });
 });
+//监听select change事件
+// function selectchange(thisone){
+//     var $this=$(thisone);
+//     console.log($this.find("option:selected").attr("data-style"));
+// }
+//change
+function changemo(){
+    $("#doc-modal-7").attr("data-style","password");
+}
 //手机验证码
 
 $('.btn-loading-example').click(function () {
@@ -539,9 +541,9 @@ $('.btn-loading-example').click(function () {
     }, 1000);
     var $mom = $btn.closest(".am-form-icon").siblings(".am-form-groupa").find("input").val();
     var $input = $btn.siblings("input");
-    var $inputcontent = $("#doc-modal-7").find("select").find("option");
-    var $inputcontent1 = $inputcontent.eq(0).attr("data-style");
-    var $inputcontent2 = $inputcontent.eq(1).attr("data-style");
+    var $inputcontent = $("#doc-modal-7").find("select").val();
+    // var $inputcontent1 = $inputcontent.eq(0).attr("data-style");
+    // var $inputcontent2 = $inputcontent.eq(1).attr("data-style");
     // console.log($input.attr("name")==="vmCode");
     if ($input.attr("name") === "vmCode") {
         //var data=$($this).val();
@@ -549,7 +551,7 @@ $('.btn-loading-example').click(function () {
             type: "post",
             url: "http://www.d1ev.com/member/liutengfei/mailcode",
             dataType: "json",
-            data: {email: $inputcontent2 || $inputcontent1},
+            data: {email: $inputcontent},
             success: function (_msg) {
                 codeajax(_msg, $btn);
 
@@ -561,7 +563,7 @@ $('.btn-loading-example').click(function () {
             type: "post",
             url: "http://www.d1ev.com/member/liutengfei/mobilecode",
             dataType: "json",
-            data: {mobile: $inputcontent1 || $inputcontent2},
+            data: {mobile: $inputcontent},
             success: function (_msg) {
                 codeajax(_msg, $btn);
             }
@@ -600,7 +602,7 @@ $('.btn-loading-example').click(function () {
 function nextone(thisone) {
     var $this = $(thisone);
     //console.log($this);
-    var $select = "b";
+    var $select = $this.siblings(".am-form-group").find("select").val();
     var code = Boolean($("body").attr("data-style"));
     var $input = $("#doc-modal-7--re").find("input");
     if (!$input.val()) {
@@ -608,12 +610,12 @@ function nextone(thisone) {
     }
     var $vCodedata = $input.val();
     //console.log($vCodedata);
-    var $mobile = $this.siblings(".am-form-group").find("select");
-    if ($mobile.val() === "a") {
-        $select = $mobile.find("option").eq(0).attr("data-style");
-    } else {
-        $select = $mobile.find("option").eq(1).attr("data-style");
-    }
+    // var $mobile = $this.siblings(".am-form-group").find("select");
+    // if ($mobile.val() === "a") {
+    //     $select = $mobile.find("option").eq(0).attr("data-style");
+    // } else {
+    //     $select = $mobile.find("option").eq(1).attr("data-style");
+    // }
     //console.log($select);
     //console.log($mobile);
     var $styles = $("#doc-modal-7").attr("data-style");
@@ -628,13 +630,14 @@ function nextone(thisone) {
                     console.log(_msg);
                     if (_msg.error === 0) {
                         changepasses();
+                        console.log($styles);
                         $("#doc-modal-7").modal('close');
                         if ($styles === "mail") {
                             $("#doc-modal-4").modal({closeViaDimmer: 0, width: 470, height: 327});
                         } else if ($styles === "mobile") {
                             $("#doc-modal-5").modal({closeViaDimmer: 0, width: 470, height: 327});
                         } else if ($styles === "password") {
-                            $("#doc-modal-6").modal({closeViaDimmer: 0, width: 470, height: 409});
+                            $("#doc-modal-11").modal({closeViaDimmer: 0, width: 470, height: 327});
                         }
 
                     } else {
@@ -651,18 +654,33 @@ function nextone(thisone) {
 }
 //add data-style
 function adddata(a) {
-    console.log(a);
-    var $content = $("#doc-modal-7").find("select").find("option");
-    var $username1 = $content.eq(0).attr("data-style");
-    //console.log($username1);
-    var $username2 = $content.eq(1).attr("data-style");
+    console.log(a);//mail mobile
+    var $content = $("#doc-modal-7").find("select").val();
+    var $sendcode = $("#doc-modal-7--re").find("input");
+    // var $username1 = $content.eq(0).attr("data-style");
+    // //console.log($username1);
+    // var $username2 = $content.eq(1).attr("data-style");
     //console.log($username2);
+    var $check=$("#doc-vld-msgmail").find("select").val();
+    var test=/^1[1-9]\d{9}$/.test($check);
+    var $name;var $number;
+    if(test){
+        $name="vvCode";
+        $number="4"
+    }else{
+        $name="vmCode";
+        $number="6"
+    }
+
     if (a === "mail") {
-        $("#doc-modal-4").attr("data-style", $username2);
+        $sendcode.attr("name", $name).attr("minlength",$number);
+        $("#doc-modal-4").attr("data-style", $content);
     } else if (a === "mobile") {
-        $("#doc-modal-5").attr("data-style", $username1);
+        $sendcode.attr("name", $name).attr("minlength",$number);
+        $("#doc-modal-5").attr("data-style", $content);
     } else if (a === "password") {
-        $("#doc-modal-6").attr("data-style", $username1 || $username2);
+        $sendcode.attr("name", $name).attr("minlength",$number);
+        $("#doc-modal-11").attr("data-style", $content);
     }
 }
 //点击修改
@@ -692,7 +710,7 @@ function sendstyle(a, thisone) {
         } else if (a === "mobile") {
             $("#doc-modal-5").modal({closeViaDimmer: 0, width: 470, height: 327});
         } else if (a === "password") {
-            $("#doc-modal-6").modal({closeViaDimmer: 0, width: 470, height: 409});
+            $("#doc-modal-11").modal({closeViaDimmer: 0, width: 470, height: 327});
         }
     }
 }

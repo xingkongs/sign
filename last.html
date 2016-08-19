@@ -41,9 +41,9 @@
         #accountBindContent .iconfont{font-size:40px;margin-right:10px;}
         #accountBindContent ul li span{line-height: 40px;}
         .am-modal-bd--re{padding:10px 40px 30px;}
-        .am-modal_button{display:inline-block;width:134px;float:right;line-height:48px;border:1px solid #f60;color:#fff; background: #f60;;margin-top:10px;border-radius:4px;-webkit-user-select: none;}
+        .am-modal_button{display:inline-block;width:134px;float:right;line-height:48px;border:1px solid #f60;color:#fff; background: #f60;;margin-top:10px;border-radius:4px;-webkit-user-select: none;cursor: pointer;}
         .am-modal_button--re{display:inline-block;width:134px;float:right;line-height:48px;border:1px solid #f60;color:#fff; background: #f60;border-radius:4px;-webkit-user-select: none;}
-        .am-modal_button--cancel{color:#f60;border:none; background: #fff;}
+        .am-modal_button--cancel{color:#f60;border:none; background: #fff;cursor: pointer;}
         .am-modal-dialog{ background: #fff;}
         .am-modal-dialog input{box-sizing: border-box;}
         .am-form-right { position: relative; padding-right: 10em!important; }
@@ -309,16 +309,16 @@
                                 <div class="am-u-lg-9">
                                     <span class="iconfont icon-qq am-text-secondary"></span><span class="li_span--head">QQ</span><span class="li_span--content">957956804</span>
                                 </div>
-                                <div class="am-u-lg-2 li_span--button" onclick="bindaddorno('qq',this)" data-am-modal="">解除绑定</div>
+                                <div class="am-btn am-u-lg-2 li_span--button" onclick="bindaddorno('qq',this)" data-am-modal="">解除绑定</div>
 
                             </li>
                             <li class="am-u-lg-12">
                                 <div class="am-u-lg-9"><span class="iconfont icon-weixin am-text-success"></span><span class="li_span--head">微信</span><span class="li_span--content">huangxuze_1</span></div>
-                                <div class="am-u-lg-2 li_span--button" onclick="bindaddorno('weixin',this)" data-am-modal="">解除绑定</div>
+                                <div class="am-btn am-u-lg-2 li_span--button" onclick="bindaddorno('weixin',this)" data-am-modal="">解除绑定</div>
                             </li>
                             <li class="am-u-lg-12">
                                 <div class="am-u-lg-9"><span class="iconfont icon-weibo am-text-danger"></span><span class="li_span--head">微博</span><span class="li_span--content"></span></div>
-                                <div class="am-u-lg-2 li_span--button" onclick="bindaddorno('weibo',this)" data-am-modal="">解除绑定</div>
+                                <div class="am-btn am-u-lg-2 li_span--button" onclick="bindaddorno('weibo',this)" data-am-modal="">解除绑定</div>
                             </li>
                         </ul>
                     </div>
@@ -429,11 +429,11 @@
             <div class="am-modal-bd--re">
                 <p class="am-text-left" style="font-size: 18px;color:#000;">绑定邮箱</p>
                 <div class="am-form-groupa">
-                    <input type="email" name="email" value="" onchange="checkfalse(this)" placeholder="请输入邮箱" class="am-radius" data-validation-message="输入地球上的邮箱撒" required>
+                    <input type="email" name="email" value="" onchange="checkfalse(this)" placeholder="请输入邮箱" class="am-radius" data-validation-message="请输入正确的邮箱" required>
                     <div class="am-alert am-alert-dangers am-text-left" style="visibility: hidden;"></div>
                 </div>
                 <div class="am-form-icon am-form-groupa">
-                    <input type="text" name="vmmCode" onchange="checkfalse(this)" class="am-form-right am-radius" placeholder="验证码" minlength="4" required>
+                    <input type="text" name="vmmCode" onchange="checkfalse(this)" class="am-form-right am-radius" placeholder="验证码" minlength="6" required>
                     <input type="button" value="点击获取" class="am-btn imga img  btn-loading-example" data-am-loading="{loadingText: '已发送'}">
                     <div class="am-alert am-alert-dangers am-text-left" style="visibility: hidden;"></div>
                 </div>
@@ -485,7 +485,7 @@
         </form>
     </div>
 </div>
-<div class="am-modal am-modal-no-btn am-modal--ajax" tabindex="-1" id="doc-modal-7">
+<div class="am-modal am-modal-no-btn am-modal--ajax" tabindex="-1" id="doc-modal-7" data-style="password">
     <div class="am-modal-dialog">
         <div class="am-modal-hd"></div>
         <form method="post" class="am-form" id="doc-vld-msgmail" novalidate="novalidate">
@@ -493,13 +493,13 @@
                 <p class="am-text-left" style="font-size: 18px;color:#000;">验证身份</p>
                 <div class="am-form-group" style="margin-bottom:30px;">
                     <select data-am-selected="{btnWidth: '100%', btnSize: 'lg'}">
-                        <option data-style="13467077567" value="a">使用134****7567验证</option>
-                        <option data-style="ldk8259878@163.com" value="b" selected>使用ld*****78@163.com验证</option>
+                        <option data-style="a" value="13467077567">使用134****7567验证</option>
+                        <option data-style="b" value="ldk8259878@163.com" selected>使用ld*****78@163.com验证</option>
                     </select>
                     <span class="am-form-caret"></span>
                 </div>
                 <div class="am-form-icon am-form-groupa" id="doc-modal-7--re">
-                    <input type="text" name="vmCode" onchange="checkfalse(this)" class="am-form-right am-radius" placeholder="验证码" minlength="4" required>
+                    <input type="text" name="vmCode" onchange="checkfalse(this)" class="am-form-right am-radius" placeholder="验证码" minlength="6" required>
                     <input type="button" value="点击获取" class="am-btn imga img  btn-loading-example" data-am-loading="{loadingText: '已发送'}">
                     <div class="am-alert am-alert-dangers am-text-left" style="visibility: hidden;"></div>
                 </div>
@@ -520,7 +520,7 @@
             <div class="am-modal-bd--re">
                 <p class="am-text-left" style="font-size: 18px;color:#000;">绑定手机</p>
                 <div class="am-form-groupa">
-                    <input type="text" name="mobile" onchange="checkfalse(this)" value="" placeholder="请输入手机号" class="am-radius" minlength="11" required>
+                    <input type="text" name="mobile" onchange="checkfalse(this)" value="" placeholder="请输入正确的手机号" class="am-radius" minlength="11" required>
                     <div class="am-alert am-alert-dangers am-text-left" style="visibility: hidden;"></div>
                 </div>
                 <div class="am-form-password" style="margin-top:0;">
@@ -544,7 +544,7 @@
             <div class="am-modal-bd--re">
                 <p class="am-text-left" style="font-size: 18px;color:#000;">绑定邮箱</p>
                 <div class="am-form-groupa">
-                    <input type="email" name="email" value="" onchange="checkfalse(this)" placeholder="请输入邮箱" class="am-radius" data-validation-message="输入地球上的邮箱撒" required>
+                    <input type="email" name="email" value="" onchange="checkfalse(this)" placeholder="请输入邮箱" class="am-radius" data-validation-message="请输入正确的邮箱" required>
                     <div class="am-alert am-alert-dangers am-text-left" style="visibility: hidden;"></div>
                 </div>
                 <div class="am-form-password" style="margin-top:0;">
@@ -552,7 +552,7 @@
                     <div class="am-alert am-alert-dangers am-text-left" style="visibility: hidden;"></div>
                 </div>
                 <div class="am-form-icon am-form-groupa">
-                    <input type="text" name="vmmCode" onchange="checkfalse(this)" class="am-form-right am-radius" placeholder="验证码" minlength="4" required>
+                    <input type="text" name="vmmCode" onchange="checkfalse(this)" class="am-form-right am-radius" placeholder="验证码" minlength="6" required>
                     <input type="button" value="点击获取" class="am-btn imga img  btn-loading-example" data-am-loading="{loadingText: '已发送'}">
                     <div class="am-alert am-alert-dangers am-text-left" style="visibility: hidden;"></div>
                 </div>
