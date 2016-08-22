@@ -43,7 +43,30 @@
         .am-modal-bd--re{padding:10px 40px 30px;}
         .am-modal_button{display:inline-block;width:134px;float:right;line-height:48px;border:1px solid #f60;color:#fff; background: #f60;;margin-top:10px;border-radius:4px;-webkit-user-select: none;cursor: pointer;}
         .am-modal_button--re{display:inline-block;width:134px;float:right;line-height:48px;border:1px solid #f60;color:#fff; background: #f60;border-radius:4px;-webkit-user-select: none;}
-        .am-modal_button--cancel{color:#f60;border:none; background: #fff;cursor: pointer;}
+
+        .am-modal_button--cancel {
+            color: #f60;
+            float: right;
+            margin-top: 10px;
+            margin-right: 50px;
+            font-size: 14px;
+            border: 1px solid #FFF !important;
+            line-height: 48px;
+            background: #fff;
+            cursor: pointer;
+        }
+
+        .am-modal_button--re--cancel {
+            color: #f60;
+            float: right;
+            margin-right: 50px;
+            font-size: 14px;
+            border: 1px solid #FFF !important;
+            line-height: 48px;
+            background: #fff;
+            cursor: pointer;
+        }
+
         .am-modal-dialog{ background: #fff;}
         .am-modal-dialog input{box-sizing: border-box;}
         .am-form-right { position: relative; padding-right: 10em!important; }
@@ -396,7 +419,7 @@
             <p class="am-text-left" style="font-size: 18px;color:#000;">解绑</p>
             <p class="am-text-left" style="-webkit-user-select: none;font-size: 14px;color:#808080;margin-top:40px;margin-bottom:0;">解绑QQ以后你将无法使用QQ登陆第一电动网,确定解绑吗?</p>
             <div class="am-alert am-alert-dangers am-text-left" style="visibility: hidden;"></div>
-            <botton class="am-modal_button am-btn-first" onclick="externalbind('qq',this)">确定</botton><botton class="am-btn-second am-modal_button am-modal_button--cancel" data-am-modal-close>取消</botton>
+            <botton class="am-modal_button am-btn-first" onclick="externalbind('qq',this)">确定</botton><botton class="am-btn-second am-modal_button--cancel" data-am-modal-close>取消</botton>
         </div>
     </div>
 </div>
@@ -407,7 +430,7 @@
             <p class="am-text-left" style="font-size: 18px;color:#000;">解绑</p>
             <p class="am-text-left" style="-webkit-user-select: none;font-size: 14px;color:#808080;margin-top:40px;margin-bottom:0;">解绑微信以后你将无法使用微信登陆第一电动网,确定解绑吗?</p>
             <div class="am-alert am-alert-dangers am-text-left" style="visibility: hidden;"></div>
-            <botton class="am-modal_button am-btn-first" onclick="externalbind('weixin',this)">确定</botton><botton class="am-btn-second am-modal_button am-modal_button--cancel" data-am-modal-close>取消</botton>
+            <botton class="am-modal_button am-btn-first" onclick="externalbind('weixin',this)">确定</botton><botton class="am-btn-second am-modal_button--cancel" data-am-modal-close>取消</botton>
         </div>
     </div>
 </div>
@@ -418,7 +441,7 @@
             <p class="am-text-left" style="font-size: 18px;color:#000;">解绑</p>
             <p class="am-text-left" style="-webkit-user-select: none;font-size: 14px;color:#808080;margin-top:40px;margin-bottom:0;">解绑微博以后你将无法使用微博登陆第一电动网,确定解绑吗?</p>
             <div class="am-alert am-alert-dangers am-text-left" style="visibility: hidden;"></div>
-            <botton class="am-modal_button am-btn-first" onclick="externalbind('weibo',this)">确定</botton><botton class="am-btn-second am-modal_button am-modal_button--cancel" data-am-modal-close>取消</botton>
+            <botton class="am-modal_button am-btn-first" onclick="externalbind('weibo',this)">确定</botton><botton class="am-btn-second am-modal_button--cancel" data-am-modal-close>取消</botton>
         </div>
     </div>
 </div>
@@ -429,7 +452,7 @@
             <div class="am-modal-bd--re">
                 <p class="am-text-left" style="font-size: 18px;color:#000;">绑定邮箱</p>
                 <div class="am-form-groupa">
-                    <input type="email" name="email" value="" onchange="checkfalse(this)" placeholder="请输入邮箱" class="am-radius" data-validation-message="请输入正确的邮箱" required>
+                    <input type="email" name="bindemail" value="" onchange="checkfalse(this)" placeholder="请输入邮箱" class="am-radius" data-validation-message="请输入正确的邮箱" required>
                     <div class="am-alert am-alert-dangers am-text-left" style="visibility: hidden;"></div>
                 </div>
                 <div class="am-form-icon am-form-groupa">
@@ -437,7 +460,7 @@
                     <input type="button" value="点击获取" class="am-btn imga img  btn-loading-example" data-am-loading="{loadingText: '已发送'}">
                     <div class="am-alert am-alert-dangers am-text-left" style="visibility: hidden;"></div>
                 </div>
-                <input id="submitmail" onclick="submitclick(this,this.id)" type="button" value="确定" class="am-modal_button--re am-btn-first"><botton class="am-btn-second am-modal_button--re am-modal_button--cancel" data-am-modal-close>取消</botton>
+                <input id="submitmail" onclick="submitclick(this,this.id)" type="button" value="确定" class="am-modal_button--re am-btn-first"><botton class="am-btn-second  am-modal_button--re--cancel" data-am-modal-close>取消</botton>
             </div>
         </form>
     </div>
@@ -449,7 +472,7 @@
             <div class="am-modal-bd--re">
                 <p class="am-text-left" style="font-size: 18px;color:#000;">绑定手机</p>
                 <div class="am-form-groupa">
-                    <input type="text" name="mobile" onchange="checkfalse(this)" value="" placeholder="请输入手机号" class="am-radius" minlength="11" required>
+                    <input type="text" name="bindmobile" onchange="checkfalse(this)" value="" placeholder="请输入手机号" class="am-radius" minlength="11" required>
                     <div class="am-alert am-alert-dangers am-text-left" style="visibility: hidden;"></div>
                 </div>
                 <div class="am-form-icon am-form-groupa">
@@ -457,7 +480,7 @@
                     <input type="button" value="点击获取" class="am-btn imga img  btn-loading-example" data-am-loading="{loadingText: '已发送'}">
                     <div class="am-alert am-alert-dangers am-text-left" style="visibility: hidden;"></div>
                 </div>
-                <input id="submitmobile" onclick="submitclick(this,this.id)" type="button" value="确定" class="am-modal_button--re am-btn-first"><botton class="am-btn-second am-modal_button--re am-modal_button--cancel" data-am-modal-close>取消</botton>
+                <input id="submitmobile" onclick="submitclick(this,this.id)" type="button" value="确定" class="am-modal_button--re am-btn-first"><botton class="am-btn-second am-modal_button--re--cancel" data-am-modal-close>取消</botton>
             </div>
         </form>
     </div>
@@ -480,7 +503,7 @@
                     <input type="password" name="password" onchange="" id="password2" value="" placeholder="重复密码(不少于6位)" class="am-radius" data-equal-to="#password" required>
                     <div class="am-alert am-alert-dangers am-text-left" style="visibility: hidden;"></div>
                 </div>
-                <input id="submitpassword" onclick="submitclick(this,this.id)" type="button" value="确定" class="am-modal_button--re am-btn-first"><botton class="am-btn-second am-modal_button--re am-modal_button--cancel" data-am-modal-close>取消</botton>
+                <input id="submitpassword" onclick="submitclick(this,this.id)" type="button" value="确定" class="am-modal_button--re am-btn-first"><botton class="am-btn-second am-modal_button--re--cancel" data-am-modal-close>取消</botton>
             </div>
         </form>
     </div>
@@ -503,7 +526,7 @@
                     <input type="button" value="点击获取" class="am-btn imga img  btn-loading-example" data-am-loading="{loadingText: '已发送'}">
                     <div class="am-alert am-alert-dangers am-text-left" style="visibility: hidden;"></div>
                 </div>
-                <input onclick="nextone(this)" type="button" value="下一步" class="am-modal_button--re am-btn-first" data-am-modal=""><botton class="am-btn-second am-modal_button--re am-modal_button--cancel" data-am-modal-close>取消</botton>
+                <input onclick="nextone(this)" type="button" value="下一步" class="am-modal_button--re am-btn-first" data-am-modal=""><botton class="am-btn-second am-modal_button--re--cancel" data-am-modal-close>取消</botton>
             </div>
         </form>
     </div>
@@ -520,7 +543,7 @@
             <div class="am-modal-bd--re">
                 <p class="am-text-left" style="font-size: 18px;color:#000;">绑定手机</p>
                 <div class="am-form-groupa">
-                    <input type="text" name="mobile" onchange="checkfalse(this)" value="" placeholder="请输入正确的手机号" class="am-radius" minlength="11" required>
+                    <input type="text" name="bindmobile" onchange="checkfalse(this)" value="" placeholder="请输入正确的手机号" class="am-radius" minlength="11" required>
                     <div class="am-alert am-alert-dangers am-text-left" style="visibility: hidden;"></div>
                 </div>
                 <div class="am-form-password" style="margin-top:0;">
@@ -532,7 +555,7 @@
                     <input type="button" value="点击获取" class="am-btn imga img  btn-loading-example" data-am-loading="{loadingText: '已发送'}">
                     <div class="am-alert am-alert-dangers am-text-left" style="visibility: hidden;"></div>
                 </div>
-                <input id="submitaddtel" onclick="submitclick(this,this.id)" type="button" value="确定" class="am-modal_button--re am-btn-first"><botton class="am-btn-second am-modal_button--re am-modal_button--cancel" data-am-modal-close>取消</botton>
+                <input id="submitaddtel" onclick="submitclick(this,this.id)" type="button" value="确定" class="am-modal_button--re am-btn-first"><botton class="am-btn-second am-modal_button--re--cancel" data-am-modal-close>取消</botton>
             </div>
         </form>
     </div>
@@ -544,7 +567,7 @@
             <div class="am-modal-bd--re">
                 <p class="am-text-left" style="font-size: 18px;color:#000;">绑定邮箱</p>
                 <div class="am-form-groupa">
-                    <input type="email" name="email" value="" onchange="checkfalse(this)" placeholder="请输入邮箱" class="am-radius" data-validation-message="请输入正确的邮箱" required>
+                    <input type="email" name="bindemail" value="" onchange="checkfalse(this)" placeholder="请输入邮箱" class="am-radius" data-validation-message="请输入正确的邮箱" required>
                     <div class="am-alert am-alert-dangers am-text-left" style="visibility: hidden;"></div>
                 </div>
                 <div class="am-form-password" style="margin-top:0;">
@@ -556,7 +579,7 @@
                     <input type="button" value="点击获取" class="am-btn imga img  btn-loading-example" data-am-loading="{loadingText: '已发送'}">
                     <div class="am-alert am-alert-dangers am-text-left" style="visibility: hidden;"></div>
                 </div>
-                <input id="submitaddmail" onclick="submitclick(this,this.id)" type="button" value="确定" class="am-modal_button--re am-btn-first"><botton class="am-btn-second am-modal_button--re am-modal_button--cancel" data-am-modal-close>取消</botton>
+                <input id="submitaddmail" onclick="submitclick(this,this.id)" type="button" value="确定" class="am-modal_button--re am-btn-first"><botton class="am-btn-second am-modal_button--re--cancel" data-am-modal-close>取消</botton>
             </div>
         </form>
     </div>
@@ -572,10 +595,10 @@
                     <div class="am-alert am-alert-dangers am-text-left" style="visibility: hidden;"></div>
                 </div>
                 <div class="am-form-groupa">
-                    <input type="password" name="password_set" onchange="" id="password2a" value="" placeholder="重复密码(不少于6位)" class="am-radius" data-equal-to="#passworda" required>
+                    <input type="password" name="password_set" onchange="" id="password2a" value="" placeholder="重复密码(不少于6位)" class="am-radius" data-equal-to="#passworda" data-validation-message="两次密码输入不一致" required>
                     <div class="am-alert am-alert-dangers am-text-left" style="visibility: hidden;"></div>
                 </div>
-                <input id="submitsetpassword_set" onclick="submitclick(this,this.id)" type="button" value="确定" class="am-modal_button--re am-btn-first"><botton class="am-btn-second am-modal_button--re am-modal_button--cancel" data-am-modal-close>取消</botton>
+                <input id="submitsetpassword_set" onclick="submitclick(this,this.id)" type="button" value="确定" class="am-modal_button--re am-btn-first"><botton class="am-btn-second am-modal_button--re--cancel" data-am-modal-close>取消</botton>
             </div>
         </form>
     </div>

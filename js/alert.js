@@ -276,6 +276,19 @@ $('#doc-vld-msg').find("input").change(function messageajax(){
                         console.log(_msg);
                     }
                 });
+            }else if($($this).attr("name")==="bindmobile"){
+                var data=$($this).val();
+
+                $.ajax({
+                    type: "post",
+                    url: "http://www.d1ev.com/member/checkunique",
+                    dataType: "json",
+                    data:{type:"bindmobile",value:data},
+                    success: function (_msg) {
+                        codeajax(_msg,$this);
+                        console.log(_msg);
+                    }
+                });
             } else if($($this).attr("name")==="rvCode"){
                 var data=$($this).val();
                 $.ajax({
@@ -325,7 +338,20 @@ $('#doc-vld-msg').find("input").change(function messageajax(){
                         console.log(_msg);
                     }
                 });
-            } else if($($this).attr("name")==="password"){
+            }else if($($this).attr("name")==="loginName_had"){
+                var data=$($this).val();
+
+                $.ajax({
+                    type: "post",
+                    url: "http://www.d1ev.com/member/checkunique",
+                    dataType: "json",
+                    data:{value:data},
+                    success: function (_msg) {
+                        codeajax(_msg,$this);
+                        console.log(_msg);
+                    }
+                });
+            }  else if($($this).attr("name")==="password"){
                 var a={}; a.error=0;
                 codeajax(a,$this);
                 //console.log($this);

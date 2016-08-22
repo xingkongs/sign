@@ -738,6 +738,19 @@ function checkfalse(thisone) {
                         console.log(_msg);
                     }
                 });
+            }else if ($($this).attr("name") === "bindmobile") {
+                var data = $($this).val();
+
+                $.ajax({
+                    type: "post",
+                    url: "http://www.d1ev.com/member/checkunique",
+                    dataType: "json",
+                    data: {type: "bindmobile", value: data},
+                    success: function (_msg) {
+                        codeajax(_msg, $this);
+                        console.log(_msg);
+                    }
+                });
             } else if ($($this).attr("name") === "password") {
                 var data = $($this).val();
                 $.ajax({
@@ -797,6 +810,19 @@ function checkfalse(thisone) {
                     url: "http://www.d1ev.com/member/checkunique",
                     dataType: "json",
                     data: {type: "email", value: data},
+                    success: function (_msg) {
+                        codeajax(_msg, $this);
+                        console.log(_msg);
+                    }
+                });
+            }else if ($($this).attr("name") === "bindemail") {
+                var data = $($this).val();
+
+                $.ajax({
+                    type: "post",
+                    url: "http://www.d1ev.com/member/checkunique",
+                    dataType: "json",
+                    data: {type: "bindemail", value: data},
                     success: function (_msg) {
                         codeajax(_msg, $this);
                         console.log(_msg);
@@ -961,7 +987,7 @@ function submitclick(thies, thisone) {
                     codeajax(_msg, $this,thisone);
                 }
             });
-        } else if (thisone === "submitsetpassword_set") {
+        } else if (formcheck && code && thisone === "submitsetpassword_set") {
             console.log(6);
             $.ajax({
                 type: "post",
@@ -1061,7 +1087,7 @@ function unbind(_msg, thisone,select){
     }else if($select&&$select==="submitaddmail"){
         $("#doc-modal-10").modal('close');
         location.reload(true);
-    }else if($select&&$select==="submitpassword_set"){
+    }else if($select&&$select==="submitsetpassword_set"){
         $("#doc-modal-11").modal('close');
         location.reload(true);
     }
@@ -1139,6 +1165,7 @@ function externalbind(a,thisone){
     })
 })();
 function replace(select,_msg){
+    console.log(select);
     var thisone=$(this);
     //关闭window
     //replace
@@ -1156,7 +1183,7 @@ function replace(select,_msg){
         unbind(_msg, thisone,select)
     }else if(select==="submitpassword"){
         unbind(_msg, thisone,select)
-    }else if(select==="submitpassword_set"){
+    }else if(select==="submitsetpassword_set"){
         unbind(_msg, thisone,select)
     }else if(select==="submitaddtel"){
         unbind(_msg, thisone,select)
