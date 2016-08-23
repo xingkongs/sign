@@ -629,7 +629,7 @@ function nextone(thisone) {
                 success: function (_msg) {
                     console.log(_msg);
                     if (_msg.error === 0) {
-                        changepasses();
+                        changepasses(90000);
                         console.log($styles);
                         $("#doc-modal-7").modal('close');
                         if ($styles === "mail") {
@@ -987,7 +987,7 @@ function submitclick(thies, thisone) {
                     codeajax(_msg, $this,thisone);
                 }
             });
-        } else if (formcheck && code && thisone === "submitsetpassword_set") {
+        } else if (formcheck&& thisone === "submitsetpassword_set") {
             console.log(6);
             $.ajax({
                 type: "post",
@@ -1006,7 +1006,7 @@ function submitclick(thies, thisone) {
     });
 }
 
-function changepasses() {
+function changepasses(timelast) {
     function changepass(a) {
 
         $("#modifyPassword").find("li").each(function () {
@@ -1016,12 +1016,14 @@ function changepasses() {
         })
 
     }
+    if(timelast){
+        changepass("new");
+        var time = setTimeout(function () {
+            changepass("old");
+            clearTimeout(time);
+        }, timelast);
+    }
 
-    changepass("new");
-    var time = setTimeout(function () {
-        changepass("old");
-        clearTimeout(time);
-    }, 150000);
 
 
 }

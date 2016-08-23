@@ -157,7 +157,7 @@ function codecheck(_msg){
         $("body").attr("data-style","");
     }
 }
-function codeajax(_msg,$this){
+function codeajax(_msg,$this,vcode){
     var $alert;
     if(!$this){
         $alert=$("#doc-vld-msg").find('.am-form-groupa').eq(0).find('.am-alert')
@@ -173,6 +173,10 @@ function codeajax(_msg,$this){
     } else if (_msg.error === 0) {
         $alert.html(_msg.message).show().css('visibility', 'hidden');
         formcheck=true;
+        $("body").attr("data-style","false");
+    } else if (vcode==="vCode") {
+        $alert.html(_msg.message).show().css('visibility', 'visible');
+        //formcheck=false;
         $("body").attr("data-style","false");
     } else{
         $alert.html(_msg.message).show().css('visibility', 'visible');
@@ -309,7 +313,7 @@ $('#doc-vld-msg').find("input").change(function messageajax(){
                     dataType: "json",
                     data:{vCode:data},
                     success: function (_msg) {
-                        codeajax(_msg,$this);
+                        codeajax(_msg,$this,"vCode");
                     }
                 });
             }else if($($this).attr("name")==="email"){
@@ -375,7 +379,7 @@ $('.btn-loading-example').click(function () {
     });
     //console.log(i);
     //console.log(formcheck);
-    if(n===i){formcheck=true;}
+    //if(n===i){formcheck=true;}
     if(n===i&&formcheck&&code){
         var mobile = $("#mobile").val();
         $.ajax({
