@@ -32,30 +32,36 @@
     <link rel="stylesheet" href="external/css/app.css">
     <link rel="stylesheet" href="//at.alicdn.com/t/font_1469600638_0967958.css">
     <style>
-        .content--fixed{
-            margin-top:60px;
-            margin-bottom:53px;
+        .content--fixed {
+            margin-top: 60px;
+            margin-bottom: 53px;
         }
-        .am-form-right{
-            padding-right:10em!important;
+
+        .am-form-right {
+            padding-right: 10em !important;
         }
-        br{height:30px;}
-        .head{
+
+        br {
+            height: 30px;
+        }
+
+        .head {
             text-align: center;
             font-weight: 500;
-            color:#4c4c4c;
-            font-size:24px;
+            color: #4c4c4c;
+            font-size: 24px;
             padding-top: 2.6rem;
             margin-bottom: 2.6rem;
             line-height: 1;
         }
-        .sechead{
+
+        .sechead {
             text-align: center;
             font-weight: 500;
-            color:#808080;
-            font-size:12px;
-            padding-top:0;
-            margin-top:-8px;
+            color: #808080;
+            font-size: 12px;
+            padding-top: 0;
+            margin-top: -8px;
             margin-bottom: 1.8rem;
             line-height: 1;
         }
@@ -72,25 +78,30 @@
             z-index: 2;
             border-radius: 0 4px 4px 0;
         }
+
         .img {
             line-height: 48px;
             text-align: center;
             -webkit-user-select: none;
         }
-        .img:hover{
+
+        .img:hover {
             background: #ccc;
         }
-        .img:active{
+
+        .img:active {
             background: #bfbfbf;
         }
-        .am-cf--btn input{
-            margin:25.8px 0 21.8px 0;
+
+        .am-cf--btn input {
+            margin: 25.8px 0 21.8px 0;
         }
 
         .ui.segment {
             position: relative;
             text-align: center;
         }
+
         .ui.horizontal.divider:after, .ui.horizontal.divider:before {
             content: '';
             display: table-cell;
@@ -99,15 +110,17 @@
             width: 50%;
             background: url(images/divider.png) no-repeat;
         }
+
         .ui.horizontal.divider {
             display: table;
             white-space: nowrap;
             height: auto;
             margin: 0 auto;
             line-height: 1;
-            width:80%;
+            width: 80%;
             text-align: center;
         }
+
         .ui.divider {
             margin: 1rem 0;
             line-height: 1;
@@ -115,7 +128,7 @@
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: .05em;
-            color: rgba(0,0,0,.85);
+            color: rgba(0, 0, 0, .85);
             -webkit-user-select: none;
             -moz-user-select: none;
             -ms-user-select: none;
@@ -123,40 +136,47 @@
             -webkit-tap-highlight-color: transparent;
             font-size: 1rem;
         }
+
         .ui.horizontal.divider:before {
             background-position: right 4em top 50%;
         }
+
         .ui.horizontal.divider:after {
             background-position: left 4em top 50%;
         }
-        .form--padding{
-            padding:0 40px;
 
-            position:relative;
-            box-shadow: 0 0 0 1px #D4D4D5,0 2px 4px 0 rgba(34,36,38,.15),0 2px 10px 0 rgba(34,36,38,.25);
+        .form--padding {
+            padding: 0 40px;
+
+            position: relative;
+            box-shadow: 0 0 0 1px #D4D4D5, 0 2px 4px 0 rgba(34, 36, 38, .15), 0 2px 10px 0 rgba(34, 36, 38, .25);
         }
-        @media(max-width:320px){
 
-            .content--fixed{
-                position:static;
-                margin-top:0;
-            }
-            .form--padding{
-                padding:0;
-                box-shadow:0 0 0 0;
-            }
-            .head{
-                padding-top:0;
-                margin-bottom:1rem ;
+        @media (max-width: 320px) {
+
+            .content--fixed {
+                position: static;
+                margin-top: 0;
             }
 
-            .am-cf--btn input{
+            .form--padding {
+                padding: 0;
+                box-shadow: 0 0 0 0;
+            }
+
+            .head {
+                padding-top: 0;
+                margin-bottom: 1rem;
+            }
+
+            .am-cf--btn input {
                 padding: 14px 0 21.8px 0;
 
             }
 
         }
-        .alert--position{
+
+        .alert--position {
             display: none;
             position: absolute;
             top: 2.5em;
@@ -166,32 +186,38 @@
             padding: 0 40px;
             width: 100%;
         }
-        p{
-            margin:0;
-            line-height:1.7;
+
+        p {
+            margin: 0;
+            line-height: 1.7;
         }
-        .am-color--re{
-            color:#4c4c4c;
+
+        .am-color--re {
+            color: #4c4c4c;
         }
-        .headsec{
-            margin:10px 0 15px;
+
+        .headsec {
+            margin: 10px 0 15px;
         }
-        .textmargin{
-            margin:10px 0 25px;
+
+        .textmargin {
+            margin: 10px 0 25px;
         }
-        .mail_button{
+
+        .mail_button {
             width: 174px;
             height: 46px;
-            color: #f60!important;
+            color: #f60 !important;
             border: 1px solid #f60;
             background: #fff;
         }
 
         /*icon定位*/
-        .am-form{
+        .am-form {
             text-align: center;
         }
-        .icon-chenggong{
+
+        .icon-chenggong {
             display: inline-block;
             line-height: 1;
             margin: 16px 0 12px;
@@ -218,10 +244,43 @@
             <p class="am-btn-sm am-text-center">恭喜您注册成功</p>
             <p class="am-btn-sm am-text-center timechange">5秒后自动进入第一电动网</p>
             <br>
-            <a class="am-link-muted" href="http://www.d1ev.com/"><input class="mail_button am-btn am-btn-sm am-center" type="button" value="立即进入"></a>
+            <a class="am-link-muted" href="http://www.d1ev.com/"><input class="mail_button am-btn am-btn-sm am-center"
+                                                                        type="button" value="立即进入"></a>
         </form>
 
     </div>
+</div>
+<!--统计代码-->
+<div style="display:none">
+    <script>var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?c1d54a092f01be0215b4487856c2c6f6";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();</script>
+    <script type="text/javascript">var _paq = _paq || [];
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function () {
+        var u = "//analytics.d1ev.cn/";
+        _paq.push(['setTrackerUrl', u + 'piwik.php']);
+        _paq.push(['setSiteId', 1]);
+        var d = document,
+                g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+        g.type = 'text/javascript';
+        g.async = true;
+        g.defer = true;
+        g.src = u + 'piwik.js';
+        s.parentNode.insertBefore(g, s);
+    })();
+    </script>
+    <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_2469655'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s13.cnzz.com/stat.php%3Fid%3D2469655' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1254528018'%3E%3C/span%3E%3Cscript src='"
+            + cnzz_protocol + "s95.cnzz.com/stat.php%3Fid%3D1254528018' type='text/javascript'%3E%3C/script%3E"));</script>
 </div>
 <!--[if (gte IE 9)|!(IE)]><!-->
 <script src="external/js/jquery.min.js"></script>

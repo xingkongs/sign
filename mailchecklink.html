@@ -31,55 +31,103 @@
     <!--<link rel="stylesheet" href="http://www.d1ev.com/sign/external/css/app.css">-->
     <!--<link rel="stylesheet" href="//at.alicdn.com/t/font_1469600638_0967958.css">-->
     <style>
-        *{margin:0;padding:0;}
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
         *, *:before, *:after {
             -webkit-box-sizing: border-box;
             box-sizing: border-box;
         }
-        html{font-size: 10px;}
+
+        html {
+            font-size: 10px;
+        }
+
         /*自定义样式*/
-        .am-text-head{font-size:16px;color:#000;}
-        .am-text-content,.am-text-content a{font-size:16px;color:#f60;margin-left:5px;}
-        .am-text-tip{font-size:14px;color:#999;}
-        .am-text-button{font-size: 24px; font-weight:bold; color: #f60;letter-spacing: 3px; border: 1px solid #f60;padding:10px 30px; text-align: center; line-height: 40px; display: inline-block;}
-        .am-text-button:hover{color:#e65c00;border-color: #e65c00;}
-        .am-text-button:active{color:#cc5200;border-color:#cc5200;}
+        .am-text-head {
+            font-size: 16px;
+            color: #000;
+        }
+
+        .am-text-content, .am-text-content a {
+            font-size: 16px;
+            color: #f60;
+            margin-left: 5px;
+        }
+
+        .am-text-tip {
+            font-size: 14px;
+            color: #999;
+        }
+
+        .am-text-button {
+            font-size: 24px;
+            font-weight: bold;
+            color: #f60;
+            letter-spacing: 3px;
+            border: 1px solid #f60;
+            padding: 10px 30px;
+            text-align: center;
+            line-height: 40px;
+            display: inline-block;
+        }
+
+        .am-text-button:hover {
+            color: #e65c00;
+            border-color: #e65c00;
+        }
+
+        .am-text-button:active {
+            color: #cc5200;
+            border-color: #cc5200;
+        }
+
         .am-text-left {
             text-align: left !important;
         }
+
         body {
             position: relative;
             background: #fff;
-            font-family: PingFangSC Regular, Hiragino Sans GB, 'Microsoft Yahei', Arial, Helvetica, sans-serif,"Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB W3", "FontAwesome", sans-serif;
+            font-family: PingFangSC Regular, Hiragino Sans GB, 'Microsoft Yahei', Arial, Helvetica, sans-serif, "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB W3", "FontAwesome", sans-serif;
             font-weight: normal;
             line-height: 1.6;
             color: #333333;
             font-size: 1.6rem;
         }
-        .content--fixed{
-            margin-top:60px;
-            margin-bottom:53px;
+
+        .content--fixed {
+            margin-top: 60px;
+            margin-bottom: 53px;
         }
-        .am-form-right{
-            padding-right:10em!important;
+
+        .am-form-right {
+            padding-right: 10em !important;
         }
-        br{height:30px;}
-        .head{
+
+        br {
+            height: 30px;
+        }
+
+        .head {
             text-align: center;
             font-weight: 500;
-            color:#4c4c4c;
-            font-size:24px;
+            color: #4c4c4c;
+            font-size: 24px;
             padding-top: 2.6rem;
             margin-bottom: 2.6rem;
             line-height: 1;
         }
-        .sechead{
+
+        .sechead {
             text-align: center;
             font-weight: 500;
-            color:#808080;
-            font-size:12px;
-            padding-top:0;
-            margin-top:-8px;
+            color: #808080;
+            font-size: 12px;
+            padding-top: 0;
+            margin-top: -8px;
             margin-bottom: 1.8rem;
             line-height: 1;
         }
@@ -96,19 +144,23 @@
             z-index: 2;
             border-radius: 0 4px 4px 0;
         }
+
         .img {
             line-height: 48px;
             text-align: center;
             -webkit-user-select: none;
         }
-        .img:hover{
+
+        .img:hover {
             background: #ccc;
         }
-        .img:active{
+
+        .img:active {
             background: #bfbfbf;
         }
-        .am-cf--btn input{
-            margin:25.8px 0 21.8px 0;
+
+        .am-cf--btn input {
+            margin: 25.8px 0 21.8px 0;
         }
 
         .ui.segment {
@@ -122,9 +174,10 @@
             height: auto;
             margin: 0 auto;
             line-height: 1;
-            width:80%;
+            width: 80%;
             text-align: center;
         }
+
         .ui.divider {
             margin: 1rem 0;
             line-height: 1;
@@ -132,7 +185,7 @@
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: .05em;
-            color: rgba(0,0,0,.85);
+            color: rgba(0, 0, 0, .85);
             -webkit-user-select: none;
             -moz-user-select: none;
             -ms-user-select: none;
@@ -140,40 +193,47 @@
             -webkit-tap-highlight-color: transparent;
             font-size: 1rem;
         }
+
         .ui.horizontal.divider:before {
             background-position: right 4em top 50%;
         }
+
         .ui.horizontal.divider:after {
             background-position: left 4em top 50%;
         }
-        .form--padding{
-            padding:0 40px;
 
-            position:relative;
-            box-shadow: 0 0 0 1px #D4D4D5,0 2px 4px 0 rgba(34,36,38,.15),0 2px 10px 0 rgba(34,36,38,.25);
+        .form--padding {
+            padding: 0 40px;
+
+            position: relative;
+            box-shadow: 0 0 0 1px #D4D4D5, 0 2px 4px 0 rgba(34, 36, 38, .15), 0 2px 10px 0 rgba(34, 36, 38, .25);
         }
-        @media(max-width:320px){
 
-            .content--fixed{
-                position:static;
-                margin-top:0;
-            }
-            .form--padding{
-                padding:0;
-                box-shadow:0 0 0 0;
-            }
-            .head{
-                padding-top:0;
-                margin-bottom:1rem ;
+        @media (max-width: 320px) {
+
+            .content--fixed {
+                position: static;
+                margin-top: 0;
             }
 
-            .am-cf--btn input{
+            .form--padding {
+                padding: 0;
+                box-shadow: 0 0 0 0;
+            }
+
+            .head {
+                padding-top: 0;
+                margin-bottom: 1rem;
+            }
+
+            .am-cf--btn input {
                 padding: 14px 0 21.8px 0;
 
             }
 
         }
-        .alert--position{
+
+        .alert--position {
             display: none;
             position: absolute;
             top: 2.5em;
@@ -183,30 +243,37 @@
             padding: 0 40px;
             width: 100%;
         }
-        p{
-            margin:0;
-            line-height:1.7;
+
+        p {
+            margin: 0;
+            line-height: 1.7;
         }
-        .am-color--re{
-            color:#4c4c4c;
+
+        .am-color--re {
+            color: #4c4c4c;
         }
-        .headsec{
-            margin:10px 0 15px;
+
+        .headsec {
+            margin: 10px 0 15px;
         }
-        .textmargin{
-            margin:10px 0 25px;
+
+        .textmargin {
+            margin: 10px 0 25px;
         }
-        .mail_button{
+
+        .mail_button {
             width: 174px;
-            height:46px;
-            border:1px solid #4c4c4c;
+            height: 46px;
+            border: 1px solid #4c4c4c;
             background: #fff;
         }
+
         /*icon定位*/
-        .am-form{
+        .am-form {
             text-align: center;
         }
-        .icon-shibai{
+
+        .icon-shibai {
             display: inline-block;
             line-height: 1;
             margin: 16px 0 12px;
@@ -221,7 +288,9 @@
 
     <div class="" style="width:650px;margin:0 auto;overflow:hidden;">
         <div class="ui center aligned basic segment">
-            <div class="ui horizontal divider am-text-left" style="width:100%;background: #f60;padding:0 50px;"><img src="http://www.d1ev.com/sign/images/logow.png" alt="第一电动网|智电未来 为你而来" title="logo" style="padding: 20px 0;"></div>
+            <div class="ui horizontal divider am-text-left" style="width:100%;background: #f60;padding:0 50px;"><img
+                    src="http://www.d1ev.com/sign/images/logow.png" alt="第一电动网|智电未来 为你而来" title="logo"
+                    style="padding: 20px 0;"></div>
         </div>
         <div style="border:1px solid #ddd;background: #fff;padding:50px;">
             <form method="get" class="am-form am-text-left" style="">
@@ -245,6 +314,38 @@
 
     </div>
 </div>
+<!--统计代码-->
+<div style="display:none">
+    <script>var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?c1d54a092f01be0215b4487856c2c6f6";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();</script>
+    <script type="text/javascript">var _paq = _paq || [];
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function () {
+        var u = "//analytics.d1ev.cn/";
+        _paq.push(['setTrackerUrl', u + 'piwik.php']);
+        _paq.push(['setSiteId', 1]);
+        var d = document,
+                g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+        g.type = 'text/javascript';
+        g.async = true;
+        g.defer = true;
+        g.src = u + 'piwik.js';
+        s.parentNode.insertBefore(g, s);
+    })();
+    </script>
+    <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_2469655'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s13.cnzz.com/stat.php%3Fid%3D2469655' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1254528018'%3E%3C/span%3E%3Cscript src='"
+            + cnzz_protocol + "s95.cnzz.com/stat.php%3Fid%3D1254528018' type='text/javascript'%3E%3C/script%3E"));</script>
+</div>
 <!--[if (gte IE 9)|!(IE)]><!-->
 <script src="http://www.d1ev.com/sign/external/js/jquery.min.js"></script>
 <!--<![endif]-->
@@ -255,10 +356,5 @@
 <![endif]-->
 <script src="http://www.d1ev.com/sign/external/js/amazeui.min.js"></script>
 <script src="http://www.d1ev.com/sign/js/alert.js"></script>
-</body>
-</html></title>
-</head>
-<body>
-
 </body>
 </html>

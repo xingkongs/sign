@@ -5,30 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
     <meta name="keywords" content="">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1">
-    <title>绑定手机 - 第一电动网</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>认证企业用户失败-第一电动网</title>
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_1472003307_2548316.css">
     <!-- Set render engine for 360 browser -->
     <meta name="renderer" content="webkit">
-
     <!-- No Baidu Siteapp-->
     <meta http-equiv="Cache-Control" content="no-siteapp"/>
-
-    <!-- Add to homescreen for Chrome on Android -->
-    <meta name="mobile-web-app-capable" content="yes">
-
-    <!-- Add to homescreen for Safari on iOS -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
-
-    <!-- Tile icon for Win8 (144x144 + tile color) -->
-    <meta name="msapplication-TileColor" content="#0e90d2">
-
+    <!-- Amaze UI CSS -->
     <link rel="stylesheet" href="external/css/amazeui.min.css">
     <link rel="stylesheet" href="external/css/amazeui.flat.css">
-    <link rel="stylesheet" href="external/css/app.css">
+    <link rel="stylesheet" href="css/step.css">
     <style>
         .content--fixed {
             margin-top: 60px;
@@ -61,7 +48,7 @@
             padding-top: 0;
             margin-top: -8px;
             margin-bottom: 1.8rem;
-            line-height: 1.7;
+            line-height: 1;
         }
 
         .imga {
@@ -72,7 +59,6 @@
             width: 133.2px;
             height: 48px;
             display: block;
-            padding: 0;
             line-height: 1;
             z-index: 2;
             border-radius: 0 4px 4px 0;
@@ -185,53 +171,92 @@
             padding: 0 40px;
             width: 100%;
         }
+
+        p {
+            margin: 0;
+            line-height: 1.7;
+        }
+
+        .am-color--re {
+            color: #4c4c4c;
+        }
+
+        .headsec {
+            margin: 10px 0 15px;
+        }
+
+        .textmargin {
+            margin: 10px 0 25px;
+        }
+
+        .mail_button {
+            width: 174px;
+            line-height: 32px;
+            color: #f60 !important;
+            border: 1px solid #f60;
+            background: #fff;
+        }
+
+        /*icon定位*/
+        .am-form {
+            text-align: center;
+        }
+
+        .icon-shibai {
+            display: inline-block;
+            line-height: 1;
+            margin: 16px 0 15px;
+            font-size: 60px;
+        }
+
+        .li_span--button {
+            -webkit-user-select: none;
+            font-size: 16px;
+            color: #f60;
+            border: 1px solid #f60;
+            text-align: center;
+            line-height: 40px;
+            display: inline-block;
+            border-radius: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+            background: #fff;
+        }
+
+        .li_span--button:hover {
+            color: #e65c00;
+            border-color: #e65c00;
+        }
+
+        .li_span--button:active {
+            color: #cc5200;
+            border-color: #cc5200;
+        }
+
+        .am-tip {
+            font-size: 12px;
+            color: #808080;
+        }
     </style>
 </head>
 <body>
-
 <div class="am-g content--fixed">
     <div class="ui center aligned basic segment">
         <div class="ui horizontal divider"><img src="images/logo.png" alt=""></div>
     </div>
-    <br>
-    <div class="am-u-lg-fix am-u-md-fix am-u-sm-centered" style="">
+    <div class="am-u-lg-6 am-u-md-6 am-u-sm-centered am-text-center" style="">
+        <br>
+        <br>
+        <i class="iconfont icon-shibai am-text-danger" style="margin-top:0;"></i>
+        <p class="am-text-lg am-text-center headsec">抱歉，您提交的资料未通过审核，认证企业用户失败</p>
+        <p class="am-btn-sm am-text-center" style="margin:25px auto 45px;">未通过原因：个人资料不够完善</p>
+        <div class="mail_button am-btn am-btn-sm am-center">重新认证企业用户</div>
 
-        <form method="post" class="am-form form--padding" id="doc-vld-msg">
-            <p class="head">绑定手机</p>
-            <p class="sechead">绑定手机号后，方便找回密码，而且您也可以通过手机号登录</p>
-            <div class="am-form-groupa">
-                <input id="mobile" type="text" name="bindmobile" value="" placeholder="请输入手机号"
-                       class="am-radius js-pattern-mobile" data-validation-message="请输入正确的手机号" required>
-                <div class="am-alert am-alert-dangers" style="visibility: hidden;"></div>
-            </div>
-            <div class="am-form-groupa">
-                <input type="text" name="password" id="password" value="" onfocus="this.type='password'"
-                       autocomplete="off" placeholder="密码(不少于6位)" class="am-radius" minlength="6" required>
-                <div class="am-alert am-alert-dangers" style="visibility: hidden;"></div>
-            </div>
-
-            <div class="am-form-icon am-form-groupa">
-
-                <input type="text" name="vCode" class="am-form-right am-radius" placeholder="验证码">
-                <input type="button" value="点击获取" class="am-btn imga img  btn-loading-example"
-                       data-am-loading="{loadingText: '已发送'}">
-                <div class="am-alert am-alert-dangers" style="visibility: hidden;"></div>
-            </div>
-            <input id="submit3" type="button" value="立即绑定" class="am-btn am-btn-first am-btn-block">
-            <input type="button" value="稍后绑定" class="am-btn am-btn-second am-btn-block">
-            <div class="am-cf am-cf--btn">
-                <input type="button" name="" value="绑定已有账号" style="margin:25.8px auto 21.8px;"
-                       class="am-btn am-btn-links am-btn-sm am-center">
-
-            </div>
-            <div class="am-alert alert--position" data-am-alert style="">
-                <button type="button" class="am-close--re">&times;</button>
-                <p class="am-radius">输入地球上的手机号撒</p></div>
-
-        </form>
 
     </div>
 </div>
+
+
 <!--统计代码-->
 <div style="display:none">
     <script>var _hmt = _hmt || [];
@@ -264,15 +289,17 @@
     document.write(unescape("%3Cspan id='cnzz_stat_icon_1254528018'%3E%3C/span%3E%3Cscript src='"
             + cnzz_protocol + "s95.cnzz.com/stat.php%3Fid%3D1254528018' type='text/javascript'%3E%3C/script%3E"));</script>
 </div>
+<!--[if lt IE 9]>
+<script src="//libs.useso.com/js/jquery/1.11.1/jquery.min.js"></script>
+<script src="//cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="/js/polyfill/rem.min.js"></script>
+<script src="//libs.useso.com/js/respond.js/1.4.2/respond.min.js"></script>
+<script src="//cdn.amazeui.org/amazeui/2.1.0/js/amazeui.legacy.min.js"></script>
+<![endif]-->
+
 <!--[if (gte IE 9)|!(IE)]><!-->
 <script src="external/js/jquery.min.js"></script>
-<!--<![endif]-->
-<!--[if lte IE 8 ]>
-<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
-<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
-<script src="external/js/amazeui.ie8polyfill.min.js"></script>
-<![endif]-->
 <script src="external/js/amazeui.min.js"></script>
-<script src="js/alert.js"></script>
+<!--<![endif]-->
 </body>
 </html>

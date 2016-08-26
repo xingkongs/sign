@@ -1,4 +1,4 @@
-var formcheck=false;
+var formcheck = false;
 (function ($) {
     if ($.AMUI && $.AMUI.validator) {
         // 增加多个正则
@@ -12,7 +12,7 @@ var formcheck=false;
     }
 })(window.jQuery);
 
-$.ready(function(){
+$.ready(function () {
     $("input[name=moblie]").val("");
 });
 
@@ -22,7 +22,7 @@ $(function check() {
         onValid: function (validity) {
             $(validity.field).closest('.am-form-groupa').find('.am-alert').css('visibility', 'hidden');
             //console.log($(validity.field));
-            formcheck=validity.valid;
+            formcheck = validity.valid;
         },
 
         onInValid: function (validity) {
@@ -35,17 +35,17 @@ $(function check() {
             $alert.html(msg).show().css('visibility', 'visible');
             $(".alert--position").hide();
             //console.log($(validity.field));
-            formcheck=validity.valid;
+            formcheck = validity.valid;
         },
         validate: function (validity) {
             var v = $(validity.field).val();
             var $field = $(validity.field);
             var msg = $field.data('validationMessage') || this.getValidationMessage(validity);
-            var code=Boolean($("body").attr("data-style"));
+            var code = Boolean($("body").attr("data-style"));
             // $("input[name=password]").focus(function(){
             //    $(this).attr("type","password");
             // });
-            $(validity.field).focus(function(){
+            $(validity.field).focus(function () {
                 $(validity.field).removeClass("am-field-error");
                 $(validity.field).closest('.am-form-groupa').find('.am-alert').css('visibility', 'hidden');
             });
@@ -78,7 +78,7 @@ $(function check() {
             //     var data=$(validity.field).val();
             //     $.ajax({
             //         type: "post",
-            //         url: "http://www.d1ev.com/member/liutengfei/rvcode",
+            //         url: "http://www.d1ev.com/member/Accountnew/rvcode",
             //         dataType: "json",
             //         data:{rvCode:data},
             //         success: function (_msg) {
@@ -89,7 +89,7 @@ $(function check() {
             //     var data=$(validity.field).val();
             //     $.ajax({
             //         type: "post",
-            //         url: "http://www.d1ev.com/member/liutengfei/rvsms",
+            //         url: "http://www.d1ev.com/member/Accountnew/rvsms",
             //         dataType: "json",
             //         data:{vCode:data},
             //         success: function (_msg) {
@@ -116,7 +116,7 @@ $(function check() {
             //     if ($(validity.field).is('#doc-vld-msg')) {
             //         // 异步操作必须返回 Deferred 对象
             //         return $.ajax({
-            //             url: 'http://www.d1ev.com/member/liutengfei/mobilereg',
+            //             url: 'http://www.d1ev.com/member/Accountnew/mobilereg',
             //             // cache: false, 实际使用中请禁用缓存
             //             dataType: 'json'
             //         }).then(function (data) {
@@ -134,8 +134,8 @@ $(function check() {
         }
     });
 });
-function codecheck(_msg){
-    var $p= $(".alert--position").find("p");
+function codecheck(_msg) {
+    var $p = $(".alert--position").find("p");
     // if($p.hasClass("am-alert-dangeres")){
     //     $p.removeClass("am-alert-dangeres");
     // } else if($p.hasClass("am-alert-success")){
@@ -146,75 +146,75 @@ function codecheck(_msg){
     //var $alert=$("#doc-vld-msg").find('.am-form-groupa').find('.am-alert');
     if (_msg.error === 3) {
         $p.addClass("am-alert-warning").html(_msg.message).end().show();
-        $("body").attr("data-style","");
+        $("body").attr("data-style", "");
 
     } else if (_msg.error === 0) {
         $p.addClass("am-alert-success").html(_msg.message).end().show();
-        $("body").attr("data-style","false");
+        $("body").attr("data-style", "false");
 
-    } else{
+    } else {
         $p.addClass("am-alert-dangeres").html(_msg.message).end().show();
-        $("body").attr("data-style","");
+        $("body").attr("data-style", "");
     }
 }
-function codeajax(_msg,$this,vcode){
+function codeajax(_msg, $this, vcode) {
     var $alert;
-    if(!$this){
-        $alert=$("#doc-vld-msg").find('.am-form-groupa').eq(0).find('.am-alert')
-    }else{
-        $alert=$this.closest('.am-form-groupa').find('.am-alert');
+    if (!$this) {
+        $alert = $("#doc-vld-msg").find('.am-form-groupa').eq(0).find('.am-alert')
+    } else {
+        $alert = $this.closest('.am-form-groupa').find('.am-alert');
     }
 
 
     if (_msg.error === 3) {
         $alert.html(_msg.message).show().css('visibility', 'visible');
-        formcheck=false;
-        $("body").attr("data-style","");
+        formcheck = false;
+        $("body").attr("data-style", "");
     } else if (_msg.error === 0) {
         $alert.html(_msg.message).show().css('visibility', 'hidden');
-        formcheck=true;
-        $("body").attr("data-style","false");
-    } else if (vcode==="vCode") {
+        formcheck = true;
+        $("body").attr("data-style", "false");
+    } else if (vcode === "vCode") {
         $alert.html(_msg.message).show().css('visibility', 'visible');
         //formcheck=false;
-        $("body").attr("data-style","false");
-    } else{
+        $("body").attr("data-style", "false");
+    } else {
         $alert.html(_msg.message).show().css('visibility', 'visible');
-        formcheck=false;
-        $("body").attr("data-style","");
+        formcheck = false;
+        $("body").attr("data-style", "");
     }
 
 }
-function submits(options,e){
+function submits(options, e) {
 
     $('#doc-vld-msg').validator(options);
-    if(!formcheck){
-    //     $(".alert--position").find("p").addClass("am-alert-dangeres").html("请正确填写内容").end().show();
+    if (!formcheck) {
+        //     $(".alert--position").find("p").addClass("am-alert-dangeres").html("请正确填写内容").end().show();
         return
-     }
-    if(e===1){
-        var messages=$("input[name=email]").val();
-        url="http://www.d1ev.com/member/liutengfei/emailreg";
-        href="http://www.d1ev.com/sign/bindmail.html#"+messages;
-
-    } else if(e===2){
-        //console.log(e);
-        url="http://www.d1ev.com/member/liutengfei/mobilereg";
-        href="http://www.d1ev.com";
-        //var hashStrings = (window.location.hash.length > 0 ? window.location.hash.substring(1) : "");
-    } else if(e===3){
-        //console.log(e);
-        url="http://www.d1ev.com/member/shina/dropbind";
-        href="http://www.d1ev.com";
-    } else if(e===4){
-        //console.log(e);
-        url="http://www.d1ev.com/member/shina/binduser";
-        href="http://www.d1ev.com";
     }
-    else if(e===5){
+    if (e === 1) {
+        var messages = $("input[name=email]").val();
+        url = "http://www.d1ev.com/member/Accountnew/emailreg";
+        href = "http://www.d1ev.com/sign/bindmail.html#" + messages;
+
+    } else if (e === 2) {
         //console.log(e);
-        url="http://www.d1ev.com/index.php?g=member&m=weibo&a=dropbind";
-        href="http://www.d1ev.com";
+        url = "http://www.d1ev.com/member/Accountnew/mobilereg";
+        href = "http://www.d1ev.com";
+        //var hashStrings = (window.location.hash.length > 0 ? window.location.hash.substring(1) : "");
+    } else if (e === 3) {
+        //console.log(e);
+        url = "http://www.d1ev.com/member/Qqlogin/dropbind";
+        href = "http://www.d1ev.com";
+    } else if (e === 4) {
+        //console.log(e);
+        url = "http://www.d1ev.com/member/Qqlogin/binduser";
+        href = "http://www.d1ev.com";
+    }
+    else if (e === 5) {
+        //console.log(e);
+        url = "http://www.d1ev.com/index.php?g=member&m=weibo&a=dropbind";
+        href = "http://www.d1ev.com";
     }
 
     // if(!$("input[name=rvCode]").val()){
@@ -226,140 +226,148 @@ function submits(options,e){
         type: "post",
         url: url,
         dataType: "json",
-        data:{mobile:$("input[name=mobile]").val(),loginName:$("input[name=loginName]").val(),password:$("input[name=password]").val(),rvCode:$("input[name=rvCode]").val(),vCode:$("input[name=vCode]").val(),email:$("input[name=email]").val()},
+        data: {
+            mobile: $("input[name=mobile]").val(),
+            loginName: $("input[name=loginName]").val(),
+            password: $("input[name=password]").val(),
+            rvCode: $("input[name=rvCode]").val(),
+            vCode: $("input[name=vCode]").val(),
+            email: $("input[name=email]").val()
+        },
         success: function (_msg) {
             codeajax(_msg);
-            if(_msg.error === 0){
-                window.location.href=href;
-                formcheck=true;
-            } else{
-                formcheck=false;
+            if (_msg.error === 0) {
+                window.location.href = _msg.url;
+                formcheck = true;
+            } else {
+                formcheck = false;
             }
         }
     });
 }
-$("#submit").on("click",function(options){
-    var e=2;
-    submits(options,e)
+$("#submit").on("click", function (options) {
+    var e = 2;
+    submits(options, e)
 });
-$("#submit2").on("click",function(options){
-    var e=1;
-    submits(options,e)
+$("#submit2").on("click", function (options) {
+    var e = 1;
+    submits(options, e)
 });
-$("#submit3").on("click",function(options){
-    var e=3;
-    submits(options,e)
+$("#submit3").on("click", function (options) {
+    var e = 3;
+    submits(options, e)
 });
-$("#submit4").on("click",function(options){
+$("#submit4").on("click", function (options) {
     //qq
-    var e=4;
-    submits(options,e)
+    var e = 4;
+    submits(options, e)
 });
-$("#submit5").on("click",function(options){
+$("#submit5").on("click", function (options) {
     //qq
-    var e=5;
-    submits(options,e)
+    var e = 5;
+    submits(options, e)
 });
-$('#doc-vld-msg').find("input").change(function messageajax(){
+$('#doc-vld-msg').find("input").change(function messageajax() {
 
-    var $this=$(this);
-    var code=Boolean($("body").attr("data-style"));
-    var time=setTimeout(function checkfalse(){
-        if(formcheck){
+    var $this = $(this);
+    var code = Boolean($("body").attr("data-style"));
+    var time = setTimeout(function checkfalse() {
+        if (formcheck) {
             //console.log(1);
-            if($($this).attr("name")==="mobile"){
-                var data=$($this).val();
+            if ($($this).attr("name") === "mobile") {
+                var data = $($this).val();
 
                 $.ajax({
                     type: "post",
                     url: "http://www.d1ev.com/member/checkunique",
                     dataType: "json",
-                    data:{type:"mobile",value:data},
+                    data: {type: "mobile", value: data},
                     success: function (_msg) {
-                        codeajax(_msg,$this);
+                        codeajax(_msg, $this);
                         console.log(_msg);
                     }
                 });
-            }else if($($this).attr("name")==="bindmobile"){
-                var data=$($this).val();
+            } else if ($($this).attr("name") === "bindmobile") {
+                var data = $($this).val();
 
                 $.ajax({
                     type: "post",
                     url: "http://www.d1ev.com/member/checkunique",
                     dataType: "json",
-                    data:{type:"bindmobile",value:data},
+                    data: {type: "bindmobile", value: data},
                     success: function (_msg) {
-                        codeajax(_msg,$this);
+                        codeajax(_msg, $this);
                         console.log(_msg);
                     }
                 });
-            } else if($($this).attr("name")==="rvCode"){
-                var data=$($this).val();
+            } else if ($($this).attr("name") === "rvCode") {
+                var data = $($this).val();
                 $.ajax({
                     type: "post",
-                    url: "http://www.d1ev.com/member/liutengfei/rvcode",
+                    url: "http://www.d1ev.com/member/Accountnew/rvcode",
                     dataType: "json",
-                    data:{rvCode:data},
+                    data: {rvCode: data},
                     success: function (_msg) {
-                        codeajax(_msg,$this);
+                        codeajax(_msg, $this);
 
                     }
                 });
-            }else if($($this).attr("name")==="vCode"){
-                var data=$($this).val();
+            } else if ($($this).attr("name") === "vCode") {
+                var data = $($this).val();
                 $.ajax({
                     type: "post",
-                    url: "http://www.d1ev.com/member/liutengfei/rvsms",
+                    url: "http://www.d1ev.com/member/Accountnew/rvsms",
                     dataType: "json",
-                    data:{vCode:data},
+                    data: {vCode: data},
                     success: function (_msg) {
-                        codeajax(_msg,$this,"vCode");
+                        codeajax(_msg, $this, "vCode");
                     }
                 });
-            }else if($($this).attr("name")==="email"){
-                var data=$($this).val();
-
-                $.ajax({
-                    type: "post",
-                    url: "http://www.d1ev.com/member/checkunique",
-                    dataType: "json",
-                    data:{type:"email",value:data},
-                    success: function (_msg) {
-                        codeajax(_msg,$this);
-                        console.log(_msg);
-                    }
-                });
-            }else if($($this).attr("name")==="loginName"){
-                var data=$($this).val();
-
-                $.ajax({
-                    type: "post",
-                    url: "http://www.d1ev.com/member/ganghe/dolostpassword",
-                    dataType: "json",
-                    data:{loginName:data},
-                    success: function (_msg) {
-                        codeajax(_msg,$this);
-                        console.log(_msg);
-                    }
-                });
-            }else if($($this).attr("name")==="loginName_had"){
-                var data=$($this).val();
+            } else if ($($this).attr("name") === "email") {
+                var data = $($this).val();
 
                 $.ajax({
                     type: "post",
                     url: "http://www.d1ev.com/member/checkunique",
                     dataType: "json",
-                    data:{value:data},
+                    data: {type: "email", value: data},
                     success: function (_msg) {
-                        codeajax(_msg,$this);
+                        codeajax(_msg, $this);
                         console.log(_msg);
                     }
                 });
-            }  else if($($this).attr("name")==="password"){
-                var a={}; a.error=0;
-                codeajax(a,$this);
+            } else if ($($this).attr("name") === "loginName") {
+                var data = $($this).val();
+
+                $.ajax({
+                    type: "post",
+                    url: "http://www.d1ev.com/member/lostpassword/dolostpassword",
+                    dataType: "json",
+                    data: {loginName: data},
+                    success: function (_msg) {
+                        codeajax(_msg, $this);
+                        console.log(_msg);
+                    }
+                });
+            } else if ($($this).attr("name") === "loginName_had") {
+                var data = $($this).val();
+
+                $.ajax({
+                    type: "post",
+                    url: "http://www.d1ev.com/member/checkunique",
+                    dataType: "json",
+                    data: {value: data},
+                    success: function (_msg) {
+                        codeajax(_msg, $this);
+                        console.log(_msg);
+                    }
+                });
+            } else if ($($this).attr("name") === "password") {
+                var a = {};
+                a.error = 0;
+                codeajax(a, $this);
                 //console.log($this);
-                $($this).attr("type","password");
+                $($this).attr("type", "password");
             }
 
         }
@@ -368,28 +376,36 @@ $('#doc-vld-msg').find("input").change(function messageajax(){
 //手机验证码
 
 $('.btn-loading-example').click(function () {
-    var code=Boolean($("body").attr("data-style"));
+    var code = Boolean($("body").attr("data-style"));
     var $btn = $(this);
     var time = 60;
-    var n=0;
+    var n = 0;
     var i;
-    if($(".am-form-icon:has(img)").length>0){i=3}else{i=2}
-    $btn.closest(".am-form-icon").siblings(".am-form-groupa").find("input").each(function(){
-        if($(this).val()){n++}else{formcheck=false;}
+    if ($(".am-form-icon:has(img)").length > 0) {
+        i = 3
+    } else {
+        i = 2
+    }
+    $btn.closest(".am-form-icon").siblings(".am-form-groupa").find("input").each(function () {
+        if ($(this).val()) {
+            n++
+        } else {
+            formcheck = false;
+        }
     });
     //console.log(i);
     //console.log(formcheck);
     //if(n===i){formcheck=true;}
-    if(n===i&&formcheck&&code){
+    if (n === i && formcheck && code) {
         var mobile = $("#mobile").val();
         $.ajax({
             type: "post",
-            url: "http://www.d1ev.com/member/liutengfei/sms",
+            url: "http://www.d1ev.com/member/Accountnew/sms",
             data: "mobile=" + mobile,
             dataType: "json",
             success: function (_msg) {
-                codeajax(_msg,$btn);
-                if(_msg.error===0){
+                codeajax(_msg, $btn);
+                if (_msg.error === 0) {
                     $btn.button('loading');
                     var hander = setInterval(function () {
                         if (time <= 0) {
@@ -450,7 +466,7 @@ $("#gomail").click(function () {
     var hashStrings = (window.location.hash.length > 0 ? window.location.hash.slice(1) : "");
     var uurl = gotoEmail(hashStrings);
     if (uurl != "") {
-        window.open("http://"+uurl);
+        window.open("http://" + uurl);
     } else {
         console.log("抱歉!未找到对应的邮箱登录地址，请自己登录邮箱查看邮件！");
     }
@@ -506,19 +522,19 @@ function gotoEmail($mail) {
         return '';
     }
 }
-$(".am-close--re").on("click",function(){
-   $(this).closest(".am-alert").hide();
+$(".am-close--re").on("click", function () {
+    $(this).closest(".am-alert").hide();
 });
 //重新发送
-function resend(){
+function resend() {
     var hashStrings = (window.location.hash.length > 0 ? window.location.hash.slice(1) : "");
     $.ajax({
         type: "post",
-        url: "http://www.d1ev.com/member/liutengfei/rsendmail",
+        url: "http://www.d1ev.com/member/Accountnew/rsendmail",
         dataType: "json",
-        data:{email:hashStrings},
+        data: {email: hashStrings},
         success: function (_msg) {
-            codeajax(_msg,$this);
+            codeajax(_msg, $this);
             console.log(_msg);
         }
     });
