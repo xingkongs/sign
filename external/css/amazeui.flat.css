@@ -2039,6 +2039,7 @@ fieldset[disabled] .am-btn-success.am-active {
   font-weight: normal;
   cursor: pointer;
   border-radius: 0;
+  padding: 0.5em 0;
 }
 .am-btn-link,.am-btn-links,
 .am-btn-links:active,
