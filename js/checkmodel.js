@@ -1074,6 +1074,7 @@ function unbind(_msg, thisone, select) {
     console.log(1);
     var $this = $(thisone);
     var $select = select;
+    var $url=_msg.forword;
     if ($select && $select === "qq") {
         $("#doc-modal-1").modal('close');
         location.reload(true);
@@ -1094,10 +1095,10 @@ function unbind(_msg, thisone, select) {
         location.reload(true);
     } else if ($select && $select === "submitaddtel") {
         $("#doc-modal-9").modal('close');
-        location.reload(true);
+        window.location.href = $url;
     } else if ($select && $select === "submitaddmail") {
         $("#doc-modal-10").modal('close');
-        location.reload(true);
+        window.location.href = $url;
     } else if ($select && $select === "submitsetpassword_set") {
         $("#doc-modal-11").modal('close');
         location.reload(true);

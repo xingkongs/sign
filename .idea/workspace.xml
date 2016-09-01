@@ -3,12 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c75d92fc-28ae-4206-ba70-619b1229afc2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/addtel.html" afterPath="$PROJECT_DIR$/addtel.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/binduser.html" afterPath="$PROJECT_DIR$/binduser.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/companycheck.html" afterPath="$PROJECT_DIR$/companycheck.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/companychecksuccess.html" afterPath="$PROJECT_DIR$/companychecksuccess.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/external/css/amazeui.flat.css" afterPath="$PROJECT_DIR$/external/css/amazeui.flat.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/last.html" afterPath="$PROJECT_DIR$/last.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thanksforcompanycheck.html" afterPath="$PROJECT_DIR$/thanksforcompanycheck.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/checkmodel.js" afterPath="$PROJECT_DIR$/js/checkmodel.js" />
     </list>
     <ignored path="sign.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,48 +28,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="last.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/last.html">
+      <file leaf-file-name="binduser.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/binduser.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8788">
-              <caret line="338" column="89" selection-start-line="338" selection-start-column="89" selection-end-line="338" selection-end-column="89" />
-              <folding>
-                <marker date="1472281108471" expanded="true" signature="5511:5586" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="amazeui.flat.css" pinned="false" current-in-tab="false">
-        <entry file="file://G:/TDdownload/AmazeUI-2.7.0/assets/css/amazeui.flat.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60918">
-              <caret line="2343" column="29" selection-start-line="2343" selection-start-column="29" selection-end-line="2343" selection-end-column="29" />
+            <state relative-caret-position="5174">
+              <caret line="199" column="11" selection-start-line="199" selection-start-column="0" selection-end-line="200" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="binduser.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/binduser.html">
+      <file leaf-file-name="addtel.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/addtel.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="797">
-              <caret line="215" column="50" selection-start-line="215" selection-start-column="50" selection-end-line="215" selection-end-column="50" />
-              <folding>
-                <element signature="n#style#0;n#input#0;n#a#0;n#form#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="companycheck.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/companycheck.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="249" column="95" selection-start-line="249" selection-start-column="95" selection-end-line="249" selection-end-column="95" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="3770">
+              <caret line="145" column="0" selection-start-line="145" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -80,52 +51,42 @@
       <file leaf-file-name="signup.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/signup.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="433">
-              <caret line="265" column="16" selection-start-line="265" selection-start-column="16" selection-end-line="265" selection-end-column="16" />
+            <state relative-caret-position="6136">
+              <caret line="236" column="52" selection-start-line="236" selection-start-column="52" selection-end-line="236" selection-end-column="52" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="amazeui.flat.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/external/css/amazeui.flat.css">
+      <file leaf-file-name="alert.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/alert.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="519">
-              <caret line="2041" column="19" selection-start-line="2041" selection-start-column="19" selection-end-line="2041" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="companycheckfalse.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/companycheckfalse.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1317">
-              <caret line="290" column="6" selection-start-line="290" selection-start-column="6" selection-end-line="290" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="companychecksuccess.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/companychecksuccess.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="381">
-              <caret line="250" column="60" selection-start-line="250" selection-start-column="60" selection-end-line="250" selection-end-column="60" />
+            <state relative-caret-position="468">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="135" selection-end-column="3" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#521#5704#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="thanksforcompanycheck.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/thanksforcompanycheck.html">
+      <file leaf-file-name="checkmodel.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/checkmodel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="546">
-              <caret line="255" column="66" selection-start-line="255" selection-start-column="66" selection-end-line="255" selection-end-column="66" />
+            <state relative-caret-position="774">
+              <caret line="1106" column="0" selection-start-line="1106" selection-start-column="0" selection-end-line="1106" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="last.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/last.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="14482">
+              <caret line="557" column="54" selection-start-line="557" selection-start-column="54" selection-end-line="557" selection-end-column="54" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1472281108471" expanded="true" signature="5511:5586" ph="..." />
               </folding>
             </state>
           </provider>
@@ -148,23 +109,23 @@
       <list>
         <option value="$PROJECT_DIR$/iframe.html" />
         <option value="$PROJECT_DIR$/profiletest.php" />
-        <option value="$PROJECT_DIR$/addtel.html" />
         <option value="$PROJECT_DIR$/bindmail.html" />
         <option value="$PROJECT_DIR$/companycheckfalse.html" />
         <option value="$PROJECT_DIR$/mailchecklink.html" />
         <option value="$PROJECT_DIR$/mailcheckvcode.html" />
         <option value="$PROJECT_DIR$/mailfalse.html" />
         <option value="$PROJECT_DIR$/mailsuccess.html" />
-        <option value="$PROJECT_DIR$/signup.html" />
         <option value="$PROJECT_DIR$/signupmail.html" />
-        <option value="$PROJECT_DIR$/js/alert.js" />
-        <option value="$PROJECT_DIR$/js/checkmodel.js" />
         <option value="$PROJECT_DIR$/last.html" />
         <option value="$PROJECT_DIR$/companycheck.html" />
         <option value="$PROJECT_DIR$/companychecksuccess.html" />
         <option value="$PROJECT_DIR$/thanksforcompanycheck.html" />
         <option value="$PROJECT_DIR$/external/css/amazeui.flat.css" />
         <option value="$PROJECT_DIR$/binduser.html" />
+        <option value="$PROJECT_DIR$/addtel.html" />
+        <option value="$PROJECT_DIR$/signup.html" />
+        <option value="$PROJECT_DIR$/js/alert.js" />
+        <option value="$PROJECT_DIR$/js/checkmodel.js" />
       </list>
     </option>
   </component>
@@ -250,42 +211,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="external" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sign" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sign" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="external" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sign" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sign" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="external" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -430,7 +355,21 @@
       <workItem from="1472281036436" duration="1386000" />
       <workItem from="1472440748044" duration="65000" />
       <workItem from="1472453023784" duration="850000" />
-      <workItem from="1472454221212" duration="2378000" />
+      <workItem from="1472454221212" duration="2607000" />
+      <workItem from="1472456886648" duration="42000" />
+      <workItem from="1472525738873" duration="416000" />
+      <workItem from="1472611978180" duration="683000" />
+      <workItem from="1472622510607" duration="189000" />
+      <workItem from="1472629502948" duration="179000" />
+      <workItem from="1472640829220" duration="47000" />
+      <workItem from="1472640889560" duration="259000" />
+      <workItem from="1472641212787" duration="121000" />
+      <workItem from="1472641411765" duration="223000" />
+      <workItem from="1472643002470" duration="27000" />
+      <workItem from="1472643753869" duration="618000" />
+      <workItem from="1472691867161" duration="652000" />
+      <workItem from="1472699942243" duration="579000" />
+      <workItem from="1472702265357" duration="2000" />
     </task>
     <task id="LOCAL-00001" summary="change UI and js">
       <created>1471346525519</created>
@@ -488,18 +427,25 @@
       <option name="project" value="LOCAL" />
       <updated>1472179383248</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="change button padding \  companycheck icon position\binduser add forget password">
+      <created>1472456713062</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1472456713062</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="311116000" />
+    <option name="totallyTimeSpent" value="315382000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-16" y="1" width="1932" height="1038" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2330463" sideWeight="0.49599084" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2825619" sideWeight="0.49599084" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -537,7 +483,8 @@
     <MESSAGE value="change page UI" />
     <MESSAGE value="change  vcode check pass" />
     <MESSAGE value="check bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="check bug" />
+    <MESSAGE value="change button padding \  companycheck icon position\binduser add forget password" />
+    <option name="LAST_COMMIT_MESSAGE" value="change button padding \  companycheck icon position\binduser add forget password" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -756,20 +703,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/step.html" />
-    <entry file="file://$PROJECT_DIR$/addtel.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6571">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="277" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bindmail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="667">
-          <caret line="287" column="7" selection-start-line="0" selection-start-column="0" selection-end-line="287" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mailcheckvcode.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="667">
@@ -812,81 +745,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/checkmodel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="324" column="10" selection-start-line="324" selection-start-column="10" selection-end-line="324" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/alert.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="184" column="5" selection-start-line="0" selection-start-column="0" selection-end-line="589" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/last.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8788">
-          <caret line="338" column="89" selection-start-line="338" selection-start-column="89" selection-end-line="338" selection-end-column="89" />
-          <folding>
-            <marker date="1472281108471" expanded="true" signature="5511:5586" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://G:/TDdownload/AmazeUI-2.7.0/assets/css/amazeui.flat.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60918">
           <caret line="2343" column="29" selection-start-line="2343" selection-start-column="29" selection-end-line="2343" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/companycheckfalse.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1317">
-          <caret line="290" column="6" selection-start-line="290" selection-start-column="6" selection-end-line="290" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/companychecksuccess.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="250" column="60" selection-start-line="250" selection-start-column="60" selection-end-line="250" selection-end-column="60" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thanksforcompanycheck.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="255" column="66" selection-start-line="255" selection-start-column="66" selection-end-line="255" selection-end-column="66" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/companycheck.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="249" column="95" selection-start-line="249" selection-start-column="95" selection-end-line="249" selection-end-column="95" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/signup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="265" column="16" selection-start-line="265" selection-start-column="16" selection-end-line="265" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -894,17 +756,93 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="519">
           <caret line="2041" column="19" selection-start-line="2041" selection-start-column="19" selection-end-line="2041" selection-end-column="19" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/companycheck.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="249" column="95" selection-start-line="249" selection-start-column="95" selection-end-line="249" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/companycheckfalse.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1317">
+          <caret line="290" column="6" selection-start-line="290" selection-start-column="6" selection-end-line="290" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/companychecksuccess.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="250" column="60" selection-start-line="250" selection-start-column="60" selection-end-line="250" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thanksforcompanycheck.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="255" column="66" selection-start-line="255" selection-start-column="66" selection-end-line="255" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bindmail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7150">
+          <caret line="275" column="19" selection-start-line="275" selection-start-column="19" selection-end-line="275" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/binduser.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="797">
-          <caret line="215" column="50" selection-start-line="215" selection-start-column="50" selection-end-line="215" selection-end-column="50" />
+        <state relative-caret-position="5174">
+          <caret line="199" column="11" selection-start-line="199" selection-start-column="0" selection-end-line="200" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addtel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3770">
+          <caret line="145" column="0" selection-start-line="145" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/signup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6136">
+          <caret line="236" column="52" selection-start-line="236" selection-start-column="52" selection-end-line="236" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/alert.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="135" selection-end-column="3" />
           <folding>
-            <element signature="n#style#0;n#input#0;n#a#0;n#form#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#521#5704#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/last.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14482">
+          <caret line="557" column="54" selection-start-line="557" selection-start-column="54" selection-end-line="557" selection-end-column="54" />
+          <folding>
+            <marker date="1472281108471" expanded="true" signature="5511:5586" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/checkmodel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="774">
+          <caret line="1106" column="0" selection-start-line="1106" selection-start-column="0" selection-end-line="1106" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
