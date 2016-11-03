@@ -8,7 +8,7 @@ var formcheck = false;
         // 增加单个正则
         $.AMUI.validator.patterns.yourpattern = /^your$/;
         // 增加单个正则
-        $.AMUI.validator.patterns.mobile = /^1((3|5|8){1}\d{1}|70)\d{8}$/;
+        $.AMUI.validator.patterns.mobile = /^(13|15|18|14|17)[0-9]{9}$/;
     }
 })(window.jQuery);
 $(function () {

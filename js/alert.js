@@ -8,7 +8,7 @@ var formcheck = false;
         // 增加单个正则
         $.AMUI.validator.patterns.yourpattern = /^your$/;
         // 增加单个正则
-        $.AMUI.validator.patterns.mobile = /^1((3|5|8){1}\d{1}|70)\d{8}$/;
+        $.AMUI.validator.patterns.mobile = /^(13|15|18|14|17)[0-9]{9}$/;
     }
 })(window.jQuery);
 
@@ -267,7 +267,7 @@ $("#submit5").on("click", function (options) {
     var e = 5;
     submits(options, e)
 });
-$('#doc-vld-msg').find("input").change(function messageajax() {
+$('#doc-vld-msg').find("input").blur(function messageajax() {
 
     var $this = $(this);
     var code = Boolean($("body").attr("data-style"));
