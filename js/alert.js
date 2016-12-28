@@ -510,8 +510,12 @@ function gotoEmail($mail) {
         return 'mail.sogou.com';
     } else if ($t == '188.com') {
         return 'www.188.com';
-    } else if ($t == '139.com') {
+    }else if ($t == 'outlook.com') {
+        return 'login.live.com';
+    }else if ($t == '139.com') {
         return 'mail.10086.cn';
+    }else if ($t == 'aliyun.com') {
+        return 'mail.aliyun.com';
     } else if ($t == '189.cn') {
         return 'webmail15.189.cn/webmail';
     } else if ($t == 'wo.com.cn') {
