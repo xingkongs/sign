@@ -1,17 +1,16 @@
-
 <!doctype html>
 <html>
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=1130,maximum-scale=1.0"/>
+    <meta name="viewport" content="width=1130,maximum-scale=1.0" >
     <title>个人会员管理 - 第一电动网</title>
     <link href="/favicon.ico" rel="shortcut icon">
-    <link rel="stylesheet" href="external/css/amazeui.flat.css">
-    <link type="text/css" href="http://www.d1ev.com/statics/extres/member/css/core.css" rel="stylesheet" />
-    <link href="http://www.d1ev.com/statics/2015d1ev/css/top.css" rel="stylesheet" type="text/css">
-    <link type="text/css" href="http://www.d1ev.com/statics/extres/member/css/user.css" rel="stylesheet" media="all" />
-    <link href="http://www.d1ev.com/statics/extres/member/area/css/cityLayout.css" type="text/css" rel="stylesheet">
-    <link rel="stylesheet" href="//at.alicdn.com/t/font_1469600638_0967958.css">
+    <link href="external/css/amazeui.flat.css" rel="stylesheet" >
+    <link href="//www.d1ev.com/statics/extres/member/css/core.css" rel="stylesheet" >
+    <link href="//www.d1ev.com/statics/2015d1ev/css/top.css" rel="stylesheet" >
+    <link href="//www.d1ev.com/statics/extres/member/css/user.css" rel="stylesheet" >
+    <link href="//www.d1ev.com/statics/extres/member/area/css/cityLayout.css" rel="stylesheet">
+    <link href="//at.alicdn.com/t/font_1469600638_0967958.css" rel="stylesheet" >
     <style type="text/css">
         /*reset amazeui*/
         *, *:before, *:after {
@@ -27,9 +26,9 @@
         dl,ol,dt,dd,ul,li,form,h1,h2,h3,h4,h5,h6 {margin:0; padding:0;list-style:none; }
         input,select,textarea,button{vertical-align:middle;resize:none;}
 
-        .cityinput { background:url(images/ts-city.png); width:180px; height:30px; border:#d6d6d6 1px solid; margin-top:5px; text-indent:5px; line-height:30px;   text-indent:5px;}
-        .cityzinput { background:url(images/ts-zcity.png); width:180px; height:30px; border:#d6d6d6 1px solid; margin-top:15px; text-indent:5px; line-height:30px;   text-indent:5px;}
-        a,a:hover{text-decoration:none}img{border:0}ul{list-style:none;margin:0;}label{color:#6CBD45;font-size:14px;font-weight:bold;padding-bottom:0.5em;margin:0;}.h3{font-size:13px;font-weight:bold;}#show{background:url(images/photo.jpg)}#meun{color:#fff;padding-left:10px;}#meun img{float:left;}#submeun{margin-left:70px;float:left;}#submeun span{text-align:center;margin-right:10px;float:left;display:inline;}#submeun span a{color:#fff;height:50px;line-height:50px;font-size:14px;font-weight:bold;text-align:center;padding-left:15px;padding-right:15px;display:block;}#submeun span.cur{text-align:center;background:#82ce18;margin-right:10px;float:left;display:inline;}#top{background-color:#000;margin:0em 0 10px 0em;border-style:solid;border-width:1px;border-color:#E5E5E5;height:50px;line-height:50px;}label.subtitle{font-size:13px;float:right;color:#6CBD45;margin:0 10px;text-align:right;}h1.title{height:50px;font-size:12px;background:url(logo.png) no-repeat;}h1.title a:link,h1.title a:visited,h1.title a:hover{color:#000;text-decoration:none;}
+        .cityinput {width:180px; height:30px; border:#d6d6d6 1px solid; margin-top:5px; text-indent:5px; line-height:30px; }
+        .cityzinput { width:180px; height:30px; border:#d6d6d6 1px solid; margin-top:15px; text-indent:5px; line-height:30px;}
+        a,a:hover{text-decoration:none}img{border:0}ul{list-style:none;margin:0;}label{color:#6CBD45;font-size:14px;font-weight:bold;padding-bottom:0.5em;margin:0;}.h3{font-size:13px;font-weight:bold;}#meun{color:#fff;padding-left:10px;}#meun img{float:left;}#submeun{margin-left:70px;float:left;}#submeun span{text-align:center;margin-right:10px;float:left;display:inline;}#submeun span a{color:#fff;height:50px;line-height:50px;font-size:14px;font-weight:bold;text-align:center;padding-left:15px;padding-right:15px;display:block;}#submeun span.cur{text-align:center;background:#82ce18;margin-right:10px;float:left;display:inline;}#top{background-color:#000;margin:0em 0 10px 0em;border-style:solid;border-width:1px;border-color:#E5E5E5;height:50px;line-height:50px;}label.subtitle{font-size:13px;float:right;color:#6CBD45;margin:0 10px;text-align:right;}h1.title{height:50px;font-size:12px;background:url(logo.png) no-repeat;}h1.title a:link,h1.title a:visited,h1.title a:hover{color:#000;text-decoration:none;}
         .li_span--head{font-size:16px;color:#000;}
         .li_span--content{font-size:16px;color:#f60;margin-left:18px;}
         .li_span--tip{font-size:12px;color:#999;}
@@ -75,12 +74,11 @@
         .am-modal-dialog button.am-selected-btn{box-sizing:border-box;}
         .am-form-groupa button{box-sizing: border-box;}
     </style>
-
     <!--[if IE]>
-    <script src="http://www.d1ev.com/statics/js/html5.js"></script>
+    <script src="//www.d1ev.com/statics/js/html5.js"></script>
     <![endif]-->
     <!--[if IE 6]>
-    <script src="http://www.d1ev.com/statics/js/DD_belatedPNG_0.0.8a.js"></script>
+    <script src="//www.d1ev.com/statics/js/DD_belatedPNG_0.0.8a.js"></script>
     <script type="text/javascript">
         DD_belatedPNG.fix('.enter,.enter a,.enter a:hover');
     </script>
@@ -92,42 +90,42 @@
         <div class="wrap">
             <div class="top_l">
                 <span class="sq">设为书签</span>
-                <a href="http://www.d1ev.com/?from=pc" class="m_d1ev"><i></i>手机电动网</a>
+                <a href="//www.d1ev.com/?from=pc" class="m_d1ev"><i></i>手机电动网</a>
                 <span class="m_d1ev"><i></i>手机电动网</span>
-                <a class="app" href="http://www.d1ev.com/app/index.html"><i></i>充电桩APP</a>
+                <a class="app" href="//www.d1ev.com/app/index.html"><i></i>充电桩APP</a>
                 <div class="sq_con">
                     <div class="sq_box">
                         <em title="关闭">X</em>
                         <h4><span class="yellow">Ctrl+D</span> 将本页面保存为书签，全面了解最新资讯，方便快捷。</h4>
-                        <p>您也可下载桌面快捷方式。<a href="http://www.d1ev.com/shortcut.php" class="d_link">点击下载</a></p>
+                        <p>您也可下载桌面快捷方式。<a href="//www.d1ev.com/shortcut.php" class="d_link">点击下载</a></p>
                     </div>
                 </div>
                 <div class="m_con">
                     <h4>|&nbsp;&nbsp;如何访问手机电动网</h4>
-                    <p><img src="http://www.d1ev.com//statics/2015d1ev/images/m_d1ev_img.jpg"></p>
+                    <p><img src="//www.d1ev.com//statics/2015d1ev/images/m_d1ev_img.jpg"></p>
                 </div>
             </div>
-            <div class="nav_top" style="display:none;"> <a href="http://www.d1ev.com/member">个人中心</a>　|　<a href="http://d1ev.com/login.php" target="_blank">企业中心</a>　|　<a href="http://d1ev.com/vip">我是VIP</a></div>
+            <div class="nav_top" style="display:none;"> <a href="//www.d1ev.com/member">个人中心</a>　|　<a href="//d1ev.com/login.php" target="_blank">企业中心</a>　|　<a href="//d1ev.com/vip">我是VIP</a></div>
             <div class="login">
                 <div class="user_lg">
-                    <a href="http://www.d1ev.com/member" class="u_name"><img onerror="this.src='http://img-cdn.d1ev.com/d/file/default/no-avatar.gif'" src="http://img-cdn.d1ev.com/d/file/avatar/8135/30x30.jpg" alt="" id="menu-avatar"><span class="name">昨夜っ星...</span></a>
+                    <a href="//www.d1ev.com/member" class="u_name"><img onerror="this.src='//img-cdn.d1ev.com/d/file/default/no-avatar.gif'" src="//img-cdn.d1ev.com/d/file/avatar/8135/30x30.jpg" alt="" id="menu-avatar"><span class="name">昨夜っ星...</span></a>
                     <div class="user_btns">
                         <ul>
-                            <li><a href="http://www.d1ev.com/member/article/index.html"><i class="enter b_ico0"></i>我的投稿</a></li>
-                            <li><a href="http://www.d1ev.com/member/subscribe/index.html"><i class="enter b_ico1"></i>我的订阅</a></li>
-                            <li><a href="http://www.d1ev.com/member/favorite/index.html"><i class="enter b_ico3"></i>我的收藏</a></li>
-                            <li><a href="http://www.d1ev.com/member/comments/index.html"><i class="enter b_ico2"></i>我的评论</a></li>
-                            <li><a href="http://www.d1ev.com/member/message/index.html"><i class="enter b_ico4"></i>我的私信</a></li>
-                            <li><a href="http://www.d1ev.com/logout?forward="><i class="enter b_ico5"></i>退出</a></li>
+                            <li><a href="//www.d1ev.com/member/article/index.html"><i class="enter b_ico0"></i>我的投稿</a></li>
+                            <li><a href="//www.d1ev.com/member/subscribe/index.html"><i class="enter b_ico1"></i>我的订阅</a></li>
+                            <li><a href="//www.d1ev.com/member/favorite/index.html"><i class="enter b_ico3"></i>我的收藏</a></li>
+                            <li><a href="//www.d1ev.com/member/comments/index.html"><i class="enter b_ico2"></i>我的评论</a></li>
+                            <li><a href="//www.d1ev.com/member/message/index.html"><i class="enter b_ico4"></i>我的私信</a></li>
+                            <li><a href="//www.d1ev.com/logout?forward="><i class="enter b_ico5"></i>退出</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="top2 wrap"> <a href="http://www.d1ev.com" class="logo" title="第一电动网   智电未来 为你而来"><img class="enter" src="http://www.d1ev.com/statics/2015d1ev/images/top_logo.png" alt="第一电动网   智电未来 为你而来"></a>
+    <div class="top2 wrap"> <a href="//www.d1ev.com" class="logo" title="第一电动网   智电未来 为你而来"><img class="enter" src="//www.d1ev.com/statics/2015d1ev/images/top_logo.png" alt="第一电动网   智电未来 为你而来"></a>
         <div class="search">
-            <form action="http://www.d1ev.com/s.php" method="post" name="sear" target="_blank">
+            <form action="//www.d1ev.com/s.php" method="post" name="sear" target="_blank">
                 <input name="key" type="text" value="输入关键词..." onFocus="OnFocusFun(this,'输入关键词...',false)" onBlur="OnBlurFun(this,'输入关键词...',false)" class="iptxt">
                 <input name="search" type="submit" class="s_btn enter" value="提交搜索" title="提交搜索">
             </form>
@@ -136,60 +134,60 @@
     <div class="top3">
         <nav class="wrap">
             <ul class="nav_l">
-                <li><a href="http://www.d1ev.com/">首页</a></li>
-                <li><a href="http://www.d1ev.com/member/daniusay" target="_blank" class="a_daniu">大牛说</a></li>
-                <li><a href="http://www.d1ev.com/salecar" target="_blank">车型库</a></li>
-                <li><a href="http://www.d1ev.com/choosecar">导购</a></li>
-                <li><a href="http://www.d1ev.com/sale" target="_blank">帮买团</a></li>
-                <li><a href="http://www.d1ev.com/news">新闻</a></li>
-                <li><a href="http://www.d1ev.com/special" target="_blank">专题</a></li>
-                <li><a href="http://photo.d1ev.com/" target="_blank" class="a_daniu">图秀</a></li>
-                <li class="minicar"><a href="http://www.d1ev.com/minicar" target="_blank">微电之家</a></li>
-                <li class="minicar"><a href="http://bbs.d1ev.com/">社区</a></li>
+                <li><a href="//www.d1ev.com/">首页</a></li>
+                <li><a href="//www.d1ev.com/member/daniusay" target="_blank" class="a_daniu">大牛说</a></li>
+                <li><a href="//www.d1ev.com/salecar" target="_blank">车型库</a></li>
+                <li><a href="//www.d1ev.com/choosecar">导购</a></li>
+                <li><a href="//www.d1ev.com/sale" target="_blank">帮买团</a></li>
+                <li><a href="//www.d1ev.com/news">新闻</a></li>
+                <li><a href="//www.d1ev.com/special" target="_blank">专题</a></li>
+                <li><a href="//photo.d1ev.com/" target="_blank" class="a_daniu">图秀</a></li>
+                <li class="minicar"><a href="//www.d1ev.com/minicar" target="_blank">微电之家</a></li>
+                <li class="minicar"><a href="//bbs.d1ev.com/">社区</a></li>
             </ul>
             <ul class="nav_r">
-                <li><a href="http://d1ev.com/companys-category/"><i class="cg_ico enter"></i>企业平台</a></li>
+                <li><a href="//d1ev.com/companys-category/"><i class="cg_ico enter"></i>企业平台</a></li>
             </ul>
         </nav>
     </div>
 </header>
 <div class="blank30"></div>
-<div class="crumb wrap"><a href="http://www.d1ev.com/"><i></i>第一电动网</a> &gt; <a href="http://www.d1ev.com/member/home/index.html">用户中心</a> &gt; 个人会员管理</div>
+<div class="crumb wrap"><a href="//www.d1ev.com/"><i></i>第一电动网</a> &gt; <a href="//www.d1ev.com/member/home/index.html">用户中心</a> &gt; 个人会员管理</div>
 <div class="blank20"></div>
 <div class="user">
     <div class="user_center">
         <div class="user_menu" id="profilem">
             <div class="userinfo">
-                <p><a href="http://www.d1ev.com/home/8135"><img onerror="this.src='http://img-cdn.d1ev.com/d/file/default/no-avatar.gif'" src="http://img-cdn.d1ev.com/d/file/avatar/8135/180x180.jpg?t=1470277236" alt="" id="menu-avatar"></a></p>
+                <p><a href="//www.d1ev.com/home/8135"><img onerror="this.src='//img-cdn.d1ev.com/d/file/default/no-avatar.gif'" src="//img-cdn.d1ev.com/d/file/avatar/8135/180x180.jpg?t=1470277236" alt="" id=""></a></p>
                 <h4>昨夜っ星空</h4>
             </div>
             <div class="menu_center">
                 <ul>
-                    <li class="mhome1"> <a href="http://www.d1ev.com/home/8135"> <span class="iconHome1">我的主页</span> </a> <em></em> </li>
-                    <li class="mhome"> <a href="http://www.d1ev.com/member/home/index.html"> <span class="iconHome">我的消息</span> </a> <em></em> </li>
-                    <li class="mprofile"> <a href="http://www.d1ev.com/member/user/profile.html"> <span class="iconProfile">个人资料</span> </a> <em></em> </li>
-                    <li class="mshare"> <a href="http://www.d1ev.com/member/comments/index.html" target="_self"> <span class="iconShare">我的评论</span> </a> <em></em> </li>
-                    <li class="article"> <a href="http://www.d1ev.com/member/article/index.html" target="_self"> <span class="iconArticle">我的投稿</span> </a> <em></em> </li> <li class="message"> <a href="http://www.d1ev.com/member/message/index.html" target="_self"> <span class="iconMessage">我的私信</span> </a><em></em> </li>
-                    <li class="msubscribe"><a href="http://www.d1ev.com/member/subscribe/index.html"><span class="iconSubscribe ">我的订阅</span></a> <em></em> </li>
-                    <li class="msong"><a href="http://www.d1ev.com/member/favorite/index.html"><span class="iconSong">我的收藏</span></a> <em></em> </li>
-                    <li class="msong" style="display:none;"><a href="http://www.d1ev.com/member/article/index.html"><span class="iconSong">我的文章</span></a> <em></em> </li>
-                    <li class="maccount" style="display:none;"> <a href="http://www.d1ev.com/member/account/assets.html"> <span class="iconAccount">账号绑定<pan> </a> <em></em> </li>
+                    <li class="mhome1"> <a href="//www.d1ev.com/home/8135"> <span class="iconHome1">我的主页</span> </a> <em></em> </li>
+                    <li class="mhome"> <a href="//www.d1ev.com/member/home/index.html"> <span class="iconHome">我的消息</span> </a> <em></em> </li>
+                    <li class="mprofile"> <a href="//www.d1ev.com/member/user/profile.html"> <span class="iconProfile">个人资料</span> </a> <em></em> </li>
+                    <li class="mshare"> <a href="//www.d1ev.com/member/comments/index.html" target="_self"> <span class="iconShare">我的评论</span> </a> <em></em> </li>
+                    <li class="article"> <a href="//www.d1ev.com/member/article/index.html" target="_self"> <span class="iconArticle">我的投稿</span> </a> <em></em> </li> <li class="message"> <a href="//www.d1ev.com/member/message/index.html" target="_self"> <span class="iconMessage">我的私信</span> </a><em></em> </li>
+                    <li class="msubscribe"><a href="//www.d1ev.com/member/subscribe/index.html"><span class="iconSubscribe ">我的订阅</span></a> <em></em> </li>
+                    <li class="msong"><a href="//www.d1ev.com/member/favorite/index.html"><span class="iconSong">我的收藏</span></a> <em></em> </li>
+                    <li class="msong" style="display:none;"><a href="//www.d1ev.com/member/article/index.html"><span class="iconSong">我的文章</span></a> <em></em> </li>
+                    <li class="maccount" style="display:none;"> <a href="//www.d1ev.com/member/account/assets.html"> <span class="iconAccount">账号绑定</span> </a> <em></em> </li>
                 </ul>
             </div>
-            <p><a href="http://www.d1ev.com/member/index/logout.html" title="退出登录" class="out">退出登录</a></p>
+            <p><a href="//www.d1ev.com/member/index/logout.html" title="退出登录" class="out">退出登录</a></p>
         </div>
         <div class="user_main">
             <div class="uMain_content">
                 <div class="main_nav2">
                     <ul id="aa">
-                        <li class="current" id="cprofile"> <a href="http://www.d1ev.com/member/user/profile.html"><span>基本资料</span></a> </li>
+                        <li class="current" id="cprofile"> <a href="//www.d1ev.com/member/user/profile.html"><span>基本资料</span></a> </li>
                         <li id="cavatar"> <a href="javascript:;"><span>修改头像</span></a> </li>
                         <li id="cpassword"> <a href="javascript:;"><span>账户设置</span></a> </li>
                         <li id="account"> <a href="javascript:;"><span>第三方绑定</span></a> </li>
                     </ul>
                 </div>
                 <div class="minHeight500 am-cf">
-                    <form id="doprofile" action="http://www.d1ev.com/member/user/doprofile.html" method="post">
+                    <form id="doprofile" action="//www.d1ev.com/member/user/doprofile.html" method="post">
                         <div id="modifyProfile" class="profile">
                             <ul>
                                 <li>
@@ -206,7 +204,7 @@
                                     <div class="name"><span>*</span>邮箱：</div>
                                     <div class="input92cc"><input id="remail" class="  input" type="text" value="ldk8259878@163.com" name="email" style="width:190px;" disabled></div>
                                     <div class="input_msg">
-                                        <a href="http://www.d1ev.com/member/user/mail.html" target="_blank"><font color="red">修改</font></a>
+                                        <a href="//www.d1ev.com/member/user/mail.html" target="_blank"><font color="red">修改</font></a>
                                     </div>
                                 </li>
                                 <li><div class="name">性别：</div>
@@ -223,7 +221,7 @@
                                     <div class="name"><span>*</span>手机：</div>
                                     <div class="input92cc"><input class="  input" type="text" value="13467077567" style="width:190px;" disabled></div>
                                     <div class="input_msg">
-                                        <a href="http://www.d1ev.com/member/user/phone.html" target="_blank"><font color="red">修改</font></a>
+                                        <a href="//www.d1ev.com/member/user/phone.html" target="_blank"><font color="red">修改</font></a>
                                     </div>
                                 </li>
                                 <li>
@@ -233,7 +231,7 @@
                                 </li>
                                 <li>
                                     <div class="name">　</div>
-                                    <div>http://www.d1ev.com/home/<b id="domain" style="color:red">8135 </b></div>
+                                    <div>//www.d1ev.com/home/<b id="domain" style="color:red">8135 </b></div>
                                 </li>
 
                                 <li>
@@ -245,31 +243,31 @@
                                     <div class="name">生日：</div>
                                     <div>
                                         <input type="text" name="info[birthday]" id="birthday" value="1970-01-01" size="10" class="input length_3 J_datetime "> </div>
-                                    <div id="memail" class="input_msg"></div>
+                                    <div id="m1email" class="input_msg"></div>
                                 </li>
                                 <li>
                                     <div class="name">住址：</div>
                                     <div>
                                         <input type="text" name="info[address]" id="address" style="width:190px;" value="" class="input"> </div>
-                                    <div id="memail" class="input_msg"></div>
+                                    <div id="m2email" class="input_msg"></div>
                                 </li>
                                 <li>
                                     <div class="name">公司：</div>
                                     <div>
                                         <input type="text" name="info[company]" id="company" style="width:190px;" value="" class="input"> </div>
-                                    <div id="memail" class="input_msg"></div>
+                                    <div id="m3email" class="input_msg"></div>
                                 </li>
                                 <li>
                                     <div class="name">职务：</div>
                                     <div>
                                         <input type="text" name="info[job]" id="job" style="width:190px;" value="" class="input"> </div>
-                                    <div id="memail" class="input_msg"></div>
+                                    <div id="m4email" class="input_msg"></div>
                                 </li>
                                 <li>
                                     <div class="name">专业领域：</div>
                                     <div>
                                         <input type="text" name="info[zhuanye]" id="zhuanye" style="width:190px;" value="" class="input"> </div>
-                                    <div id="memail" class="input_msg"></div>
+                                    <div id="m5email" class="input_msg"></div>
                                 </li>
                                 <li>
                                     <div class="name"></div>
@@ -285,11 +283,11 @@
                                  </div>
                         </div>
                         <div class="avatar_size_list">
-                            <img onerror="this.src='http://img-cdn.d1ev.com/d/file/default/no-avatar.gif'" src="http://img-cdn.d1ev.com/d/file/avatar/8135/300x300.jpg?t=1470277236" alt="">
-                            <img onerror="this.src='http://img-cdn.d1ev.com/d/file/default/no-avatar.gif'" src="http://img-cdn.d1ev.com/d/file/avatar/8135/180x180.jpg?t=1470277236" alt="">
-                            <img onerror="this.src='http://img-cdn.d1ev.com/d/file/default/no-avatar.gif'" src="http://img-cdn.d1ev.com/d/file/avatar/8135/90x90.jpg?t=1470277236" alt="">
-                            <img onerror="this.src='http://img-cdn.d1ev.com/d/file/default/no-avatar.gif'" src="http://img-cdn.d1ev.com/d/file/avatar/8135/45x45.jpg?t=1470277236" alt="">
-                            <img onerror="this.src='http://img-cdn.d1ev.com/d/file/default/no-avatar.gif'" src="http://img-cdn.d1ev.com/d/file/avatar/8135/30x30.jpg?t=1470277236" alt="">
+                            <img onerror="this.src='//img-cdn.d1ev.com/d/file/default/no-avatar.gif'" src="//img-cdn.d1ev.com/d/file/avatar/8135/300x300.jpg?t=1470277236" alt="">
+                            <img onerror="this.src='//img-cdn.d1ev.com/d/file/default/no-avatar.gif'" src="//img-cdn.d1ev.com/d/file/avatar/8135/180x180.jpg?t=1470277236" alt="">
+                            <img onerror="this.src='//img-cdn.d1ev.com/d/file/default/no-avatar.gif'" src="//img-cdn.d1ev.com/d/file/avatar/8135/90x90.jpg?t=1470277236" alt="">
+                            <img onerror="this.src='//img-cdn.d1ev.com/d/file/default/no-avatar.gif'" src="//img-cdn.d1ev.com/d/file/avatar/8135/45x45.jpg?t=1470277236" alt="">
+                            <img onerror="this.src='//img-cdn.d1ev.com/d/file/default/no-avatar.gif'" src="//img-cdn.d1ev.com/d/file/avatar/8135/30x30.jpg?t=1470277236" alt="">
                         </div>
                     </div>
                     <div id="modifyPassword" class="" style="display: none;margin-top:-15px;">
@@ -353,18 +351,18 @@
 <div class="blank20"></div>
 ﻿
 <footer>
-    <div class="ft_top"> <a href="http://www.d1ev.com/" title="第一电动为推动新能源汽车的普及而竭尽所能" class="ft_logo"></a>
-        <div class="ft_nav"><a href="http://d1ev.com/aboutus.php?type=32">关于我们</a>　|　<a href="http://d1ev.com/aboutus.php?type=40">联系方式</a>　|　<a href="http://d1ev.com/aboutus.php?type=34">加入我们</a>　|　<a href="javascript:;">广告服务</a>　|　<a href="http://d1ev.com/aboutus.php?type=71">我也要与第一电动合作</a></div>
+    <div class="ft_top"> <a href="//www.d1ev.com/" title="第一电动为推动新能源汽车的普及而竭尽所能" class="ft_logo"></a>
+        <div class="ft_nav"><a href="//d1ev.com/aboutus.php?type=32">关于我们</a>　|　<a href="//d1ev.com/aboutus.php?type=40">联系方式</a>　|　<a href="//d1ev.com/aboutus.php?type=34">加入我们</a>　|　<a href="javascript:;">广告服务</a>　|　<a href="//d1ev.com/aboutus.php?type=71">我也要与第一电动合作</a></div>
     </div>
     <div class="copy">
         <p> <span class="l">Copyright &copy; 2010-2016 第一电动网</span> <span class="r">京ICP备14024261号　京ICP证160753号　京公网安备110105011343</span> </p>
     </div>
 </footer>
 <div class="scrollBtn">
-    <div class="backindex enter" title="返回首页"><a href="http://www.d1ev.com" target="_blank" title="返回首页"></a></div>
-    <div class="m_d enter" title="手机访问"><img src="http://www.d1ev.com/statics/2015d1ev/images/m_d.jpg" id="m_d_img"></div>
-    <div class="weixin enter" title="第一电动微信"><img src="http://www.d1ev.com/statics/images/weixin.png" id="weixin"></div>
-    <div class="proposal enter"><a href="http://www.d1ev.com/diaocha/2014050631208.html" hidefocus="true" target="_blank" title="意见反馈"></a></div>
+    <div class="backindex enter" title="返回首页"><a href="//www.d1ev.com" target="_blank" title="返回首页"></a></div>
+    <div class="m_d enter" title="手机访问"><img src="//www.d1ev.com/statics/2015d1ev/images/m_d.jpg" id="m_d_img"></div>
+    <div class="weixin enter" title="第一电动微信"><img src="//www.d1ev.com/statics/images/weixin.png" id="weixin"></div>
+    <div class="proposal enter"><a href="//www.d1ev.com/diaocha/2014050631208.html" hidefocus="true" target="_blank" title="意见反馈"></a></div>
     <div class="backToTop enter" title="返回顶部" style="display: none;"></div>
 </div>
 
@@ -448,7 +446,7 @@
 <div class="am-modal am-modal-no-btn am-modal--ajax" tabindex="-1" id="doc-modal-4">
     <div class="am-modal-dialog">
         <div class="am-modal-hd"></div>
-        <form method="post" action="http://www.d1ev.com/member/liutengfei/modifyemail" target="_self" class="am-form" id="doc-vld-msg" novalidate="novalidate">
+        <form method="post" action="//www.d1ev.com/member/liutengfei/modifyemail" target="_self" class="am-form" id="doc-vld-msg" novalidate="novalidate">
             <div class="am-modal-bd--re">
                 <p class="am-text-left" style="font-size: 18px;color:#000;">绑定邮箱</p>
                 <div class="am-form-groupa">
@@ -468,7 +466,7 @@
     <div class="am-modal am-modal-no-btn am-modal--ajax" tabindex="-1" id="doc-modal-5">
     <div class="am-modal-dialog">
         <div class="am-modal-hd"></div>
-        <form method="post" action="http://www.d1ev.com/member/liutengfei/modifymobile" target="_self" class="am-form" id="doc-vld-msgg" novalidate="novalidate">
+        <form method="post" action="//www.d1ev.com/member/liutengfei/modifymobile" target="_self" class="am-form" id="doc-vld-msgg" novalidate="novalidate">
             <div class="am-modal-bd--re">
                 <p class="am-text-left" style="font-size: 18px;color:#000;">绑定手机</p>
                 <div class="am-form-groupa">
@@ -488,7 +486,7 @@
 <div class="am-modal am-modal-no-btn am-modal--ajax" tabindex="-1" id="doc-modal-6">
     <div class="am-modal-dialog">
         <div class="am-modal-hd"></div>
-        <form method="post" action="http://www.d1ev.com/member/liutengfei/modifypassword" target="_self" class="am-form" id="doc-vld-msgs" novalidate="novalidate">
+        <form method="post" action="//www.d1ev.com/member/liutengfei/modifypassword" target="_self" class="am-form" id="doc-vld-msgs" novalidate="novalidate">
             <div class="am-modal-bd--re">
                 <p class="am-text-left" style="font-size: 18px;color:#000;">修改密码</p>
                 <div class="am-form-groupa">
@@ -533,13 +531,13 @@
 </div>
 <div class="am-modal am-modal-no-btn" tabindex="-1" id="doc-modal-8">
     <div class="am-modal-dialog">
-        <iframe src="https://open.weixin.qq.com/connect/qrconnect?appid=wxb6c18a9512fe651a&scope=snsapi_login&redirect_uri=http://www.d1ev.com/member/weixin/login&state=&login_type=jssdk" frameborder="0" height="405" style="background:#ddd;"></iframe>
+        <iframe src="https://open.weixin.qq.com/connect/qrconnect?appid=wxb6c18a9512fe651a&scope=snsapi_login&redirect_uri=//www.d1ev.com/member/weixin/login&state=&login_type=jssdk" frameborder="0" height="405" style="background:#ddd;"></iframe>
     </div>
 </div>
 <div class="am-modal am-modal-no-btn" tabindex="-1" id="doc-modal-9">
     <div class="am-modal-dialog">
         <div class="am-modal-hd"></div>
-        <form method="post" action="http://www.d1ev.com/member/liutengfei/modifymobile" target="_self" class="am-form" id="doc-vld-msgaddtel" novalidate="novalidate">
+        <form method="post" action="//www.d1ev.com/member/liutengfei/modifymobile" target="_self" class="am-form" id="doc-vld-msgaddtel" novalidate="novalidate">
             <div class="am-modal-bd--re">
                 <p class="am-text-left" style="font-size: 18px;color:#000;">绑定手机</p>
                 <div class="am-form-groupa">
@@ -563,7 +561,7 @@
 <div class="am-modal am-modal-no-btn" tabindex="-1" id="doc-modal-10">
     <div class="am-modal-dialog">
         <div class="am-modal-hd"></div>
-        <form method="post" action="http://www.d1ev.com/member/liutengfei/modifymobile" target="_self" class="am-form" id="doc-vld-msgaddmail" novalidate="novalidate">
+        <form method="post" action="//www.d1ev.com/member/liutengfei/modifymobile" target="_self" class="am-form" id="doc-vld-msgaddmail" novalidate="novalidate">
             <div class="am-modal-bd--re">
                 <p class="am-text-left" style="font-size: 18px;color:#000;">绑定邮箱</p>
                 <div class="am-form-groupa">
@@ -587,7 +585,7 @@
 <div class="am-modal am-modal-no-btn am-modal--ajax" tabindex="-1" id="doc-modal-11">
     <div class="am-modal-dialog">
         <div class="am-modal-hd"></div>
-        <form method="post" action="http://www.d1ev.com/member/liutengfei/modifypassword" target="_self" class="am-form" id="doc-vld-msgspassword_set" novalidate="novalidate">
+        <form method="post" action="//www.d1ev.com/member/liutengfei/modifypassword" target="_self" class="am-form" id="doc-vld-msgspassword_set" novalidate="novalidate">
             <div class="am-modal-bd--re">
                 <p class="am-text-left" style="font-size: 18px;color:#000;">设置密码</p>
                 <div class="am-form-groupa">
@@ -603,11 +601,10 @@
         </form>
     </div>
 </div>
-<div style="display:none"><script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="//hm.baidu.com/hm.js?c1d54a092f01be0215b4487856c2c6f6";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s);})();</script><script type="text/javascript">var cnzz_protocol=(("https:"==document.location.protocol)?" https://":" http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_2469655'%3E%3C/span%3E%3Cscript src='"+cnzz_protocol+"s13.cnzz.com/stat.php%3Fid%3D2469655' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var cnzz_protocol=(("https:"==document.location.protocol)?" https://":" http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1254528018'%3E%3C/span%3E%3Cscript src='"+cnzz_protocol+"s95.cnzz.com/stat.php%3Fid%3D1254528018' type='text/javascript'%3E%3C/script%3E"));</script></div>
 <script type="text/javascript">
     //全局变量
     var GV = {
-        DIMAUB: "http://www.d1ev.com/",
+        DIMAUB: "//www.d1ev.com/",
         JS_ROOT: "statics/js/"
     };
     var domIsReady = false,
@@ -628,12 +625,11 @@
     //会员中心地址
     _config['domainSite'] = GV.DIMAUB;
     //网站地址
-    _config['domainMainSite'] = 'http://www.d1ev.com/';
+    _config['domainMainSite'] = '//www.d1ev.com/';
     //当前模块静态文件目录
-    _config['domainStatic'] = 'http://www.d1ev.com/statics/extres/member/';
+    _config['domainStatic'] = '//www.d1ev.com/statics/extres/member/';
 </script>
-<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 <script>
     $(function(){
         $('#rdomain').keyup(function(){
@@ -641,18 +637,18 @@
         })
     })
 </script>
-<script type="text/javascript" src="http://www.d1ev.com/statics/extres/member/js/common.js"></script>
-<script type="text/javascript" src="http://www.d1ev.com/statics/js/swfobject.js"></script>
-<script type="text/javascript" src="http://www.d1ev.com/statics/extres/member/js/fullAvatarEditor.js"></script>
+<script type="text/javascript" src="//www.d1ev.com/statics/extres/member/js/common.js"></script>
+<script type="text/javascript" src="//www.d1ev.com/statics/js/swfobject.js"></script>
+<script type="text/javascript" src="//www.d1ev.com/statics/extres/member/js/fullAvatarEditor.js"></script>
 
-<script src="http://www.d1ev.com/statics/extres/member/area/js/public.js"></script>
-<script type="text/javascript" src="http://www.d1ev.com/statics/2015d1ev/js/top.js"></script>
-<script type="text/javascript" src="http://www.d1ev.com/statics/extres/member/js/jquery.artDialog.min.js"></script>
+<script src="//www.d1ev.com/statics/extres/member/area/js/public.js"></script>
+<script type="text/javascript" src="//www.d1ev.com/statics/2015d1ev/js/top.js"></script>
+<script type="text/javascript" src="//www.d1ev.com/statics/extres/member/js/jquery.artDialog.min.js"></script>
 <script type="text/javascript">
     swfobject.addDomLoadEvent(function () {
         var swfFullAvatar = new fullAvatarEditor("myContent", {
             id: 'swf',
-            upload_url: 'http://www.d1ev.com/index.php?g=Member&m=Index&a=uploadavatar&auth_data=a9f9yw3uSI%2BUA2NvHdFTIBNaJ05UXiU292Swr0ZaEMew',
+            upload_url: '//www.d1ev.com/index.php?g=Member&m=Index&a=uploadavatar&auth_data=a9f9yw3uSI%2BUA2NvHdFTIBNaJ05UXiU292Swr0ZaEMew',
             avatar_sizes:"150*150|90*90|45*45|22*22|15*15",
             avatar_scale:2,
             avatar_sizes_desc:"300*300像素|180*180像素|90*90像素|45*45像素|30*30像素",
@@ -660,10 +656,10 @@
         }, fullAvatarCallback);
     });
 </script>
-<script type="text/javascript" src="http://www.d1ev.com/statics/js/wind.js"></script>
-<script type="text/javascript" src="http://www.d1ev.com/statics/js/common.js"></script>
-<script type="text/javascript" src="http://www.d1ev.com/statics/extres/member/js/profile.js"></script>
-<script type="text/javascript" src="http://www.d1ev.com/statics/js/ajaxForm.js"></script>
+<script type="text/javascript" src="//www.d1ev.com/statics/js/wind.js"></script>
+<script type="text/javascript" src="//www.d1ev.com/statics/js/common.js"></script>
+<script type="text/javascript" src="//www.d1ev.com/statics/extres/member/js/profile.js"></script>
+<script type="text/javascript" src="//www.d1ev.com/statics/js/ajaxForm.js"></script>
 <script type="text/javascript">
     profile.init();
     //头像上传回调
@@ -697,16 +693,7 @@
         }
     }
 </script>
-<script type="text/javascript">
-    (function(){
-        var bp = document.createElement('script');
-        var curProtocol = window.location.protocol.split(':')[0];
-        if (curProtocol === 'https') {bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';}
-        else {bp.src = 'http://push.zhanzhang.baidu.com/push.js';}
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(bp, s);
-    })();
-</script>
+
 <script src="external/js/amazeui.min.js"></script>
 <script src="js/checkmodel.js"></script>
 </body>

@@ -42,108 +42,15 @@ $(function check() {
             var $field = $(validity.field);
             var msg = $field.data('validationMessage') || this.getValidationMessage(validity);
             var code = Boolean($("body").attr("data-style"));
-            // $("input[name=password]").focus(function(){
-            //    $(this).attr("type","password");
-            // });
             $(validity.field).focus(function () {
                 $(validity.field).removeClass("am-field-error");
                 $(validity.field).closest('.am-form-groupa').find('.am-alert').css('visibility', 'hidden');
             });
-            // var comparer = function (v1, v2) {
-            //     if (v1 != v2) {
-            //         validity.valid = false;
-            //     }
-            //
-            //     // 这些属性目前 v2.3 以前没什么用，如果不想写可以忽略
-            //     // 从 v2.3 开始，这些属性被 getValidationMessage() 用于生成错误提示信息
-            //     if (v2 < 10) {
-            //         validity.rangeUnderflow = true;
-            //     } else if (v2 > 10) {
-            //         validity.rangeOverflow = true;
-            //     }
-            // };
-            // if($(validity.field).is("input[name=mobile]")){
-            //     var data=$(validity.field).val();
-            //
-            //     $.ajax({
-            //         type: "post",
-            //         url: "http://www.d1ev.com/member/checkunique",
-            //         dataType: "json",
-            //         data:{type:"mobile",value:data},
-            //         success: function (_msg) {
-            //             console.log(_msg)
-            //         }
-            //     });
-            // } else if($(validity.field).is("input[name=rvCode]")){
-            //     var data=$(validity.field).val();
-            //     $.ajax({
-            //         type: "post",
-            //         url: "http://www.d1ev.com/member/Accountnew/rvcode",
-            //         dataType: "json",
-            //         data:{rvCode:data},
-            //         success: function (_msg) {
-            //             console.log(_msg)
-            //         }
-            //     });
-            // }else if($(validity.field).is("input[name=vCode]")){
-            //     var data=$(validity.field).val();
-            //     $.ajax({
-            //         type: "post",
-            //         url: "http://www.d1ev.com/member/Accountnew/rvsms",
-            //         dataType: "json",
-            //         data:{vCode:data},
-            //         success: function (_msg) {
-            //             console.log(_msg)
-            //         }
-            //     });
-            // }else if($(validity.field).is("input[name=email]")){
-            //     var data=$(validity.field).val();
-            //     console.log(1);
-            //     $.ajax({
-            //         type: "post",
-            //         url: "http://www.d1ev.com/member/checkunique",
-            //         dataType: "json",
-            //         data:{type:"email",value:data},
-            //         success: function (_msg) {
-            //             console.log(_msg)
-            //         }
-            //     });
-            // }
-            // Ajax 验证
-            // $("input#submit").on("click", function () {
-            //
-            //     //Response.Redirect("~/");
-            //     if ($(validity.field).is('#doc-vld-msg')) {
-            //         // 异步操作必须返回 Deferred 对象
-            //         return $.ajax({
-            //             url: 'http://www.d1ev.com/member/Accountnew/mobilereg',
-            //             // cache: false, 实际使用中请禁用缓存
-            //             dataType: 'json'
-            //         }).then(function (data) {
-            //             comparer(data.count, v);
-            //             //Response.Redirect("~/");
-            //             //window.location.href='http://www.d1ev.com'
-            //             $(".alert--position").addClass("am-alert-successes").html(msg).show().hide("fast", arguments.callee);
-            //             return validity;
-            //         }, function () {
-            //             $(".alert--position").addClass("am-alert-dangeres").html(msg).show().hide("fast", arguments.callee);
-            //             return validity;
-            //         });
-            //     }
-            // })
         }
     });
 });
 function codecheck(_msg) {
     var $p = $(".alert--position").find("p");
-    // if($p.hasClass("am-alert-dangeres")){
-    //     $p.removeClass("am-alert-dangeres");
-    // } else if($p.hasClass("am-alert-success")){
-    //     $p.removeClass("am-alert-success");
-    // }else if($p.hasClass("am-alert-warning")){
-    //     $p.removeClass("am-alert-warning");
-    // }
-    //var $alert=$("#doc-vld-msg").find('.am-form-groupa').find('.am-alert');
     if (_msg.error === 3) {
         $p.addClass("am-alert-warning").html(_msg.message).end().show();
         $("body").attr("data-style", "");
@@ -198,30 +105,20 @@ function submits(options, e) {
         href = "http://www.d1ev.com/sign/bindmail.html#" + messages;
 
     } else if (e === 2) {
-        //console.log(e);
         url = "http://www.d1ev.com/member/Accountnew/mobilereg";
         href = "http://www.d1ev.com";
         //var hashStrings = (window.location.hash.length > 0 ? window.location.hash.substring(1) : "");
     } else if (e === 3) {
-        //console.log(e);
         url = "http://www.d1ev.com/member/Qqlogin/dropbind";
         href = "http://www.d1ev.com";
     } else if (e === 4) {
-        //console.log(e);
         url = "http://www.d1ev.com/member/Qqlogin/binduser";
         href = "http://www.d1ev.com";
     }
     else if (e === 5) {
-        //console.log(e);
         url = "http://www.d1ev.com/index.php?g=member&m=weibo&a=dropbind";
         href = "http://www.d1ev.com";
     }
-
-    // if(!$("input[name=rvCode]").val()){
-    //     $(".alert--position").find("p").addClass("am-alert-warning").html("请正确填写内容").end().show();
-    //     return
-    // }
-    //console.log(1);
     $.ajax({
         type: "post",
         url: url,
@@ -273,7 +170,6 @@ $('#doc-vld-msg').find("input").blur(function messageajax() {
     var code = Boolean($("body").attr("data-style"));
     var time = setTimeout(function checkfalse() {
         if (formcheck) {
-            //console.log(1);
             if ($($this).attr("name") === "mobile") {
                 var data = $($this).val();
 
@@ -366,7 +262,6 @@ $('#doc-vld-msg').find("input").blur(function messageajax() {
                 var a = {};
                 a.error = 0;
                 codeajax(a, $this);
-                //console.log($this);
                 $($this).attr("type", "password");
             }
 
@@ -393,9 +288,6 @@ $('.btn-loading-example').click(function () {
             formcheck = false;
         }
     });
-    //console.log(i);
-    //console.log(formcheck);
-    //if(n===i){formcheck=true;}
     if (n === i && formcheck && code) {
         var mobile = $("#mobile").val();
         $.ajax({
@@ -416,27 +308,6 @@ $('.btn-loading-example').click(function () {
                         }
                     }, 1000);
                 }
-
-                // // console.log(n===i);
-                // if(n===i){formcheck=true;}
-                // // console.log(formcheck);
-                // console.log(code);
-                // if(n===i&&formcheck&&code){$("#doc-vld-msg").find(".am-form-icon").find("input[type=button]").removeClass("am-disabled");}
-
-                // //var _msg = JSON.parse(_msg);
-                // if (_msg.error === 1) {
-                //     $(".alert--position").addClass("am-alert-dangeres").html(_msg.message).show();
-                //
-                // } else if (_msg.error === 2) {
-                //     $(".alert--position").addClass("am-alert-dangeres").html(_msg.message).show();
-                //
-                // } else if (_msg.error === 3) {
-                //     $(".alert--position").addClass("am-alert-warning").html(_msg.message).show();
-                //
-                // } else if (_msg.error === 0) {
-                //     $(".alert--position").addClass("am-alert-success").html(_msg.message).show();
-                //
-                // }
             }
         });
 
@@ -476,51 +347,51 @@ $("#gomail").click(function () {
 function gotoEmail($mail) {
     $t = $mail.split('@')[1];
     $t = $t.toLowerCase();
-    if ($t == '163.com') {
+    if ($t === '163.com') {
         return 'mail.163.com';
-    } else if ($t == 'vip.163.com') {
+    } else if ($t === 'vip.163.com') {
         return 'vip.163.com';
-    } else if ($t == '126.com') {
+    } else if ($t === '126.com') {
         return 'mail.126.com';
-    } else if ($t == 'qq.com' || $t == 'vip.qq.com' || $t == 'foxmail.com') {
+    } else if ($t === 'qq.com' || $t === 'vip.qq.com' || $t === 'foxmail.com') {
         return 'mail.qq.com';
-    } else if ($t == 'gmail.com') {
+    } else if ($t === 'gmail.com') {
         return 'mail.google.com';
-    } else if ($t == 'sohu.com') {
+    } else if ($t === 'sohu.com') {
         return 'mail.sohu.com';
-    } else if ($t == 'tom.com') {
+    } else if ($t === 'tom.com') {
         return 'mail.tom.com';
-    } else if ($t == 'vip.sina.com') {
+    } else if ($t === 'vip.sina.com') {
         return 'vip.sina.com';
-    } else if ($t == 'sina.com.cn' || $t == 'sina.com') {
+    } else if ($t === 'sina.com.cn' || $t === 'sina.com') {
         return 'mail.sina.com.cn';
-    } else if ($t == 'tom.com') {
+    } else if ($t === 'tom.com') {
         return 'mail.tom.com';
-    } else if ($t == 'yahoo.com.cn' || $t == 'yahoo.cn') {
+    } else if ($t === 'yahoo.com.cn' || $t === 'yahoo.cn') {
         return 'mail.cn.yahoo.com';
-    } else if ($t == 'tom.com') {
+    } else if ($t === 'tom.com') {
         return 'mail.tom.com';
-    } else if ($t == 'yeah.net') {
+    } else if ($t === 'yeah.net') {
         return 'www.yeah.net';
-    } else if ($t == '21cn.com') {
+    } else if ($t === '21cn.com') {
         return 'mail.21cn.com';
-    } else if ($t == 'hotmail.com') {
+    } else if ($t === 'hotmail.com') {
         return 'www.hotmail.com';
-    } else if ($t == 'sogou.com') {
+    } else if ($t === 'sogou.com') {
         return 'mail.sogou.com';
-    } else if ($t == '188.com') {
+    } else if ($t === '188.com') {
         return 'www.188.com';
-    }else if ($t == 'outlook.com') {
+    }else if ($t === 'outlook.com') {
         return 'login.live.com';
-    }else if ($t == '139.com') {
+    }else if ($t === '139.com') {
         return 'mail.10086.cn';
-    }else if ($t == 'aliyun.com') {
+    }else if ($t === 'aliyun.com') {
         return 'mail.aliyun.com';
-    } else if ($t == '189.cn') {
+    } else if ($t === '189.cn') {
         return 'webmail15.189.cn/webmail';
-    } else if ($t == 'wo.com.cn') {
+    } else if ($t === 'wo.com.cn') {
         return 'mail.wo.com.cn/smsmail';
-    } else if ($t == '139.com') {
+    } else if ($t === '139.com') {
         return 'mail.10086.cn';
     } else {
         return '';

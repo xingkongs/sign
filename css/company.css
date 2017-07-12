@@ -1,0 +1,446 @@
+body{
+   /* background: #fafcff;*/
+    font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+
+}
+hr{
+    margin: 37px 0 27px;
+    border-top: 1px solid #d9d9d9;
+}
+
+.ev-blank160{
+    height: 160px;
+}
+.ev-container{
+    /*
+    max-width: 440px;
+    min-height: 415px;
+    margin: 0 auto;*/
+    background: #fff;
+    position: relative;
+
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 100%;
+    max-width: 504px;
+
+
+}
+
+.ev-form{
+    /*
+     width: 360px;*/
+    margin: 0 auto;
+    max-width: 480px;
+
+}
+
+.ev-form-group{
+    margin-bottom: 6px;
+    position: relative;
+}
+
+.ev-radius{
+    border-radius: 4px!important;
+    height: 48px;
+}
+.ev-btn-color{
+    background: #f60;
+    color: #fff;
+}
+
+.ev-btn-color:hover,.ev-btn-color:focus{
+    background: #f26100;
+    color: #fff;
+}
+
+.ev-btn-color:active{
+    background: #e55c00;
+}
+.ev-a{
+    color: #4c4c4c;
+    line-height: 1;
+    padding-bottom: 30px;
+    font-size: 14px;
+}
+.ev-a:hover{
+    color: #f60;
+}
+.ev-a:active{
+    color: #f26100;
+}
+.ev-hr{
+    position: relative;
+}
+
+.ev-alert-danger{
+    background: #fff;
+    color: red;
+    border: none;
+    margin: 0; padding: 0 10px;
+    position: absolute;
+    bottom: -26px;
+    left: 0;
+    font-size: 14px;
+}
+.ev-tip{
+    width: 360px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    position: absolute;
+    top: -46px;
+    left: 0;
+    background: #ccc;
+}
+
+.ev-tip-error{
+    background:#ffe5e5;
+    color: #cc6666;
+}
+
+.ev-tip-success{
+    background:#e0f9c0;
+    color: #9b7e2b;
+}
+
+
+/**/
+.ev-evlogo{
+
+    height: 160px;
+    position: relative;
+
+}
+.ev-hr-bg{
+    display: block;
+    position: relative;
+    top: 100px;
+    width: 100%;
+    /*transform: translateX(-50%);*/
+    background: url("../images/line01.png") no-repeat center center;
+    height: 1px;
+
+}
+.ev-evlogo-wrap{
+    width: 260px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -130px;
+
+    z-index: 1;
+    background: #fff;
+}
+.ev-valid{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 48px;
+    width: 132px;
+    text-align: center;
+    background: #ccc;
+    border-radius: 0 4px 4px 0;
+    border: 1px solid #ccc;
+    border-left: none;
+    overflow: hidden;
+}
+.ev-valid img{
+    width: 100%;
+    height: 100%;
+}
+.ev-step{
+    max-width: 584px;
+    margin: 0 auto;
+    font-size: 12px;
+}
+.ev-step-circle{
+    width: 36px;
+    text-align: center;
+    height: 36px;
+    line-height: 36px;
+    border-radius: 36px;
+    background: #ccc;
+    color: #fff;
+    font-size: 20px;
+    margin: 0 auto;
+    position: relative;
+    z-index:1;
+
+}
+.ev-step-p:after {
+    content: '';
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 14%;
+    left: 50%;
+    border-top: 1px solid #ccc;
+    z-index: 0;
+}
+.ev-step .am-u-sm-4:last-child .ev-step-p:after{
+    display: none;
+}
+.ev-line-red:after{
+    border-top: 1px solid #f60;
+}
+.ev-step .am-u-sm-4{
+    position: relative;
+}
+.ev-step-on{
+    background: #f60;
+}
+.ev-step-p{
+    text-align: center;
+    margin: 30px 0 36px;
+}
+/**/
+.ev-qual{
+    text-align: center;
+    padding-bottom: 40px;
+    font-size: 22px;
+    /*font-weight: 100;*/
+}
+.ev-h{
+    font-size: 18px;
+    text-align: center;
+    line-height: 1;
+}
+.ev-h2{
+    margin-top: 40px;
+}
+.ev-form-group .ev-select{
+    width: 234px;
+    display: inline-block;
+}
+.ev-form-group .ev-select1{
+    margin-right: 6px;
+}
+
+.ev-up{
+    width: 234px;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    background: #e6e6e6;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+.ev-up input{
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 234px;
+    height: 100%;
+}
+.ev-cut{
+    width: 234px;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    background: #e6e6e6;
+    position: absolute;
+    top: 68px;
+    left: 0;
+}
+.ev-log{
+    width: 222px;
+    height: 135px;
+    line-height: 135px;
+    text-align: center;
+    background: #f2f2f2;
+    background: #ccc;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 36px;
+}
+.ev-log img{
+    width: 100%;
+    display: block;
+}
+.ev-lo{
+    position: relative;
+    height: 136px;
+}
+.ev-form-group .ev-textarea{
+    height: 130px;
+    resize: none;
+}
+
+.ev-business-licence{
+    text-align: center;
+    background: #e6e6e6;
+    line-height: 48px;
+    font-size: 14px;
+    position: relative;
+}
+.ev-business-licence input{
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 480px;
+    height: 100%;
+}
+.ev-exposure{
+    font-size: 14px;
+    height: 42px;
+    line-height: 42px;
+}
+.ev-form .ev-form-group .ev-realname{
+    width: 234px;
+    margin-right: 6px;
+    display: inline-block;
+}
+.ev-email{
+    margin-bottom: 8px;
+}
+.ev-checkbox{
+    margin-left: 6px;
+    font-size: 14px;
+}
+.ev-checkbox i{
+    font-size: 14px;
+}
+.ev-js-btn{
+    margin-bottom: 100px;
+}
+.ev-model{
+    background: none;
+    color: #4d9dd9;
+    outline: none!important;
+}
+.ev-model:active,.ev-model:hover{
+    color: #4d9dd9;
+    outline: none;
+    background: none;
+}
+
+.ev-iframe-btn{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.bdsug {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 47px;
+    z-index: 1;
+    /*left:250px;*/
+    width: 100%;
+    background: #fff;
+    border: 1px solid #ccc;
+    _overflow: hidden;
+    box-shadow: 1px 1px 3px #ededed;
+    -webkit-box-shadow: 1px 1px 3px #ededed;
+    -moz-box-shadow: 1px 1px 3px #ededed;
+    -o-box-shadow: 1px 1px 3px #ededed;
+}
+.bdsug li {
+    width: 100%;
+    color: #000;
+    font: 14px arial;
+    line-height: 22px;
+    padding: 0 8px;
+    position: relative;
+    cursor: default;
+    list-style: none;
+
+}
+.bdsug .bdsug_li:hover{background:#f0f0f0}
+.bdsug .bdsug_green{background:#59E0BC;color: #000;}
+
+.bdsug ul{
+    padding: 0;
+    margin: 0;
+}
+.ev-container2,.ev-container3{
+    display: none;
+}
+.ev-licece-img img{
+    max-width: 100%;
+}
+.wws-disabled{
+    background: #5c5c5c;
+    cursor: not-allowed;
+}
+.wws-form-name{
+    position: absolute;
+    top: 0;
+    left: -130px;
+    width: 110px;
+    height: 48px;
+    line-height: 48px;
+    text-align: right;
+    font-size: 1.4rem;
+}
+
+.am-form input[type=number], .am-form input[type=search], .am-form input[type=text], .am-form input[type=password], .am-form input[type=datetime], .am-form input[type=datetime-local], .am-form input[type=date], .am-form input[type=month], .am-form input[type=time], .am-form input[type=week], .am-form input[type=email], .am-form input[type=url], .am-form input[type=tel], .am-form input[type=color], .am-form select, .am-form textarea, .am-form-field{
+    font-size: 1.4rem;
+}
+.ev-form-trade .am-selected{
+    width: 234px;
+}
+.ev-form-trade .am-selected:nth-child(2){
+    margin-right: 7px;
+}
+.ev-form-trade .am-selected .am-btn{
+    padding: .84em 1em .84em .5em;
+    border-radius: 4px;
+    font-size: 1.4rem;
+    border: 1px solid #ccc;
+}
+
+.ev-form-city .am-selected{
+    width: 234px;
+}
+.ev-form-city .am-selected:nth-child(2){
+    margin-right: 7px;
+}
+.ev-form-city .am-selected .am-btn{
+    padding: .84em 1em .84em .5em;
+    border-radius: 4px;
+    font-size: 1.4rem;
+    border: 1px solid #ccc;
+}
+
+.ev-form-model .am-selected{
+    width: 480px;
+}
+.ev-form-model .am-selected:nth-child(2){
+    margin-right: 7px;
+}
+.ev-form-model .am-selected .am-btn{
+    padding: .84em 1em .84em .5em;
+    border-radius: 4px;
+    font-size: 1.4rem;
+    border: 1px solid #ccc;
+}
+
+.ev-form-sex .am-selected{
+    width: 234px;
+}
+
+.ev-form-sex .am-selected .am-btn{
+    padding: 1em 1em 1.1em .5em;
+    border-radius: 4px;
+    font-size: 1.4rem;
+    border: 1px solid #ccc;
+}
+.ev-form-group i{
+    font-style: normal;
+}

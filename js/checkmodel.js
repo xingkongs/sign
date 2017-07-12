@@ -16,13 +16,11 @@ $(function () {
 
         onValid: function (validity) {
             $(validity.field).closest('.am-form-groupa').find('.am-alert').css('visibility', 'hidden');
-            //console.log($(validity.field));
             formcheck = validity.valid;
             if ($(validity.field).is("select")) {
                 formcheck = false;
                 var $check = $(validity.field).val();
                 var $sendcode = $("#doc-modal-7--re").find("input");
-                //console.log($check);
                 var test = /^1[1-9]\d{9}$/.test($check);
                 if (test) {
                     $sendcode.attr("name", "vvCode").attr("minlength", "4");
@@ -44,35 +42,17 @@ $(function () {
             var msg = $field.data('validationMessage') || this.getValidationMessage(validity);
 
             $alert.html(msg).show().css('visibility', 'visible');
-            //console.log(validity);
             return formcheck = validity.valid;
-
-            // var $modal = $('#your-modal');
-            //
-            // $modal.siblings('.am-btn').on('click', function(e) {
-            //     var $target = $(e.target);
-            //     if (($target).hasClass('js-modal-open')) {
-            //         $modal.modal();
-            //     } else if (($target).hasClass('js-modal-close')) {
-            //         $modal.modal('close');
-            //     } else {
-            //         $modal.modal('toggle');
-            //     }
-            // });
 
         },
         validate: function (validity) {
             var v = $(validity.field).val();
             var $field = $(validity.field);
             var msg = $field.data('validationMessage') || this.getValidationMessage(validity);
-            //console.log(validity.field);
             var comparer = function (v1, v2) {
-                if (v1 != v2) {
+                if (v1 !== v2) {
                     validity.valid = false;
                 }
-
-                // 这些属性目前 v2.3 以前没什么用，如果不想写可以忽略
-                // 从 v2.3 开始，这些属性被 getValidationMessage() 用于生成错误提示信息
                 if (v2 < 10) {
                     validity.rangeUnderflow = true;
                 } else if (v2 > 10) {
@@ -88,13 +68,11 @@ $(function () {
 
         onValid: function (validity) {
             $(validity.field).closest('.am-form-groupa').find('.am-alert').css('visibility', 'hidden');
-            //console.log($(validity.field));
             formcheck = validity.valid;
             if ($(validity.field).is("select")) {
                 formcheck = false;
                 var $check = $(validity.field).val();
                 var $sendcode = $("#doc-modal-7--re").find("input");
-                //console.log($check);
                 var test = /^1[1-9]\d{9}$/.test($check);
                 if (test) {
                     $sendcode.attr("name", "vvCode").attr("minlength", "4");
@@ -116,35 +94,16 @@ $(function () {
             var msg = $field.data('validationMessage') || this.getValidationMessage(validity);
 
             $alert.html(msg).show().css('visibility', 'visible');
-            //console.log(validity);
             return formcheck = validity.valid;
-
-            // var $modal = $('#your-modal');
-            //
-            // $modal.siblings('.am-btn').on('click', function(e) {
-            //     var $target = $(e.target);
-            //     if (($target).hasClass('js-modal-open')) {
-            //         $modal.modal();
-            //     } else if (($target).hasClass('js-modal-close')) {
-            //         $modal.modal('close');
-            //     } else {
-            //         $modal.modal('toggle');
-            //     }
-            // });
-
         },
         validate: function (validity) {
             var v = $(validity.field).val();
             var $field = $(validity.field);
             var msg = $field.data('validationMessage') || this.getValidationMessage(validity);
-            //console.log(validity.field);
             var comparer = function (v1, v2) {
                 if (v1 != v2) {
                     validity.valid = false;
                 }
-
-                // 这些属性目前 v2.3 以前没什么用，如果不想写可以忽略
-                // 从 v2.3 开始，这些属性被 getValidationMessage() 用于生成错误提示信息
                 if (v2 < 10) {
                     validity.rangeUnderflow = true;
                 } else if (v2 > 10) {
@@ -160,13 +119,11 @@ $(function () {
 
         onValid: function (validity) {
             $(validity.field).closest('.am-form-groupa').find('.am-alert').css('visibility', 'hidden');
-            //console.log($(validity.field));
             formcheck = validity.valid;
             if ($(validity.field).is("select")) {
                 formcheck = false;
                 var $check = $(validity.field).val();
                 var $sendcode = $("#doc-modal-7--re").find("input");
-                //console.log($check);
                 var test = /^1[1-9]\d{9}$/.test($check);
                 if (test) {
                     $sendcode.attr("name", "vvCode").attr("minlength", "4");
@@ -188,35 +145,16 @@ $(function () {
             var msg = $field.data('validationMessage') || this.getValidationMessage(validity);
 
             $alert.html(msg).show().css('visibility', 'visible');
-            //console.log(validity);
             return formcheck = validity.valid;
-
-            // var $modal = $('#your-modal');
-            //
-            // $modal.siblings('.am-btn').on('click', function(e) {
-            //     var $target = $(e.target);
-            //     if (($target).hasClass('js-modal-open')) {
-            //         $modal.modal();
-            //     } else if (($target).hasClass('js-modal-close')) {
-            //         $modal.modal('close');
-            //     } else {
-            //         $modal.modal('toggle');
-            //     }
-            // });
-
         },
         validate: function (validity) {
             var v = $(validity.field).val();
             var $field = $(validity.field);
             var msg = $field.data('validationMessage') || this.getValidationMessage(validity);
-            //console.log(validity.field);
             var comparer = function (v1, v2) {
                 if (v1 != v2) {
                     validity.valid = false;
                 }
-
-                // 这些属性目前 v2.3 以前没什么用，如果不想写可以忽略
-                // 从 v2.3 开始，这些属性被 getValidationMessage() 用于生成错误提示信息
                 if (v2 < 10) {
                     validity.rangeUnderflow = true;
                 } else if (v2 > 10) {
@@ -232,13 +170,11 @@ $(function () {
 
         onValid: function (validity) {
             $(validity.field).closest('.am-form-groupa').find('.am-alert').css('visibility', 'hidden');
-            //console.log($(validity.field));
             formcheck = validity.valid;
             if ($(validity.field).is("select")) {
                 formcheck = false;
                 var $check = $(validity.field).val();
                 var $sendcode = $("#doc-modal-7--re").find("input");
-                //console.log($check);
                 var test = /^1[1-9]\d{9}$/.test($check);
                 if (test) {
                     $sendcode.attr("name", "vvCode").attr("minlength", "4");
@@ -263,32 +199,15 @@ $(function () {
             //console.log(validity);
             return formcheck = validity.valid;
 
-            // var $modal = $('#your-modal');
-            //
-            // $modal.siblings('.am-btn').on('click', function(e) {
-            //     var $target = $(e.target);
-            //     if (($target).hasClass('js-modal-open')) {
-            //         $modal.modal();
-            //     } else if (($target).hasClass('js-modal-close')) {
-            //         $modal.modal('close');
-            //     } else {
-            //         $modal.modal('toggle');
-            //     }
-            // });
-
         },
         validate: function (validity) {
             var v = $(validity.field).val();
             var $field = $(validity.field);
             var msg = $field.data('validationMessage') || this.getValidationMessage(validity);
-            //console.log(validity.field);
             var comparer = function (v1, v2) {
                 if (v1 != v2) {
                     validity.valid = false;
                 }
-
-                // 这些属性目前 v2.3 以前没什么用，如果不想写可以忽略
-                // 从 v2.3 开始，这些属性被 getValidationMessage() 用于生成错误提示信息
                 if (v2 < 10) {
                     validity.rangeUnderflow = true;
                 } else if (v2 > 10) {
@@ -304,13 +223,11 @@ $(function () {
 
         onValid: function (validity) {
             $(validity.field).closest('.am-form-groupa').find('.am-alert').css('visibility', 'hidden');
-            //console.log($(validity.field));
             formcheck = validity.valid;
             if ($(validity.field).is("select")) {
                 formcheck = false;
                 var $check = $(validity.field).val();
                 var $sendcode = $("#doc-modal-7--re").find("input");
-                //console.log($check);
                 var test = /^1[1-9]\d{9}$/.test($check);
                 if (test) {
                     $sendcode.attr("name", "vvCode").attr("minlength", "4");
@@ -332,35 +249,17 @@ $(function () {
             var msg = $field.data('validationMessage') || this.getValidationMessage(validity);
 
             $alert.html(msg).show().css('visibility', 'visible');
-            //console.log(validity);
             return formcheck = validity.valid;
-
-            // var $modal = $('#your-modal');
-            //
-            // $modal.siblings('.am-btn').on('click', function(e) {
-            //     var $target = $(e.target);
-            //     if (($target).hasClass('js-modal-open')) {
-            //         $modal.modal();
-            //     } else if (($target).hasClass('js-modal-close')) {
-            //         $modal.modal('close');
-            //     } else {
-            //         $modal.modal('toggle');
-            //     }
-            // });
 
         },
         validate: function (validity) {
             var v = $(validity.field).val();
             var $field = $(validity.field);
             var msg = $field.data('validationMessage') || this.getValidationMessage(validity);
-            //console.log(validity.field);
             var comparer = function (v1, v2) {
                 if (v1 != v2) {
                     validity.valid = false;
                 }
-
-                // 这些属性目前 v2.3 以前没什么用，如果不想写可以忽略
-                // 从 v2.3 开始，这些属性被 getValidationMessage() 用于生成错误提示信息
                 if (v2 < 10) {
                     validity.rangeUnderflow = true;
                 } else if (v2 > 10) {
@@ -376,13 +275,11 @@ $(function () {
 
         onValid: function (validity) {
             $(validity.field).closest('.am-form-groupa').find('.am-alert').css('visibility', 'hidden');
-            //console.log($(validity.field));
             formcheck = validity.valid;
             if ($(validity.field).is("select")) {
                 formcheck = false;
                 var $check = $(validity.field).val();
                 var $sendcode = $("#doc-modal-7--re").find("input");
-                //console.log($check);
                 var test = /^1[1-9]\d{9}$/.test($check);
                 if (test) {
                     $sendcode.attr("name", "vvCode").attr("minlength", "4");
@@ -404,35 +301,16 @@ $(function () {
             var msg = $field.data('validationMessage') || this.getValidationMessage(validity);
 
             $alert.html(msg).show().css('visibility', 'visible');
-            //console.log(validity);
             return formcheck = validity.valid;
-
-            // var $modal = $('#your-modal');
-            //
-            // $modal.siblings('.am-btn').on('click', function(e) {
-            //     var $target = $(e.target);
-            //     if (($target).hasClass('js-modal-open')) {
-            //         $modal.modal();
-            //     } else if (($target).hasClass('js-modal-close')) {
-            //         $modal.modal('close');
-            //     } else {
-            //         $modal.modal('toggle');
-            //     }
-            // });
-
         },
         validate: function (validity) {
             var v = $(validity.field).val();
             var $field = $(validity.field);
             var msg = $field.data('validationMessage') || this.getValidationMessage(validity);
-            //console.log(validity.field);
             var comparer = function (v1, v2) {
                 if (v1 != v2) {
                     validity.valid = false;
                 }
-
-                // 这些属性目前 v2.3 以前没什么用，如果不想写可以忽略
-                // 从 v2.3 开始，这些属性被 getValidationMessage() 用于生成错误提示信息
                 if (v2 < 10) {
                     validity.rangeUnderflow = true;
                 } else if (v2 > 10) {
@@ -448,13 +326,11 @@ $(function () {
 
         onValid: function (validity) {
             $(validity.field).closest('.am-form-groupa').find('.am-alert').css('visibility', 'hidden');
-            //console.log($(validity.field));
             formcheck = validity.valid;
             if ($(validity.field).is("select")) {
                 formcheck = false;
                 var $check = $(validity.field).val();
                 var $sendcode = $("#doc-modal-7--re").find("input");
-                //console.log($check);
                 var test = /^1[1-9]\d{9}$/.test($check);
                 if (test) {
                     $sendcode.attr("name", "vvCode").attr("minlength", "4");
@@ -476,35 +352,17 @@ $(function () {
             var msg = $field.data('validationMessage') || this.getValidationMessage(validity);
 
             $alert.html(msg).show().css('visibility', 'visible');
-            //console.log(validity);
             return formcheck = validity.valid;
-
-            // var $modal = $('#your-modal');
-            //
-            // $modal.siblings('.am-btn').on('click', function(e) {
-            //     var $target = $(e.target);
-            //     if (($target).hasClass('js-modal-open')) {
-            //         $modal.modal();
-            //     } else if (($target).hasClass('js-modal-close')) {
-            //         $modal.modal('close');
-            //     } else {
-            //         $modal.modal('toggle');
-            //     }
-            // });
-
         },
         validate: function (validity) {
             var v = $(validity.field).val();
             var $field = $(validity.field);
             var msg = $field.data('validationMessage') || this.getValidationMessage(validity);
-            //console.log(validity.field);
             var comparer = function (v1, v2) {
                 if (v1 != v2) {
                     validity.valid = false;
                 }
 
-                // 这些属性目前 v2.3 以前没什么用，如果不想写可以忽略
-                // 从 v2.3 开始，这些属性被 getValidationMessage() 用于生成错误提示信息
                 if (v2 < 10) {
                     validity.rangeUnderflow = true;
                 } else if (v2 > 10) {
@@ -515,11 +373,6 @@ $(function () {
         }
     });
 });
-//监听select change事件
-// function selectchange(thisone){
-//     var $this=$(thisone);
-//     console.log($this.find("option:selected").attr("data-style"));
-// }
 //change
 function changemo() {
     $("#doc-modal-7").attr("data-style", "password");
@@ -551,11 +404,7 @@ $('.btn-loading-example').click(function () {
     var $mom = $btn.closest(".am-form-icon").siblings(".am-form-groupa").find("input").val();
     var $input = $btn.siblings("input");
     var $inputcontent = $("#doc-modal-7").find("select").val();
-    // var $inputcontent1 = $inputcontent.eq(0).attr("data-style");
-    // var $inputcontent2 = $inputcontent.eq(1).attr("data-style");
-    // console.log($input.attr("name")==="vmCode");
     if ($input.attr("name") === "vmCode") {
-        //var data=$($this).val();
         $.ajax({
             type: "post",
             url: "http://www.d1ev.com/member/Accountnew/mailcode",
@@ -567,7 +416,6 @@ $('.btn-loading-example').click(function () {
             }
         });
     } else if ($input.attr("name") === "vvCode") {
-        //var data=$($this).val();
         $.ajax({
             type: "post",
             url: "http://www.d1ev.com/member/Accountnew/mobilecode",
@@ -578,7 +426,6 @@ $('.btn-loading-example').click(function () {
             }
         });
     } else if ($input.attr("name") === "vmmCode") {
-        //var data=$($this).val();
         $.ajax({
             type: "post",
             url: "http://www.d1ev.com/member/Accountnew/onlyemailcode",
@@ -590,7 +437,6 @@ $('.btn-loading-example').click(function () {
             }
         });
     } else if ($input.attr("name") === "vvvCode") {
-        //var data=$($this).val();
         $.ajax({
             type: "post",
             url: "http://www.d1ev.com/member/Accountnew/sms",
@@ -607,10 +453,8 @@ $('.btn-loading-example').click(function () {
 
 
 //点击下一步
-//$("#doc-modal-7").find("input.am-btn-first").attr("data-am-modal","{target: '#doc-modal-4', closeViaDimmer: 0, width: 470, height: 327}")
 function nextone(thisone) {
     var $this = $(thisone);
-    //console.log($this);
     var $select = $this.siblings(".am-form-group").find("select").val();
     var code = Boolean($("body").attr("data-style"));
     var $input = $("#doc-modal-7--re").find("input");
@@ -618,15 +462,6 @@ function nextone(thisone) {
         $input.focus();
     }
     var $vCodedata = $input.val();
-    //console.log($vCodedata);
-    // var $mobile = $this.siblings(".am-form-group").find("select");
-    // if ($mobile.val() === "a") {
-    //     $select = $mobile.find("option").eq(0).attr("data-style");
-    // } else {
-    //     $select = $mobile.find("option").eq(1).attr("data-style");
-    // }
-    //console.log($select);
-    //console.log($mobile);
     var $styles = $("#doc-modal-7").attr("data-style");
     var time = setTimeout(function () {
         if (formcheck && code) {
@@ -666,10 +501,6 @@ function adddata(a) {
     console.log(a);//mail mobile
     var $content = $("#doc-modal-7").find("select").val();
     var $sendcode = $("#doc-modal-7--re").find("input");
-    // var $username1 = $content.eq(0).attr("data-style");
-    // //console.log($username1);
-    // var $username2 = $content.eq(1).attr("data-style");
-    //console.log($username2);
     var $check = $("#doc-vld-msgmail").find("select").val();
     var test = /^1[1-9]\d{9}$/.test($check);
     var $name;
@@ -698,8 +529,6 @@ function sendstyle(a, thisone) {
     $("#doc-modal-7").attr("data-style", a);
     var $this = $(thisone);
     var $style = $this.closest("li").attr("data-style");
-    //$("#doc-modal-4").attr("data-style",$username2);
-    //console.log($style);
     !(function checkwitch() {
         if ($style === "old") {
             clickbutton1();
@@ -734,7 +563,6 @@ function checkfalse(thisone) {
     console.log(formcheck);
     var time = setTimeout(function () {
         if (formcheck) {
-            //console.log($($this).attr("name")==="mobile");
             if ($($this).attr("name") === "mobile") {
                 var data = $($this).val();
 
@@ -926,10 +754,6 @@ function submitclick(thies, thisone) {
     var $passwordnewre = $this.siblings(".am-form-groupa").eq(2).find("input").val();
     var $password = $this.siblings(".am-form-password").find("input").val();
     var $username = $this.closest(".am-modal").attr("data-style");
-    //console.log($username);
-    //console.log($passwordold);
-
-    //console.log(thisone);
     var time = setTimeout(function () {
         if (formcheck && code && thisone === "submitmail") {
             console.log(1);
@@ -1046,10 +870,8 @@ function bindaddorno(a, thisone) {
     } else if (!$selectcontent) {
         $li.attr("data-style", "unbind");
     }
-    //console.log($selectcontent);
-    //console.log($li);
-    if ($li.attr("data-style") === "bind") {//绑定
-        //console.log("bind");
+    if ($li.attr("data-style") === "bind") {
+        //绑定
         if ($select === "qq") {
             $("#doc-modal-1").modal({closeViaDimmer: 0, width: 470, height: 240});
         } else if ($select === "weixin") {
@@ -1057,7 +879,8 @@ function bindaddorno(a, thisone) {
         } else if ($select === "weibo") {
             $("#doc-modal-3").modal({closeViaDimmer: 0, width: 470, height: 240});
         }
-    } else if ($li.attr("data-style") === "unbind") {//未绑定
+    } else if ($li.attr("data-style") === "unbind") {
+        //未绑定
         console.log("unbind");
         if ($select === "qq") {
             url = "http://www.d1ev.com/index.php?g=member&m=third&a=bind&type=qq";
