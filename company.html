@@ -1,0 +1,563 @@
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="renderer" content="webkit">
+    <title>认证企业用户_第一电动网</title>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1469600638_0967958.css">
+    <link rel="stylesheet" href="http://biz.touchev.com/sign/external/css/amazeui.min.css">
+    <link rel="stylesheet" href="http://biz.touchev.com/sign/css/company.css">
+    <style>
+        /*表单验证*/
+        .Validform_checktip{margin-left:8px;line-height:20px;height:20px;overflow:hidden;color:#999;font-size:13px;}
+        .Validform_right{color:#71b83d;margin-left:0;}
+        .Validform_wrong{color:red;white-space:nowrap;margin-left:0;}
+        .Validform_loading{padding-left:20px;background:url(http://biz.touchev.com/images/validimg/onLoad.gif) no-repeat left center;}
+        .Validform_error{background-color:#ffe7e7;}
+        .ValidformTip{color:#cccccc;}
+        #Validform_msg{color:#7d8289; font: 12px/1.5 tahoma, arial, 5b8b4f53, sans-serif; width:280px; -webkit-box-shadow:2px 2px 3px #aaa; -moz-box-shadow:2px 2px 3px #aaa; background:#fff; position:absolute; top:0px; right:50px; z-index:99999; display:none;filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#999999');}
+        #Validform_msg .iframe{position:absolute; left:0px; top:-1px; z-index:-1;}
+        #Validform_msg .Validform_title{line-height:25px; height:25px; text-align:left; font-weight:bold; padding:0 8px; color:#fff; position:relative; background-color:#000;}
+        #Validform_msg a.Validform_close:link,#Validform_msg a.Validform_close:visited{line-height:22px; position:absolute; right:8px; top:0px; color:#fff; text-decoration:none;}
+        #Validform_msg a.Validform_close:hover{color:#cc0;}
+        #Validform_msg .Validform_info{padding:8px;border:1px solid #000; border-top:none; text-align:left;}
+        .ev-checktip{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div class="am-text-center ev-evlogo">
+    <div class="ev-evlogo-wrap"><img src="http://biz.touchev.com/sign/images/evlogo.png" alt="第一电动网" /></div>
+    <span class="ev-hr-bg"></span>
+</div>
+<div class="ev-qual">
+    认证企业用户
+</div>
+<div class="ev-step">
+    <div class="am-g">
+        <div class="am-u-sm-4 am-u-md-4">
+            <div class="ev-step-circle ev-step-on ">1</div>
+            <p class="ev-step-p">填写认证信息</p>
+        </div>
+        <div class="am-u-sm-4 am-u-md-4">
+            <div class="ev-step-circle">2</div>
+            <p class="ev-step-p ">等待审核</p>
+        </div>
+        <div class="am-u-sm-4 am-u-md-4">
+            <div class="ev-step-circle">3</div>
+            <p class="ev-step-p">注册成功</p>
+        </div>
+    </div>
+</div>
+<div class="ev-container ev-container1 am-container">
+    <p class="ev-h">
+        企业信息
+    </p>
+    <div class="ev-form">
+        <form action="http://biz.touchev.com/member/accountnew/regcompany" method="post" class="am-form ev-form">
+            <div class="am-form-group ev-form-group ev-form-group1">
+                <input type="text" name="comname" id="comname" datatype="*2-20" class="ev-radius" placeholder="公司名称" sucmsg="公司名称验证通过！" nullmsg="请输入公司名称！" errormsg="请输入正确公司名称！">
+                <span class="Validform_checktip ev-checktip"></span>
+                <div class="bdsug" style="height: auto; display: none;">
+                    <ul>
+                    </ul>
+                </div>
+                <div class="wws-form-name"><i>*</i>公司名称：</div>
+            </div>
+            <div class="company_info">
+                <div class="am-form-group ev-form-group ev-form-trade">
+                    <select name="catid" id="s_province" class="ev-radius ev-select1 ev-select" data-am-selected>
+                    </select>
+                    <select name="tcatid" id="s_city" class="ev-radius ev-select" datatype="*" nullmsg="请选择行业类别！" data-am-selected>
+                    </select>
+                    <span class="Validform_checktip"></span>
+                    <div class="wws-form-name"><i>*</i>主营行业：</div>
+                </div>
+                <div class="am-form-group ev-form-group ev-form-model">
+                    <select name="ctype" id="ev-js-model" class="ev-radius" datatype="*" nullmsg="请选择经营模式！" data-am-selected="">
+                        <option value="">经营模式</option>
+                        <option value="生产型">生产型</option>
+                        <option value="贸易型">贸易型</option>
+                        <option value="服务型">服务型</option>
+                        <option value="代理型">代理型</option>
+                        <option value="政府或其他">政府或其他</option>
+                    </select>
+                    <span class="Validform_checktip"></span>
+                    <div class="wws-form-name"><i>*</i>经营模式：</div>
+                </div>
+                <div class="am-form-group ev-form-group ev-form-city">
+                    <select name="province" id="s_province2" class="ev-radius ev-select1 ev-select" data-am-selected>
+                    </select>
+                    <select name="city" id="s_city2" class="ev-radius ev-select" datatype="*" nullmsg="请选择市！" data-am-selected>
+                    </select>
+                    <span class="Validform_checktip"></span>
+                    <div class="wws-form-name"><i>*</i>所在地区：</div>
+                </div>
+                <div class="ev-form-group ev-lo">
+                    <div class="ev-up ev-radius" id="ev-up1">上传logo
+                        <input type="hidden" name="logo_pic" id="logo_pic" datatype="*" nullmsg="请上传LOGO！" sucmsg="LOGO验证通过！">
+                        <button type="button" class="am-btn ev-iframe-btn" data-am-modal="{target: '#doc-modal-1', closeViaDimmer: true, width: 900, height: 570}">
+                            Modal
+                        </button>
+                        <span class="Validform_checktip"></span>
+                    </div>
+                    <div class="ev-cut ev-radius">删除</div>
+                    <div class="ev-log ev-radius">
+                        <img src="http://biz.touchev.com/sign/images/logo03.jpg" id="image--re" />
+                    </div>
+                    <div class="wws-form-name"><i>*</i>LOGO：</div>
+                </div>
+                <div class="am-form-group ev-form-group">
+                    <textarea class="ev-textarea" name="intro" placeholder="公司介绍" datatype="*" sucmsg="公司介绍验证通过！" nullmsg="请输入公司介绍！" errormsg="请输入公司介绍！"></textarea>
+                    <span class="Validform_checktip"></span>
+                    <div class="wws-form-name"><i>*</i>公司介绍：</div>
+                </div>
+                <div class="am-form-group ev-form-group">
+                    <div class="ev-radius ev-business-licence">上传营业执照
+                        <input type="hidden" name="yyzz_pic" id="yyzz_pic">
+                        <button type="button" class="am-btn ev-iframe-btn" data-am-modal="{target: '#doc-modal-2', closeViaDimmer: true, width: 900, height: 570}">
+                            Modal
+                        </button>
+                        <div class="wws-form-name">上传营业执照：</div>
+                    </div>
+                    <div class="ev-exposure">上传营业执照即可作为信用认证企业，比普通会员有更高曝光哦~（非必填）</div>
+                    <div class="ev-licece-img">
+                        <img src="http://biz.touchev.com/sign/images/licence.jpg" id="image--re2" alt="营业执照">
+                    </div>
+                </div>
+            </div>
+            <p class="ev-h ev-h2">
+                个人信息
+            </p>
+            <div class="am-form-group ev-form-group ev-form-sex">
+                <input type="text" name="realname" class="ev-radius ev-realname" placeholder="真实姓名" datatype="s2-8" sucmsg="真实姓名验证通过" nullmsg="请输入真实姓名！" errormsg="请输入正确真实姓名">
+                <select name="sex" class="ev-radius ev-select" data-am-selected>
+                    <option value="1">先生</option>
+                    <option value="2">女士</option>
+                </select>
+                <span class="Validform_checktip"></span>
+                <div class="wws-form-name"><i>*</i>真实姓名：</div>
+            </div>
+            <div class="am-form-group ev-form-group">
+                <input type="text" name="position" class="ev-radius" placeholder="职位" datatype="s2-8" sucmsg="职位验证通过" nullmsg="请输入职位！" errormsg="请输入正确职位">
+                <span class="Validform_checktip"></span>
+                <div class="wws-form-name"><i>*</i>职位：</div>
+            </div>
+            <div class="am-form-group ev-form-group ev-tel">
+                <input type="text" name="mobile" class="ev-radius" placeholder="手机" value="" datatype="m" sucmsg="手机号码验证通过" nullmsg="请输入手机号码！" errormsg="请输入正确手机号码">
+                <span class="Validform_checktip"></span>
+                <div class="wws-form-name"><i>*</i>手机：</div>
+            </div>
+            <div class="am-form-group ev-form-group ev-email">
+                <input type="text" name="email" class="ev-radius" placeholder="邮箱" value="" datatype="e" sucmsg="邮箱验证通过" nullmsg="请输入邮箱！" errormsg="请输入正确邮箱">
+                <span class="Validform_checktip"></span>
+                <div class="wws-form-name"><i>*</i>邮箱：</div>
+            </div>
+            <div class="am-form-group ev-form-group ev-form-group2 ev-js-photocheck">
+                <div class="ev-valid ev-valid2">
+                    <img src="http://biz.touchev.com/api/checkcode/index/type/lostpassword/code_len/4/font_size/14/width/100/height/40.html" alt="验证码">
+                </div>
+                <input type="text" name="rvCode" class="ev-radius ev-js-code ev-js-code2" ignore="ignore" placeholder="图片验证码" errormsg="请输入正确验证码" nullmsg="请输入验证码！" sucmsg="验证通过！">
+                <span class="Validform_checktip"></span>
+            </div>
+            <div class="am-form-group ev-form-group">
+                <input type="checkbox" name="readme" value="checkbox" datatype="*" nullmsg="请选择！" disabled checked />
+                <i class="ev-checkbox">点提交即已阅读并同意
+                    <button type="button" class="am-btn ev-model" data-am-modal="{target: '#my-popup'}">《用户注册协议》</button>
+                </i>
+                <span class="Validform_checktip"></span>
+            </div>
+            <input type="hidden" name="verify" value="0" id="verify" />
+            <button type="submit" class="am-btn ev-btn-color ev-js-btn ev-js-btn1 ev-radius am-btn-block">提交审核</button>
+        </form>
+    </div>
+</div>
+<div class="am-container ev-container ev-container2">
+    正在审核中...
+</div>
+<div class="am-container ev-container ev-container3">
+    注册成功！
+</div>
+<div class="am-modal am-modal-no-btn" tabindex="-1" id="doc-modal-1">
+    <div class="am-modal-dialog">
+        <div class="am-modal-hd">上传logo
+            <a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close>&times;</a>
+        </div>
+        <div class="am-modal-bd">
+            <iframe id="iframe1" src="http://biz.touchev.com/sign/iframe2/index.html" width="880" height="520" frameborder="0"></iframe>
+        </div>
+    </div>
+</div>
+<div class="am-modal am-modal-no-btn" tabindex="-1" id="doc-modal-2">
+    <div class="am-modal-dialog">
+        <div class="am-modal-hd">上传营业执照
+            <a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close>&times;</a>
+        </div>
+        <div class="am-modal-bd">
+            <iframe id="iframe2" src="http://biz.touchev.com/sign/iframe3/index.html" width="880" height="520" frameborder="0"></iframe>
+        </div>
+    </div>
+</div>
+<div class="am-popup" id="my-popup">
+    <div class="am-popup-inner">
+        <div class="am-popup-hd">
+            <h4 class="am-popup-title">用户注册协议</h4>
+            <span data-am-modal-close class="am-close">&times;</span>
+        </div>
+        <div class="am-popup-bd">
+            继续注册前请先阅读会员注册协议 <br>
+            欢迎您加入本站，为维护网上公共秩序和社会稳定，请您自觉遵守以下条款：<br>
+            一、不得利用本站危害国家安全、泄露国家秘密，不得侵犯国家社会集体的和公民的合法权益，不得利用本站制作、复制和传播下列信息：<br>
+            （一）煽动抗拒、破坏宪法和法律、行政法规实施的；<br>
+            （二）煽动颠覆国家政权，推翻社会主义制度的；<br>
+            （三）煽动分裂国家、破坏国家统一的；<br>
+            （四）煽动民族仇恨、民族歧视，破坏民族团结的；<br>
+            （五）捏造或者歪曲事实，散布谣言，扰乱社会秩序的；<br>
+            （六）宣扬封建迷信、淫秽、色情、赌博、暴力、凶杀、恐怖、教唆犯罪的；<br>
+            （七）公然侮辱他人或者捏造事实诽谤他人的，或者进行其他恶意攻击的；<br>
+            （八）损害国家机关信誉的；<br>
+            （九）其他违反宪法和法律行政法规的；<br>
+            二、互相尊重，对自己的言论和行为负责。<br>
+        </div>
+    </div>
+</div>
+<!--[if lt IE 9]>
+<script src="//libs.useso.com/js/jquery/1.11.1/jquery.min.js"></script>
+<script src="//cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="http://biz.touchev.com/sign/js/polyfill/rem.min.js"></script>
+<script src="//libs.useso.com/js/respond.js/1.4.2/respond.min.js"></script>
+<script src="//cdn.amazeui.org/amazeui/2.1.0/js/amazeui.legacy.min.js"></script>
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="http://biz.touchev.com/sign/external/js/jquery.min.js"></script>
+<script src="http://biz.touchev.com/sign/external/js/amazeui.min.js"></script>
+<script src="http://biz.touchev.com/cgjs/Validform_v5.3.2_min.js"></script>
+
+
+<!--<![endif]-->
+<script src="http://biz.touchev.com/sign/js/cityselect.js"></script>
+<script>
+
+    function closeModal(id) {
+        var $modal = $(id);
+        $modal.modal('close');
+    }
+    //省市联动初始化
+    _init_area();
+
+    //表单验证
+    $(".ev-form").Validform({
+
+        tiptype:function(msg,o,cssct){
+            console.log('o:'+o);
+            if(!o.obj.is('form')){
+                var objtip = o.obj.siblings('.Validform_checktip');
+                cssct(objtip,o.type);
+                objtip.text(msg);
+            }
+        },
+        showAllError:true,
+        ajaxPost:true,
+        callback:function (data) {
+            console.log(data);
+            //$('.Validform_info').text(data.message);
+            // $.Hidemsg();
+            if(data.error==0){
+                window.location.href=data.url;
+            }
+
+        },
+        beforeCheck:function () {
+            $('.ev-js-code2').blur();
+        }
+
+    });
+
+    //select验证
+    (function () {
+        function selChange(ele) {
+            if($(ele).val()=='细分行业'||$(ele).val()=='请选择市'){
+                $(ele).find('option').eq(0).val('');
+            }
+        }
+        selChange('#s_city');
+        selChange('#s_city2');
+        $('#s_city').change(function () {
+            selChange('#s_city');
+            selChange('#s_city2');
+
+        });
+    })();
+
+    //验证图片验证码
+    $('.ev-js-code2').blur(function () {
+        $.ajax({
+            type:'POST',
+            beforeSend:function () {
+                //if($('.ev-js-code2').next().hasClass('Validform_wrong')){
+                //  return false;
+                //}
+            },
+            url:'http://biz.touchev.com/member/accountnew/rvCode',
+            data:{
+                rvCode:$('.ev-js-code2').val()
+            },
+            dataType:'json',
+            success:function (data) {
+
+                $('.ev-js-photocheck').append('<span class="Validform_checktip"></span>');
+                console.log(data);
+                if(data.error==0){
+                    $('.ev-js-code2').next().removeClass('Validform_wrong').addClass('Validform_right').html($('.ev-js-code2').attr('sucmsg'));
+                }else{
+                    $('.ev-js-code2').next().addClass('Validform_wrong').removeClass('Validform_right').html($('.ev-js-code2').attr('errormsg'));
+                }
+            }
+        });
+
+    });
+
+    //图片验证码
+    changCode();
+    function changCode() {
+        $('.ev-valid img').attr({"src": "http://biz.touchev.com/api/checkcode?type=register&code_len=4&font_size=14&width=133&height=48&t=" + Math.random()});
+    }
+    $('.ev-valid2').click(function () {
+        changCode();
+    });
+
+    //onBlur click;
+    $(document).on("click","#comname",function(e){
+        if($(".bdsug ul li").length && $("#comname").val()!="")
+            $(".bdsug").show();
+    });
+    //公司名称
+    $('#comname').on('input',function(e){
+        comname_verify();
+    });
+    //blur
+    $(document).on("blur","#comname",function(e){
+        setTimeout('$(".bdsug").hide()',500);
+    });
+    function comname_verify(type){
+        $("#comid").val(0);
+        if($("#comname").val()!=""){
+            htmlobj=$.ajax({url:"http://biz.touchev.com/member/accountnew/companyList",type:"POST",dataType:"json",async:false,data:{
+                    company:$("#comname").val()
+                },success:function (data) {
+                    console.log(data);
+
+                    var bd_html="";
+                    if(data.result && data.result.length){
+                        result = data.result;
+                        for(key in result){
+                            bd_html+='<li data-key="'+result[key].userid+'" data-val="'+result[key].Company+'" class="bdsug_li">'+result[key].Company+'</li>';
+                        }
+                    }
+                    if(data.verify){
+                        $(".company_info input").attr("ignore","ignore");
+                        $(".company_info select").attr("ignore","ignore");
+                        $(".company_info textarea").attr("ignore","ignore");
+                        $(".company_info input").attr("disabled","disabled");
+                        $(".company_info select").attr("disabled","disabled");
+                        $(".company_info textarea").attr("disabled","disabled");
+
+
+                        $("#comid").val(data.result[0].userid);
+
+                        $(".company_info").slideUp("slow");
+                        $('#verify').val('1');
+
+                    }else{
+                        $(".company_info input").removeAttr("ignore");
+                        $(".company_info select").removeAttr("ignore");
+                        $(".company_info textarea").removeAttr("ignore");
+                        $(".company_info input").removeAttr("disabled");
+                        $(".company_info select").removeAttr("disabled");
+                        $(".company_info textarea").removeAttr("disabled");
+
+                        $(".company_info").slideDown("slow");
+                        $('#verify').val('0');
+                        bd_html += '<li data-key="" data-val="" class="bdsug_li bdsug_green">创建名为“'+$("#comname").val()+'”的新公司</li>';
+                        console.log(type);
+                        if(type!=1)
+                            $(".bdsug").show();
+                    }
+                    $('.bdsug ul').html(bd_html);
+                }});
+        }else if($(".company_info").is(":hidden")){
+            $("#comid").val(0);
+            $('.bdsug ul').html("");
+            $(".bdsug").hide();
+            $(".company_info").slideDown("slow");
+        }
+    }
+
+    $(document).on("click",".bdsug_li",function(e){
+        if($(e.target).attr('data-val')!="" && $(e.target).attr('data-key')!=""){
+            $('#comid').val($(e.target).attr('data-key'));
+            $('#comname').val($(e.target).attr('data-val'));
+        }
+        $(".bdsug").hide();
+        $("#comid").val(0);
+        if($("#comname").val()!=""){
+            htmlobj=$.ajax({url:"http://biz.touchev.com/member/accountnew/companyList",type:"POST",dataType:"json",async:false,data:{
+                    company:$("#comname").val()
+                }});
+            data=htmlobj.responseJSON;
+            var bd_html="";
+            if(data.result && data.result.length){
+                result = data.result;
+                for(key in result){
+                    bd_html+='<li data-key="'+result[key].userid+'" data-val="'+result[key].Company+'" class="bdsug_li">'+result[key].Company+'</li>';
+                }
+                console.log(data.result);
+            }
+            if(data.verify){
+                console.log(data.verify+'--1');
+                $(".company_info input").attr("ignore","ignore");
+                $(".company_info select").attr("ignore","ignore");
+                $(".company_info textarea").attr("ignore","ignore");
+                $(".company_info input").attr("disabled","disabled");
+                $(".company_info select").attr("disabled","disabled");
+                $(".company_info textarea").attr("disabled","disabled");
+
+                $("#comid").val(data.result[0].userid);
+
+                $(".company_info").slideUp("slow");
+                $('#verify').val('1');
+                $('#comname').removeClass('Validform_error');
+                $('#comname').next().removeClass('Validform_wrong').addClass('Validform_right').html('通过信息验证');
+            }else{
+                console.log(data.verify+'--2');
+                $(".company_info input").removeAttr("ignore");
+                $(".company_info select").removeAttr("ignore");
+                $(".company_info textarea").removeAttr("ignore");
+                $(".company_info input").removeAttr("disabled");
+                $(".company_info select").removeAttr("disabled");
+                $(".company_info textarea").removeAttr("disabled");
+                $('#verify').val('0');
+                $(".company_info").slideDown("slow");
+
+                bd_html += '<li data-key="" data-val="" class="bdsug_li bdsug_green">创建名为“'+$("#comname").val()+'”的新公司</li>';
+                $('#comname').removeClass('Validform_error');
+                $('#comname').next().removeClass('Validform_wrong').addClass('Validform_right').html('通过信息验证');
+            }
+            $('.bdsug ul').html(bd_html);
+
+        }else if($(".company_info").is(":hidden")){
+            console.log(".company_info");
+            $("#comid").val(0);
+            $('.bdsug ul').html("");
+            $(".bdsug").hide();
+            $(".company_info").slideDown("slow");
+        }
+    });
+
+    //cut
+    $('.ev-cut').on('click',function () {
+        $('.ev-log').html('<img src="http://biz.touchev.com/sign/images/logo03.jpg" id="image--re">');
+        $('#logo_pic').val('');
+        $('#filename1').val('');
+        $(this).prev('.ev-up').find('.Validform_checktip').removeClass('Validform_right').addClass('Validform_wrong').text('请上传LOGO！');
+    });
+
+    //刷新iframe页面
+    (function () {
+        $('.ev-iframe-btn:eq(0)').click(function () {
+            //setTimeout(function () {
+            //$('#iframe1')[0].window.location.reload();
+            //document.getElementById('iframe1').window.location.reload()
+            document.getElementById('iframe1').contentWindow.location.reload(true);
+            //},100);
+
+
+        });
+        $('.ev-iframe-btn:eq(1)').click(function () {
+            document.getElementById('iframe2').contentWindow.location.reload(true);
+        });
+
+    })();
+
+    //select点击如果有value则下面的提示出现
+    (function () {
+
+        $(document).on('click','.ev-form-trade .am-selected:last .am-selected-list li',function () {
+            //console.log('213');
+            if ($('#s_city').val()!=''){
+
+                $('.ev-form-trade').find('select').eq(1).removeClass('Validform_error')
+                    .siblings('.Validform_checktip').removeClass('Validform_wrong').addClass('Validform_right')
+                    .text('行业类别通过验证');
+            }else{
+                //为空的情况
+                $('.ev-form-trade').find('select').eq(1).addClass('Validform_error')
+                    .siblings('.Validform_checktip').addClass('Validform_wrong').removeClass('Validform_right')
+                    .text('请选择行业类别！');
+            }
+        });
+
+        $(document).on('click','.ev-form-trade .am-selected:first .am-selected-list li',function () {
+
+            if ($('#s_province').val()=='主营行业'){
+
+                $('.ev-form-trade').find('select').eq(1).addClass('Validform_error')
+                    .siblings('.Validform_checktip').addClass('Validform_wrong').removeClass('Validform_right')
+                    .text('请选择行业类别！');
+            }
+        });
+
+        $(document).on('click','.ev-form-model .am-selected .am-selected-list li',function () {
+            //console.log('213');
+            if ($('#ev-js-model').val()!=''){
+
+                $('.ev-form-model').find('select').removeClass('Validform_error')
+                    .siblings('.Validform_checktip').removeClass('Validform_wrong').addClass('Validform_right')
+                    .text('经营模式通过验证');
+            }else{
+                //为空的情况
+                $('.ev-form-trade').find('select').addClass('Validform_error')
+                    .siblings('.Validform_checktip').addClass('Validform_wrong').removeClass('Validform_right')
+                    .text('请选择经营模式！');
+            }
+        });
+
+        $(document).on('click','.ev-form-city .am-selected:last .am-selected-list li',function () {
+            //console.log('213');
+            if ($('#s_city2').val()!=''){
+
+                $('.ev-form-city').find('select').eq(1).removeClass('Validform_error')
+                    .siblings('.Validform_checktip').removeClass('Validform_wrong').addClass('Validform_right')
+                    .text('所在地区通过验证');
+            }else{
+                //为空的情况
+                $('.ev-form-city').find('select').eq(1).addClass('Validform_error')
+                    .siblings('.Validform_checktip').addClass('Validform_wrong').removeClass('Validform_right')
+                    .text('请选择所在地区！');
+            }
+        });
+
+        $(document).on('click','.ev-form-city .am-selected:first .am-selected-list li',function () {
+
+            if ($('#s_province2').val()=='请选择省'){
+
+                $('.ev-form-city').find('select').eq(1).addClass('Validform_error')
+                    .siblings('.Validform_checktip').addClass('Validform_wrong').removeClass('Validform_right')
+                    .text('请选择所在地区！');
+            }
+        });
+
+    })();
+
+
+
+</script>
+<script src="http://biz.touchev.com/sign/js/company.js"></script>
+<div id="footer-analysis-3rd" style="display: none;">
+    <script type="text/javascript" src="//assets-biz.touchev.com/assets/1.0.0/analysis.3rd.js"></script>
+</div>
+</body>
+</html>
